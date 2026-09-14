@@ -1,0 +1,36 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:bitcointechtalk.com)",
+      "Bash(ls -la \"c:\\\\Users\\\\samee\\\\Desktop\\\\AI Trading Platform\\\\.claude\" && ls \"c:\\\\Users\\\\samee\\\\.claude\\\\projects\\\\c--Users-samee\\\\memory\")",
+      "Read(//c/Users/samee/.claude/projects/c--Users-samee/memory/**)",
+      "WebFetch(domain:austeriosmart-up.com)",
+      "WebFetch(domain:dorivo-au.net)",
+      "WebFetch(domain:lyravestgrove-au.com)",
+      "WebFetch(domain:polar-zinsmere.com)",
+      "WebFetch(domain:zephgain-au.com)",
+      "WebFetch(domain:bright-kapitune-au.com)",
+      "WebFetch(domain:gemwealth-holm.com)",
+      "WebFetch(domain:rendaven.com)",
+      "Bash(npm install *)",
+      "Bash(node scripts/scrape-sites.mjs)",
+      "Bash(node scripts/rasterize-og.mjs)",
+      "Bash(npm run *)",
+      "Bash(node scripts/verify.mjs)",
+      "Bash(node -e ' *)",
+      "Bash(node scripts/gen-sitemap.mjs)",
+      "Bash(nslookup ai-trading-platform.com)",
+      "Bash(nslookup www.ai-trading-platform.com)",
+      "Bash(curl -sI -m 20 https://ai-trading-platform.com/)",
+      "Bash(curl -sI -m 20 http://ai-trading-platform.com/)",
+      "Bash(npx --no-install vercel --version)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code} in %{time_total}s\\\\n\" -m 10 http://localhost:5185/)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code} in %{time_total}s\\\\n\" -m 10 http://localhost:5185/trading/rendaven-review)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code} in %{time_total}s\\\\n\" -m 10 http://localhost:5185/trading/lyra-vestgrove-review)",
+      "Bash(tasklist)"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\samee\\.claude\\projects\\c--Users-samee\\memory"
+    ]
+  }
+}
