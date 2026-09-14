@@ -39,12 +39,17 @@ const RAW = [
 // Overall rating = mean of the five scorecard dimensions, rounded to 1 dp.
 // isoDate derives the machine-readable date for JSON-LD from the display date.
 // path defaults to /trading/<slug>-review; a review can still override it.
+// Every review's CTA buttons point at the Austerio campaign landing with
+// ?f=<platform>&subid=BIT unless the review sets its own ctaUrl.
 const computed = RAW.map((review) => {
   const dims = Object.values(review.scorecard)
   const rating = Math.round((dims.reduce((sum, d) => sum + d, 0) / dims.length) * 10) / 10
   const isoDate = new Date(`${review.date} UTC`).toISOString().slice(0, 10)
   const path = review.path || `/trading/${review.slug}-review`
-  return { ...review, rating, isoDate, path }
+  const ctaUrl =
+    review.ctaUrl ||
+    `https://austerio-smart-up.com/?f=${encodeURIComponent(review.name)}&subid=BIT`
+  return { ...review, rating, isoDate, path, ctaUrl }
 })
 
 // Rating order - used for the top-rated list, featured review and related cards.
