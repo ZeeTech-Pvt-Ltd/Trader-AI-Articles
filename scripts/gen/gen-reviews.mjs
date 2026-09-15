@@ -194,7 +194,11 @@ if (generatedCount > 0) {
 }
 
 if (catalog) {
-  check(all.length >= 2450 && all.length <= 2540, `total articles ${all.length} outside 2450-2540`)
+  // The source keeps growing, so assert exactness against the catalog rather
+  // than a fixed ceiling; the range is a sanity net for crawl corruption.
+  const expected = handwritten.length + catalog.entries.length
+  check(all.length === expected, `total articles ${all.length} != expected ${expected}`)
+  check(all.length >= 2450 && all.length <= 3000, `total articles ${all.length} outside 2450-3000`)
 }
 
 // ---- write manifest + chunks ----------------------------------------------

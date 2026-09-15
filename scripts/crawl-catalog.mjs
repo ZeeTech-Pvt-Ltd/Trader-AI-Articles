@@ -7,7 +7,6 @@ import { mkdirSync, writeFileSync, readFileSync, existsSync, readdirSync } from 
 import { join } from 'node:path'
 
 const BASE = 'https://bitcointechtalk.com'
-const TOTAL_PAGES = 254
 const CONCURRENCY = 2
 const PART_DIR = join(process.cwd(), 'scripts', 'crawl-parts')
 
@@ -75,6 +74,15 @@ function parseCards(html) {
 
 async function main() {
   mkdirSync(PART_DIR, { recursive: true })
+
+  // The site keeps growing - read the current pagination total from page 1.
+  const firstHtml = await fetchPage(BASE)
+  const TOTAL_PAGES =
+    Math.max(0, ...[...firstHtml.matchAll(/\/page\/(\d+)\//g)].map((m) => Number(m[1]))) ||
+    Math.max(0, ...[...firstHtml.matchAll(/page\/(\d+)"/g)].map((m) => Number(m[1]))) ||
+    254
+  console.log(`pagination total: ${TOTAL_PAGES} pages`)
+
   const queue = []
   const urls = [BASE, ...Array.from({ length: TOTAL_PAGES - 1 }, (_, i) => `${BASE}/page/${i + 2}`)]
   const parts = []

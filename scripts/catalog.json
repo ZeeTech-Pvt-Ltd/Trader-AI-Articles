@@ -1,10 +1,395 @@
 {
-  "fetched": "2026-09-15T07:30:09.384Z",
+  "fetched": "2026-09-15T10:54:51.562Z",
   "source": "https://bitcointechtalk.com",
-  "totalPages": 254,
+  "totalPages": 260,
   "failures": [],
   "droppedHandwritten": 31,
   "entries": [
+    {
+      "slug": "elevate-ai-trading",
+      "name": "Elevate AI Trading",
+      "sourcePath": "/trading/elevate-ai-trading-review",
+      "sourceDate": "Sep 15, 2026",
+      "sourceReadTime": "10 min read"
+    },
+    {
+      "slug": "quant-global-plus",
+      "name": "Quant Global Plus",
+      "sourcePath": "/trading/quant-global-plus-review",
+      "sourceDate": "Sep 15, 2026",
+      "sourceReadTime": "10 min read"
+    },
+    {
+      "slug": "assetspro",
+      "name": "AssetsPro",
+      "sourcePath": "/trading/assetspro-review",
+      "sourceDate": "Sep 15, 2026",
+      "sourceReadTime": "9 min read"
+    },
+    {
+      "slug": "dazpoint-trade",
+      "name": "Dazpoint Trade",
+      "sourcePath": "/trading/dazpoint-trade-review",
+      "sourceDate": "Sep 15, 2026",
+      "sourceReadTime": "10 min read"
+    },
+    {
+      "slug": "asport-traders",
+      "name": "Asport Traders",
+      "sourcePath": "/trading/asport-traders-review",
+      "sourceDate": "Sep 15, 2026",
+      "sourceReadTime": "10 min read"
+    },
+    {
+      "slug": "naira-refinery-ai",
+      "name": "Naira Refinery AI",
+      "sourcePath": "/trading/naira-refinery-ai-review",
+      "sourceDate": "Sep 15, 2026",
+      "sourceReadTime": "10 min read"
+    },
+    {
+      "slug": "auren-capital",
+      "name": "Auren Capital",
+      "sourcePath": "/trading/auren-capital-review",
+      "sourceDate": "Sep 15, 2026",
+      "sourceReadTime": "10 min read"
+    },
+    {
+      "slug": "verane-negocaison",
+      "name": "Verane Negocaison",
+      "sourcePath": "/trading/verane-negocaison-review",
+      "sourceDate": "Sep 15, 2026",
+      "sourceReadTime": "9 min read"
+    },
+    {
+      "slug": "smart-pips-premium",
+      "name": "Smart Pips Premium",
+      "sourcePath": "/trading/smart-pips-premium-review",
+      "sourceDate": "Sep 15, 2026",
+      "sourceReadTime": "10 min read"
+    },
+    {
+      "slug": "alpha-globals-inc",
+      "name": "Alpha Globals Inc",
+      "sourcePath": "/trading/alpha-globals-inc-review",
+      "sourceDate": "Sep 15, 2026",
+      "sourceReadTime": "10 min read"
+    },
+    {
+      "slug": "piteas-exchange",
+      "name": "Piteas Exchange",
+      "sourcePath": "/trading/piteas-exchange-review",
+      "sourceDate": "Sep 15, 2026",
+      "sourceReadTime": "10 min read"
+    },
+    {
+      "slug": "silex-valorenca",
+      "name": "Silex Valorenca",
+      "sourcePath": "/trading/silex-valorenca-review",
+      "sourceDate": "Sep 15, 2026",
+      "sourceReadTime": "9 min read"
+    },
+    {
+      "slug": "forge-campoor",
+      "name": "Forge Campoor",
+      "sourcePath": "/trading/forge-campoor-review",
+      "sourceDate": "Sep 15, 2026",
+      "sourceReadTime": "10 min read"
+    },
+    {
+      "slug": "auraklurgenden",
+      "name": "Auraklurgenden",
+      "sourcePath": "/trading/auraklurgenden-review",
+      "sourceDate": "Sep 15, 2026",
+      "sourceReadTime": "9 min read"
+    },
+    {
+      "slug": "bold-stakeworthen",
+      "name": "Bold Stakeworthen",
+      "sourcePath": "/trading/bold-stakeworthen-review",
+      "sourceDate": "Sep 15, 2026",
+      "sourceReadTime": "10 min read"
+    },
+    {
+      "slug": "capital-edge",
+      "name": "Capital Edge",
+      "sourcePath": "/trading/capital-edge-review",
+      "sourceDate": "Sep 15, 2026",
+      "sourceReadTime": "9 min read"
+    },
+    {
+      "slug": "polystack",
+      "name": "Polystack",
+      "sourcePath": "/trading/polystack-review",
+      "sourceDate": "Sep 15, 2026",
+      "sourceReadTime": "9 min read"
+    },
+    {
+      "slug": "wealthwise-broker",
+      "name": "WealthWise Broker",
+      "sourcePath": "/trading/wealthwise-broker-review",
+      "sourceDate": "Sep 15, 2026",
+      "sourceReadTime": "10 min read"
+    },
+    {
+      "slug": "nivaroxaluzo",
+      "name": "Nivaroxaluzo",
+      "sourcePath": "/trading/nivaroxaluzo-review",
+      "sourceDate": "Sep 15, 2026",
+      "sourceReadTime": "9 min read"
+    },
+    {
+      "slug": "veltrix-prime",
+      "name": "Veltrix Prime",
+      "sourcePath": "/trading/veltrix-prime-review",
+      "sourceDate": "Sep 15, 2026",
+      "sourceReadTime": "10 min read"
+    },
+    {
+      "slug": "afrigestio",
+      "name": "Afrigestio",
+      "sourcePath": "/trading/afrigestio-review",
+      "sourceDate": "Sep 15, 2026",
+      "sourceReadTime": "9 min read"
+    },
+    {
+      "slug": "nexus-invest-ai",
+      "name": "Nexus Invest AI",
+      "sourcePath": "/trading/nexus-invest-ai-review",
+      "sourceDate": "Sep 15, 2026",
+      "sourceReadTime": "10 min read"
+    },
+    {
+      "slug": "quantisphere-capital",
+      "name": "Quantisphere Capital",
+      "sourcePath": "/trading/quantisphere-capital-review",
+      "sourceDate": "Sep 15, 2026",
+      "sourceReadTime": "10 min read"
+    },
+    {
+      "slug": "terra-rendholt",
+      "name": "Terra Rendholt",
+      "sourcePath": "/trading/terra-rendholt-review",
+      "sourceDate": "Sep 15, 2026",
+      "sourceReadTime": "9 min read"
+    },
+    {
+      "slug": "fast-dipmatic-capital",
+      "name": "Fast Dipmatic Capital",
+      "sourcePath": "/trading/fast-dipmatic-capital-review",
+      "sourceDate": "Sep 15, 2026",
+      "sourceReadTime": "10 min read"
+    },
+    {
+      "slug": "astsetera-ai",
+      "name": "Astsetera AI",
+      "sourcePath": "/trading/astsetera-ai-review",
+      "sourceDate": "Sep 15, 2026",
+      "sourceReadTime": "10 min read"
+    },
+    {
+      "slug": "granit-ertragburg",
+      "name": "Granit Ertragburg",
+      "sourcePath": "/trading/granit-ertragburg-review",
+      "sourceDate": "Sep 15, 2026",
+      "sourceReadTime": "10 min read"
+    },
+    {
+      "slug": "kiterendaris",
+      "name": "Kiterendaris",
+      "sourcePath": "/trading/kiterendaris-review",
+      "sourceDate": "Sep 15, 2026",
+      "sourceReadTime": "9 min read"
+    },
+    {
+      "slug": "senerum",
+      "name": "Senerum",
+      "sourcePath": "/trading/senerum-review",
+      "sourceDate": "Sep 15, 2026",
+      "sourceReadTime": "9 min read"
+    },
+    {
+      "slug": "evolia",
+      "name": "Evolia",
+      "sourcePath": "/trading/evolia-review",
+      "sourceDate": "Sep 15, 2026",
+      "sourceReadTime": "9 min read"
+    },
+    {
+      "slug": "fortunegainhol",
+      "name": "Fortunegainhol",
+      "sourcePath": "/trading/fortunegainhol-review",
+      "sourceDate": "Sep 15, 2026",
+      "sourceReadTime": "9 min read"
+    },
+    {
+      "slug": "modelmax-altopt",
+      "name": "ModelMax AltOpt",
+      "sourcePath": "/trading/modelmax-altopt-review",
+      "sourceDate": "Sep 15, 2026",
+      "sourceReadTime": "9 min read"
+    },
+    {
+      "slug": "aigu-valerance",
+      "name": "Aigu Valerance",
+      "sourcePath": "/trading/aigu-valerance-review",
+      "sourceDate": "Sep 15, 2026",
+      "sourceReadTime": "10 min read"
+    },
+    {
+      "slug": "meridiana-io",
+      "name": "Meridiana IO",
+      "sourcePath": "/trading/meridiana-io-review",
+      "sourceDate": "Sep 15, 2026",
+      "sourceReadTime": "9 min read"
+    },
+    {
+      "slug": "ai-trading-italy",
+      "name": "AI Trading Italy",
+      "sourcePath": "/trading/ai-trading-italy-review",
+      "sourceDate": "Sep 15, 2026",
+      "sourceReadTime": "10 min read"
+    },
+    {
+      "slug": "trade-gpt",
+      "name": "Trade GPT",
+      "sourcePath": "/trading/trade-gpt-review",
+      "sourceDate": "Sep 15, 2026",
+      "sourceReadTime": "10 min read"
+    },
+    {
+      "slug": "fondo-pensione",
+      "name": "Fondo Pensione",
+      "sourcePath": "/trading/fondo-pensione-review",
+      "sourceDate": "Sep 15, 2026",
+      "sourceReadTime": "9 min read"
+    },
+    {
+      "slug": "snapmanerixx",
+      "name": "Snapmanerixx",
+      "sourcePath": "/trading/snapmanerixx-review",
+      "sourceDate": "Sep 15, 2026",
+      "sourceReadTime": "9 min read"
+    },
+    {
+      "slug": "rankeign-mehrat",
+      "name": "Rankeign Mehrat",
+      "sourcePath": "/trading/rankeign-mehrat-review",
+      "sourceDate": "Sep 15, 2026",
+      "sourceReadTime": "10 min read"
+    },
+    {
+      "slug": "venezia-prime-gpt-app",
+      "name": "Venezia Prime GPT App",
+      "sourcePath": "/trading/venezia-prime-gpt-app-review",
+      "sourceDate": "Sep 15, 2026",
+      "sourceReadTime": "10 min read"
+    },
+    {
+      "slug": "invero-ia",
+      "name": "Invero IA",
+      "sourcePath": "/trading/invero-ia-review",
+      "sourceDate": "Sep 15, 2026",
+      "sourceReadTime": "10 min read"
+    },
+    {
+      "slug": "vralisexfin",
+      "name": "Vralisexfin",
+      "sourcePath": "/trading/vralisexfin-review",
+      "sourceDate": "Sep 15, 2026",
+      "sourceReadTime": "9 min read"
+    },
+    {
+      "slug": "kbc-trade",
+      "name": "KBC Trade",
+      "sourcePath": "/trading/kbc-trade-review",
+      "sourceDate": "Sep 15, 2026",
+      "sourceReadTime": "9 min read"
+    },
+    {
+      "slug": "swaptaire-fr",
+      "name": "Swaptaire FR",
+      "sourcePath": "/trading/swaptaire-fr-review",
+      "sourceDate": "Sep 15, 2026",
+      "sourceReadTime": "9 min read"
+    },
+    {
+      "slug": "eleclerc-fr",
+      "name": "Eleclerc FR",
+      "sourcePath": "/trading/eleclerc-fr-review",
+      "sourceDate": "Sep 15, 2026",
+      "sourceReadTime": "10 min read"
+    },
+    {
+      "slug": "chain-findex-air",
+      "name": "Chain Findex Air",
+      "sourcePath": "/trading/chain-findex-air-review",
+      "sourceDate": "Sep 15, 2026",
+      "sourceReadTime": "10 min read"
+    },
+    {
+      "slug": "linde-vermodijk",
+      "name": "Linde Vermodijk",
+      "sourcePath": "/trading/linde-vermodijk-review",
+      "sourceDate": "Sep 15, 2026",
+      "sourceReadTime": "9 min read"
+    },
+    {
+      "slug": "rezerva-invest",
+      "name": "Rezerva Invest",
+      "sourcePath": "/trading/rezerva-invest-review",
+      "sourceDate": "Sep 15, 2026",
+      "sourceReadTime": "9 min read"
+    },
+    {
+      "slug": "solutions-globales",
+      "name": "Solutions Globales",
+      "sourcePath": "/trading/solutions-globales-review",
+      "sourceDate": "Sep 15, 2026",
+      "sourceReadTime": "10 min read"
+    },
+    {
+      "slug": "valorai-activanc",
+      "name": "ValoraI Activanc",
+      "sourcePath": "/trading/valorai-activanc-review",
+      "sourceDate": "Sep 15, 2026",
+      "sourceReadTime": "10 min read"
+    },
+    {
+      "slug": "fruiter-resso",
+      "name": "Fruiter Resso",
+      "sourcePath": "/trading/fruiter-resso-review",
+      "sourceDate": "Sep 15, 2026",
+      "sourceReadTime": "10 min read"
+    },
+    {
+      "slug": "rima-falmstead-ai",
+      "name": "Rima Falmstead Ai",
+      "sourcePath": "/trading/rima-falmstead-ai-review",
+      "sourceDate": "Sep 15, 2026",
+      "sourceReadTime": "10 min read"
+    },
+    {
+      "slug": "charter-zinsode",
+      "name": "Charter Zinsode",
+      "sourcePath": "/trading/charter-zinsode-review",
+      "sourceDate": "Sep 15, 2026",
+      "sourceReadTime": "9 min read"
+    },
+    {
+      "slug": "cajalnversora-ai",
+      "name": "Cajalnversora AI",
+      "sourcePath": "/trading/cajalnversora-ai-review",
+      "sourceDate": "Sep 15, 2026",
+      "sourceReadTime": "10 min read"
+    },
+    {
+      "slug": "aurora-finspire",
+      "name": "Aurora Finspire",
+      "sourcePath": "/trading/aurora-finspire-review",
+      "sourceDate": "Sep 15, 2026",
+      "sourceReadTime": "10 min read"
+    },
     {
       "slug": "lume-patrimezza",
       "name": "Lume Patrimezza",
@@ -398,55 +783,6 @@
       "sourceReadTime": "9 min read"
     },
     {
-      "slug": "monetavex",
-      "name": "Monetavex",
-      "sourcePath": "/trading/monetavex-review",
-      "sourceDate": "Sep 14, 2026",
-      "sourceReadTime": "9 min read"
-    },
-    {
-      "slug": "the-ai-profit-formula",
-      "name": "The AI Profit Formula",
-      "sourcePath": "/trading/the-ai-profit-formula-review",
-      "sourceDate": "Sep 14, 2026",
-      "sourceReadTime": "10 min read"
-    },
-    {
-      "slug": "lptr-mining",
-      "name": "LPTR Mining",
-      "sourcePath": "/trading/lptr-mining-review",
-      "sourceDate": "Sep 14, 2026",
-      "sourceReadTime": "10 min read"
-    },
-    {
-      "slug": "greenshare-invest",
-      "name": "GreenShare Invest",
-      "sourcePath": "/trading/greenshare-invest-review",
-      "sourceDate": "Sep 14, 2026",
-      "sourceReadTime": "10 min read"
-    },
-    {
-      "slug": "dornatrixel-ai",
-      "name": "Dornatrixel AI",
-      "sourcePath": "/trading/dornatrixel-ai-review",
-      "sourceDate": "Sep 14, 2026",
-      "sourceReadTime": "9 min read"
-    },
-    {
-      "slug": "vrij-vermoganova-nl",
-      "name": "Vrij Vermoganova NL",
-      "sourcePath": "/trading/vrij-vermoganova-nl-review",
-      "sourceDate": "Sep 14, 2026",
-      "sourceReadTime": "10 min read"
-    },
-    {
-      "slug": "aivelloq",
-      "name": "Aivelloq",
-      "sourcePath": "/trading/aivelloq-review",
-      "sourceDate": "Sep 14, 2026",
-      "sourceReadTime": "9 min read"
-    },
-    {
       "slug": "finkurs",
       "name": "Finkurs",
       "sourcePath": "/trading/finkurs-review",
@@ -513,6 +849,55 @@
       "slug": "durak-money",
       "name": "Durak Money",
       "sourcePath": "/trading/durak-money-review",
+      "sourceDate": "Sep 14, 2026",
+      "sourceReadTime": "9 min read"
+    },
+    {
+      "slug": "monetavex",
+      "name": "Monetavex",
+      "sourcePath": "/trading/monetavex-review",
+      "sourceDate": "Sep 14, 2026",
+      "sourceReadTime": "9 min read"
+    },
+    {
+      "slug": "the-ai-profit-formula",
+      "name": "The AI Profit Formula",
+      "sourcePath": "/trading/the-ai-profit-formula-review",
+      "sourceDate": "Sep 14, 2026",
+      "sourceReadTime": "10 min read"
+    },
+    {
+      "slug": "lptr-mining",
+      "name": "LPTR Mining",
+      "sourcePath": "/trading/lptr-mining-review",
+      "sourceDate": "Sep 14, 2026",
+      "sourceReadTime": "10 min read"
+    },
+    {
+      "slug": "greenshare-invest",
+      "name": "GreenShare Invest",
+      "sourcePath": "/trading/greenshare-invest-review",
+      "sourceDate": "Sep 14, 2026",
+      "sourceReadTime": "10 min read"
+    },
+    {
+      "slug": "dornatrixel-ai",
+      "name": "Dornatrixel AI",
+      "sourcePath": "/trading/dornatrixel-ai-review",
+      "sourceDate": "Sep 14, 2026",
+      "sourceReadTime": "9 min read"
+    },
+    {
+      "slug": "vrij-vermoganova-nl",
+      "name": "Vrij Vermoganova NL",
+      "sourcePath": "/trading/vrij-vermoganova-nl-review",
+      "sourceDate": "Sep 14, 2026",
+      "sourceReadTime": "10 min read"
+    },
+    {
+      "slug": "aivelloq",
+      "name": "Aivelloq",
+      "sourcePath": "/trading/aivelloq-review",
       "sourceDate": "Sep 14, 2026",
       "sourceReadTime": "9 min read"
     },
@@ -3520,76 +3905,6 @@
       "sourceReadTime": "10 min read"
     },
     {
-      "slug": "corvelixa-prime",
-      "name": "Corvelixa Prime",
-      "sourcePath": "/trading/corvelixa-prime-review",
-      "sourceDate": "Sep 11, 2026",
-      "sourceReadTime": "9 min read"
-    },
-    {
-      "slug": "wertoven",
-      "name": "Wertoven",
-      "sourcePath": "/trading/wertoven-review",
-      "sourceDate": "Sep 11, 2026",
-      "sourceReadTime": "9 min read"
-    },
-    {
-      "slug": "skvanelidros-schweiz",
-      "name": "Skvanelidros Schweiz",
-      "sourcePath": "/trading/skvanelidros-schweiz-review",
-      "sourceDate": "Sep 11, 2026",
-      "sourceReadTime": "10 min read"
-    },
-    {
-      "slug": "cairn-charts",
-      "name": "Cairn Charts",
-      "sourcePath": "/trading/cairn-charts-review",
-      "sourceDate": "Sep 11, 2026",
-      "sourceReadTime": "9 min read"
-    },
-    {
-      "slug": "binova-markets",
-      "name": "Binova Markets",
-      "sourcePath": "/trading/binova-markets-review",
-      "sourceDate": "Sep 11, 2026",
-      "sourceReadTime": "9 min read"
-    },
-    {
-      "slug": "phidias-prop-firm",
-      "name": "Phidias Prop Firm",
-      "sourcePath": "/trading/phidias-prop-firm-review",
-      "sourceDate": "Sep 11, 2026",
-      "sourceReadTime": "10 min read"
-    },
-    {
-      "slug": "cristal-fondion-ai",
-      "name": "Cristal Fondion Ai",
-      "sourcePath": "/trading/cristal-fondion-ai-review",
-      "sourceDate": "Sep 11, 2026",
-      "sourceReadTime": "10 min read"
-    },
-    {
-      "slug": "gevinakon-ai",
-      "name": "Gevinakon AI",
-      "sourcePath": "/trading/gevinakon-ai-review",
-      "sourceDate": "Sep 11, 2026",
-      "sourceReadTime": "10 min read"
-    },
-    {
-      "slug": "gevinakon",
-      "name": "Gevinakon",
-      "sourcePath": "/trading/gevinakon-review",
-      "sourceDate": "Sep 11, 2026",
-      "sourceReadTime": "9 min read"
-    },
-    {
-      "slug": "cortex-trade",
-      "name": "Cortex Trade",
-      "sourcePath": "/trading/cortex-trade-review",
-      "sourceDate": "Sep 11, 2026",
-      "sourceReadTime": "9 min read"
-    },
-    {
       "slug": "cima-patrienza-ai",
       "name": "Cima Patrienza AI",
       "sourcePath": "/trading/cima-patrienza-ai-review",
@@ -3658,6 +3973,76 @@
       "sourcePath": "/trading/analista-artificiale-review",
       "sourceDate": "Sep 11, 2026",
       "sourceReadTime": "10 min read"
+    },
+    {
+      "slug": "corvelixa-prime",
+      "name": "Corvelixa Prime",
+      "sourcePath": "/trading/corvelixa-prime-review",
+      "sourceDate": "Sep 11, 2026",
+      "sourceReadTime": "9 min read"
+    },
+    {
+      "slug": "wertoven",
+      "name": "Wertoven",
+      "sourcePath": "/trading/wertoven-review",
+      "sourceDate": "Sep 11, 2026",
+      "sourceReadTime": "9 min read"
+    },
+    {
+      "slug": "skvanelidros-schweiz",
+      "name": "Skvanelidros Schweiz",
+      "sourcePath": "/trading/skvanelidros-schweiz-review",
+      "sourceDate": "Sep 11, 2026",
+      "sourceReadTime": "10 min read"
+    },
+    {
+      "slug": "cairn-charts",
+      "name": "Cairn Charts",
+      "sourcePath": "/trading/cairn-charts-review",
+      "sourceDate": "Sep 11, 2026",
+      "sourceReadTime": "9 min read"
+    },
+    {
+      "slug": "binova-markets",
+      "name": "Binova Markets",
+      "sourcePath": "/trading/binova-markets-review",
+      "sourceDate": "Sep 11, 2026",
+      "sourceReadTime": "9 min read"
+    },
+    {
+      "slug": "phidias-prop-firm",
+      "name": "Phidias Prop Firm",
+      "sourcePath": "/trading/phidias-prop-firm-review",
+      "sourceDate": "Sep 11, 2026",
+      "sourceReadTime": "10 min read"
+    },
+    {
+      "slug": "cristal-fondion-ai",
+      "name": "Cristal Fondion Ai",
+      "sourcePath": "/trading/cristal-fondion-ai-review",
+      "sourceDate": "Sep 11, 2026",
+      "sourceReadTime": "10 min read"
+    },
+    {
+      "slug": "gevinakon-ai",
+      "name": "Gevinakon AI",
+      "sourcePath": "/trading/gevinakon-ai-review",
+      "sourceDate": "Sep 11, 2026",
+      "sourceReadTime": "10 min read"
+    },
+    {
+      "slug": "gevinakon",
+      "name": "Gevinakon",
+      "sourcePath": "/trading/gevinakon-review",
+      "sourceDate": "Sep 11, 2026",
+      "sourceReadTime": "9 min read"
+    },
+    {
+      "slug": "cortex-trade",
+      "name": "Cortex Trade",
+      "sourcePath": "/trading/cortex-trade-review",
+      "sourceDate": "Sep 11, 2026",
+      "sourceReadTime": "9 min read"
     },
     {
       "slug": "live-trades-only",
@@ -9939,76 +10324,6 @@
       "sourceReadTime": "9 min read"
     },
     {
-      "slug": "nexora-ai",
-      "name": "NEXORA AI",
-      "sourcePath": "/trading/nexora-ai-review",
-      "sourceDate": "Sep 7, 2026",
-      "sourceReadTime": "9 min read"
-    },
-    {
-      "slug": "stake-manerix-06",
-      "name": "Stake Manerix 0.6",
-      "sourcePath": "/trading/stake-manerix-06-review",
-      "sourceDate": "Sep 7, 2026",
-      "sourceReadTime": "10 min read"
-    },
-    {
-      "slug": "nalvurikenz",
-      "name": "Nalvurikenz",
-      "sourcePath": "/trading/nalvurikenz-review",
-      "sourceDate": "Sep 7, 2026",
-      "sourceReadTime": "9 min read"
-    },
-    {
-      "slug": "jelvruvozan",
-      "name": "Jelvruvozan",
-      "sourcePath": "/trading/jelvruvozan-review",
-      "sourceDate": "Sep 7, 2026",
-      "sourceReadTime": "9 min read"
-    },
-    {
-      "slug": "chvel4men",
-      "name": "CHVEL4MEN",
-      "sourcePath": "/trading/chvel4men-review",
-      "sourceDate": "Sep 7, 2026",
-      "sourceReadTime": "10 min read"
-    },
-    {
-      "slug": "onorefund-ai",
-      "name": "Onorefund AI",
-      "sourcePath": "/trading/onorefund-ai-review",
-      "sourceDate": "Sep 7, 2026",
-      "sourceReadTime": "10 min read"
-    },
-    {
-      "slug": "forgreserve-ai",
-      "name": "Forgreserve AI",
-      "sourcePath": "/trading/forgreserve-ai-review",
-      "sourceDate": "Sep 7, 2026",
-      "sourceReadTime": "9 min read"
-    },
-    {
-      "slug": "neurshard-ai",
-      "name": "Neurshard AI",
-      "sourcePath": "/trading/neurshard-ai-review",
-      "sourceDate": "Sep 7, 2026",
-      "sourceReadTime": "10 min read"
-    },
-    {
-      "slug": "hodladvisor-ai",
-      "name": "Hodladvisor AI",
-      "sourcePath": "/trading/hodladvisor-ai-review",
-      "sourceDate": "Sep 7, 2026",
-      "sourceReadTime": "9 min read"
-    },
-    {
-      "slug": "sensebroker-ai",
-      "name": "Sensebroker AI",
-      "sourcePath": "/trading/sensebroker-ai-review",
-      "sourceDate": "Sep 7, 2026",
-      "sourceReadTime": "9 min read"
-    },
-    {
       "slug": "nobiloption-ai",
       "name": "Nobiloption AI",
       "sourcePath": "/trading/nobiloption-ai-review",
@@ -10077,6 +10392,76 @@
       "sourcePath": "/trading/cypx-capital-review",
       "sourceDate": "Sep 3, 2026",
       "sourceReadTime": "10 min read"
+    },
+    {
+      "slug": "nexora-ai",
+      "name": "NEXORA AI",
+      "sourcePath": "/trading/nexora-ai-review",
+      "sourceDate": "Sep 7, 2026",
+      "sourceReadTime": "9 min read"
+    },
+    {
+      "slug": "stake-manerix-06",
+      "name": "Stake Manerix 0.6",
+      "sourcePath": "/trading/stake-manerix-06-review",
+      "sourceDate": "Sep 7, 2026",
+      "sourceReadTime": "10 min read"
+    },
+    {
+      "slug": "nalvurikenz",
+      "name": "Nalvurikenz",
+      "sourcePath": "/trading/nalvurikenz-review",
+      "sourceDate": "Sep 7, 2026",
+      "sourceReadTime": "9 min read"
+    },
+    {
+      "slug": "jelvruvozan",
+      "name": "Jelvruvozan",
+      "sourcePath": "/trading/jelvruvozan-review",
+      "sourceDate": "Sep 7, 2026",
+      "sourceReadTime": "9 min read"
+    },
+    {
+      "slug": "chvel4men",
+      "name": "CHVEL4MEN",
+      "sourcePath": "/trading/chvel4men-review",
+      "sourceDate": "Sep 7, 2026",
+      "sourceReadTime": "10 min read"
+    },
+    {
+      "slug": "onorefund-ai",
+      "name": "Onorefund AI",
+      "sourcePath": "/trading/onorefund-ai-review",
+      "sourceDate": "Sep 7, 2026",
+      "sourceReadTime": "10 min read"
+    },
+    {
+      "slug": "forgreserve-ai",
+      "name": "Forgreserve AI",
+      "sourcePath": "/trading/forgreserve-ai-review",
+      "sourceDate": "Sep 7, 2026",
+      "sourceReadTime": "9 min read"
+    },
+    {
+      "slug": "neurshard-ai",
+      "name": "Neurshard AI",
+      "sourcePath": "/trading/neurshard-ai-review",
+      "sourceDate": "Sep 7, 2026",
+      "sourceReadTime": "10 min read"
+    },
+    {
+      "slug": "hodladvisor-ai",
+      "name": "Hodladvisor AI",
+      "sourcePath": "/trading/hodladvisor-ai-review",
+      "sourceDate": "Sep 7, 2026",
+      "sourceReadTime": "9 min read"
+    },
+    {
+      "slug": "sensebroker-ai",
+      "name": "Sensebroker AI",
+      "sourcePath": "/trading/sensebroker-ai-review",
+      "sourceDate": "Sep 7, 2026",
+      "sourceReadTime": "9 min read"
     },
     {
       "slug": "power-warrants",
