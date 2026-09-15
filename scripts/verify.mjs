@@ -125,7 +125,7 @@ for (const entry of samples.slice(0, 8)) {
   ok((await page.$$('.faq__item')).length === 5, `${entry.slug}: 5 faqs`)
   ok(!!(await page.$('#review-jsonld')), `${entry.slug}: review JSON-LD injected`)
   const canonical = await page.getAttribute('link[rel="canonical"]', 'href')
-  ok(canonical === `https://trader-ai.com/${entry.path.replace(/^\//, '')}`, `${entry.slug}: canonical URL correct`)
+  ok(canonical === `https://traderai.ai/${entry.path.replace(/^\//, '')}`, `${entry.slug}: canonical URL correct`)
   ok(!consoleErrors.has(page), `${entry.slug}: no console errors`)
   await page.close()
 }

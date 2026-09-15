@@ -16,7 +16,7 @@ const archive = readArchive()
 const today = new Date().toISOString().slice(0, 10)
 
 const url = (loc, lastmod, changefreq, priority) =>
-  `  <url><loc>https://trader-ai.com${loc}</loc><lastmod>${lastmod}</lastmod><changefreq>${changefreq}</changefreq><priority>${priority}</priority></url>`
+  `  <url><loc>https://traderai.ai${loc}</loc><lastmod>${lastmod}</lastmod><changefreq>${changefreq}</changefreq><priority>${priority}</priority></url>`
 
 // Archive pages beyond the homepage (/page/2, …) - desktop page size of 9.
 const totalPages = Math.ceil(archive.count / 9)

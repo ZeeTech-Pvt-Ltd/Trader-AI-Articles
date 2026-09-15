@@ -5,7 +5,7 @@ export default function TermsOfUse() {
   return (
     <LegalPage title="Terms of Use" kicker="Legal" updated="September 8, 2026">
       <p>
-        By accessing trader-ai.com (“the site”), you agree to these terms. If you
+        By accessing traderai.ai (“the site”), you agree to these terms. If you
         do not agree, please do not use the site.
       </p>
 

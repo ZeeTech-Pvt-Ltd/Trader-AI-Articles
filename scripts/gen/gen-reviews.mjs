@@ -22,6 +22,11 @@ const REVIEWS_DIR = join(ROOT, 'src', 'data', 'reviews')
 const CHUNK_DIR = join(REVIEWS_DIR, 'generated')
 const MANIFEST_PATH = join(REVIEWS_DIR, 'manifest.json')
 const CATALOG_PATH = join(ROOT, 'scripts', 'catalog.json')
+const OVERRIDES_PATH = join(__dirname, 'overrides.json')
+
+// Per-article CTA overrides (slug -> custom campaign URL). Overrides the
+// derived Austerio URL for that one review's buttons.
+const overrides = existsSync(OVERRIDES_PATH) ? JSON.parse(readFileSync(OVERRIDES_PATH, 'utf8')) : {}
 
 const DIM_KEYS = ['easeOfUse', 'features', 'transparency', 'security', 'support']
 const BODY_FIELDS = [
@@ -74,13 +79,19 @@ function bodyOf(review, customCtaUrl) {
 }
 
 const all = []
-for (const review of handwritten) all.push({ review, generated: false })
+for (const rawReview of handwritten) {
+  const review = overrides[rawReview.slug]
+    ? { ...rawReview, ctaUrl: overrides[rawReview.slug] }
+    : rawReview
+  all.push({ review, generated: false })
+}
 if (catalog) {
   const handwrittenSlugs = new Set(handwritten.map((r) => r.slug))
   let index = handwritten.length
   for (const entry of catalog.entries) {
     if (handwrittenSlugs.has(entry.slug)) continue
-    const review = buildArticle(entry, index, rngFor(entry.slug))
+    const built = buildArticle(entry, index, rngFor(entry.slug))
+    const review = overrides[entry.slug] ? { ...built, ctaUrl: overrides[entry.slug] } : built
     all.push({ review, generated: true })
     index++
   }

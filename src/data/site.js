@@ -2,10 +2,10 @@
 export const SITE = {
   name: 'Trader AI',
   tagline: 'Safe, Legit or a Scam? Our Verdicts',
-  domain: 'trader-ai.com',
-  url: 'https://trader-ai.com/',
+  domain: 'traderai.ai',
+  url: 'https://traderai.ai/',
   byline: 'The Editorial Desk',
-  contactEmail: 'contact@trader-ai.com',
+  contactEmail: 'contact@traderai.ai',
   description:
     'Trader AI reviews for 2026: we read what each platform claims, check what it publishes, and hand down a verdict - safe, legit or a scam.',
 }

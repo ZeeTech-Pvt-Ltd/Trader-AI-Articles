@@ -48,7 +48,7 @@ const listSvg = cols
 
 const overflow =
   REVIEWS.length > SHOWN
-    ? `<text x="600" y="576" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="20" font-style="italic" fill="#3d382d">…and ${REVIEWS.length - SHOWN} more platforms reviewed at trader-ai.com</text>`
+    ? `<text x="600" y="576" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="20" font-style="italic" fill="#3d382d">…and ${REVIEWS.length - SHOWN} more platforms reviewed at traderai.ai</text>`
     : ''
 
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">

@@ -6,7 +6,7 @@ export default function PrivacyPolicy() {
     <LegalPage title="Privacy Policy" kicker="Legal" updated="September 8, 2026">
       <p>
         Trader AI (“we”, “the desk”) operates the website at
-        trader-ai.com. This policy explains what information we collect when you
+        traderai.ai. This policy explains what information we collect when you
         visit the site or contact us, and how it is used.
       </p>
 
@@ -37,7 +37,7 @@ export default function PrivacyPolicy() {
       <h2>Your rights</h2>
       <p>
         You may request a copy of the information we hold about you, ask for corrections, or
-        request deletion by writing to contact@trader-ai.com. We respond within a
+        request deletion by writing to contact@traderai.ai. We respond within a
         reasonable time.
       </p>
 
