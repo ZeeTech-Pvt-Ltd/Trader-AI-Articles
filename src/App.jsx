@@ -3,9 +3,10 @@ import { Routes, Route, useLocation, Navigate } from 'react-router-dom'
 import Header from './components/Header.jsx'
 import Footer from './components/Footer.jsx'
 // Route-level code splitting: each page (and its dependencies, like
-// intl-tel-input on the offer funnel) is fetched only when that route opens,
-// keeping the initial bundle lean on mobile.
-const Home = lazy(() => import('./pages/Home.jsx'))
+// intl-tel-input on the offer funnel) is fetched only when that route opens.
+// Home stays static - it is the landing page, it is tiny, and keeping it out
+// of a lazy chunk avoids an extra round trip before the first cards render.
+import Home from './pages/Home.jsx'
 const ReviewArticle = lazy(() => import('./pages/ReviewArticle.jsx'))
 const OfferPage = lazy(() => import('./pages/OfferPage.jsx'))
 const About = lazy(() => import('./pages/About.jsx'))
@@ -54,22 +55,8 @@ export default function App() {
       <Header />
       <main id="main">
         <Routes>
-          <Route
-            path="/"
-            element={
-              <Suspense fallback={<PageLoading />}>
-                <Home />
-              </Suspense>
-            }
-          />
-          <Route
-            path="/page/:page"
-            element={
-              <Suspense fallback={<PageLoading />}>
-                <Home />
-              </Suspense>
-            }
-          />
+          <Route path="/" element={<Home />} />
+          <Route path="/page/:page" element={<Home />} />
           <Route
             path="/review/:slug"
             element={

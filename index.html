@@ -54,7 +54,30 @@
     </script>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- Static first-paint shell: shown until React mounts and replaces it.
+           Mirrors the homepage skeleton so the very first frame already looks
+           like the review grid, even on slow connections. -->
+      <div style="max-width:1180px;margin:0 auto;padding:56px 24px">
+        <div style="display:grid;gap:24px;grid-template-columns:1fr;max-width:1180px">
+          <div style="height:18px;width:180px;border-radius:999px;background:#f0e6dc"></div>
+          <div style="height:38px;width:min(620px,90%);border-radius:10px;background:#eee9e2"></div>
+          <div style="height:16px;width:82%;border-radius:10px;background:#f0ede7"></div>
+          <div style="height:16px;width:64%;border-radius:10px;background:#f0ede7"></div>
+        </div>
+        <div style="display:grid;gap:24px;grid-template-columns:repeat(3,1fr);margin-top:44px">
+          <div style="height:210px;border-radius:14px;background:#f4f1ec;border:1px solid #ece7df"></div>
+          <div style="height:210px;border-radius:14px;background:#f4f1ec;border:1px solid #ece7df"></div>
+          <div style="height:210px;border-radius:14px;background:#f4f1ec;border:1px solid #ece7df"></div>
+          <div style="height:210px;border-radius:14px;background:#f4f1ec;border:1px solid #ece7df"></div>
+          <div style="height:210px;border-radius:14px;background:#f4f1ec;border:1px solid #ece7df"></div>
+          <div style="height:210px;border-radius:14px;background:#f4f1ec;border:1px solid #ece7df"></div>
+          <div style="height:210px;border-radius:14px;background:#f4f1ec;border:1px solid #ece7df"></div>
+          <div style="height:210px;border-radius:14px;background:#f4f1ec;border:1px solid #ece7df"></div>
+          <div style="height:210px;border-radius:14px;background:#f4f1ec;border:1px solid #ece7df"></div>
+        </div>
+      </div>
+    </div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
