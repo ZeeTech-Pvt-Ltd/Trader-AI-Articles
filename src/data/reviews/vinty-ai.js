@@ -14,7 +14,7 @@ export default {
   deck: 'Vinty AI promises AI signals for ten crypto assets, a $250 start and a demo account. We read every page - and the rough edges in the published material cost it points.',
   date: 'Sep 11, 2026',
   readTime: '10 min read',
-  byline: 'chris coverdale',
+  byline: 'Chris Coverdale',
   accent: '#be123c',
   verdict: 'SAFE - WITH CONDITIONS',
   targetMarket: 'Global, with geo-restrictions (lists conflict)',

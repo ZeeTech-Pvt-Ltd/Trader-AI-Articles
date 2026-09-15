@@ -12,7 +12,7 @@ export default {
   deck: 'One section says customer support is "24", another says "7 customer support". Both figures sit on the same page, and neither is explained. That is this review in one line.',
   date: 'Sep 15, 2026',
   readTime: '10 min read',
-  byline: 'chris coverdale',
+  byline: 'Chris Coverdale',
   accent: '#ca8a04',
   verdict: 'SAFE - WITH CONDITIONS',
   targetMarket: 'Global, with geo-restrictions (lists conflict)',

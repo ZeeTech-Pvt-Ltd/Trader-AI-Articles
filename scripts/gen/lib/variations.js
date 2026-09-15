@@ -7,7 +7,7 @@ export const BYLINES = [
   'Paul Tudor Jones',
   'Jim Simons',
   'Stanley Druckenmiller',
-  'chris coverdale',
+  'Chris Coverdale',
   'Takashi Kotegawa',
   'Shay Huang',
   'Adam Khoo',

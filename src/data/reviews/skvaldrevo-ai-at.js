@@ -12,7 +12,7 @@ export default {
   deck: 'The demo account mirrors current markets with virtual money - which means it teaches you exactly what live trading will feel like, losses included. That is the honest way into this review.',
   date: 'Sep 14, 2026',
   readTime: '10 min read',
-  byline: 'chris coverdale',
+  byline: 'Chris Coverdale',
   accent: '#ca8a04',
   verdict: 'SAFE - WITH CONDITIONS',
   targetMarket: 'Global, with geo-restrictions (lists conflict)',

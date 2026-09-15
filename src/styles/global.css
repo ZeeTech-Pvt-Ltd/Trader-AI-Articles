@@ -3001,24 +3001,24 @@ main:has(.funnel-cta) ~ .footer {
 
 @media (max-width: 1024px) {
   .hero .container {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 40px;
   }
 
   .funnel-hero__grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 40px;
   }
 
   .funnel-verdict__grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 40px;
   }
 
   .funnel__steps,
   .funnel__features,
   .funnel__testimonials {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .funnel__steps {
@@ -3035,7 +3035,7 @@ main:has(.funnel-cta) ~ .footer {
   }
 
   .featured .container {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 36px;
   }
 
@@ -3059,7 +3059,7 @@ main:has(.funnel-cta) ~ .footer {
   }
 
   .article-body__layout {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .article-body__aside {
@@ -3073,7 +3073,7 @@ main:has(.funnel-cta) ~ .footer {
   }
 
   .contact-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .footer__grid {
@@ -3113,7 +3113,7 @@ main:has(.funnel-cta) ~ .footer {
   .proscons,
   .related-grid,
   .article-body__aside {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .featured .container {
@@ -3126,7 +3126,7 @@ main:has(.funnel-cta) ~ .footer {
   }
 
   .how-rate__cell {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 12px;
   }
 
@@ -3135,11 +3135,11 @@ main:has(.funnel-cta) ~ .footer {
   }
 
   .facts__grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .steps {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .facts__row:nth-child(odd) {
@@ -3155,7 +3155,7 @@ main:has(.funnel-cta) ~ .footer {
   }
 
   .scorecard__row {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 8px;
   }
 
@@ -3164,11 +3164,11 @@ main:has(.funnel-cta) ~ .footer {
   }
 
   .form-row {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .footer__grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 34px;
   }
 }
