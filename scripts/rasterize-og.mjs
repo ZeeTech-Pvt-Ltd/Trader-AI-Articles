@@ -2,7 +2,10 @@
 // the platform list is built dynamically, so new reviews appear automatically.
 // Run: node scripts/rasterize-og.mjs
 import { chromium } from 'file:///C:/Users/samee/node_modules/playwright/index.mjs'
-import { REVIEWS } from '../src/data/reviews/index.js'
+import { readArchive } from './lib/archive-node.mjs'
+
+const archive = readArchive()
+const REVIEWS = archive.byRating
 
 const W = 1200
 const H = 630
@@ -25,12 +28,14 @@ const cols = []
 for (let i = 0; i < shown.length; i += rowsPerCol) {
   cols.push(shown.slice(i, i + rowsPerCol))
 }
+let flatIndex = 0
 const listSvg = cols
   .map((col, c) =>
     col
-      .map((r, i) => {
-        const y = 400 + i * 34
-        const num = String(REVIEWS.indexOf(r) + 1).padStart(2, '0')
+      .map((r) => {
+        const i = flatIndex++
+        const y = 400 + (i % rowsPerCol) * 34
+        const num = String(i + 1).padStart(2, '0')
         const name = r.name.length > 20 ? `${r.name.slice(0, 19)}…` : r.name
         return (
           `<text x="${COL_X[c]}" y="${y}" font-family="'IBM Plex Mono', monospace" font-size="19" fill="#1a1712">` +
@@ -75,4 +80,4 @@ await page.goto(dataUrl)
 await page.waitForTimeout(500)
 await page.screenshot({ path: 'public/og-image.png' })
 await browser.close()
-console.log(`wrote public/og-image.png (${REVIEWS.length} platforms listed)`)
+console.log(`wrote public/og-image.png (${archive.count} platforms listed)`)

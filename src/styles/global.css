@@ -523,7 +523,7 @@ button {
 }
 
 .section-head__title {
-  font-size: 30px;
+  font-size: 26px;
   margin-top: 10px;
 }
 
@@ -539,9 +539,9 @@ button {
 
 .hero {
   background:
-    radial-gradient(900px 420px at 88% -12%, rgba(234, 106, 31, 0.13), transparent 62%),
-    radial-gradient(640px 380px at -6% 108%, rgba(234, 106, 31, 0.07), transparent 60%),
-    var(--surface);
+    radial-gradient(900px 420px at 88% -12%, rgba(234, 106, 31, 0.2), transparent 62%),
+    radial-gradient(640px 380px at -6% 108%, rgba(234, 106, 31, 0.12), transparent 60%),
+    linear-gradient(135deg, #fdeee2 0%, #fdf6ee 55%, #fdeee2 100%);
   border-bottom: 1px solid var(--line);
   padding: 88px 0 84px;
 }
@@ -554,16 +554,25 @@ button {
 }
 
 .hero__title {
-  font-size: clamp(30px, 4vw, 48px);
-  line-height: 1.16;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 700;
+  font-size: clamp(30px, 3.8vw, 52px);
+  line-height: 1.12;
+  letter-spacing: -0.01em;
   margin: 20px 0 18px;
   color: var(--ink);
 }
 
 .hero__title em {
-  font-style: normal;
+  font-style: italic;
   color: var(--primary);
-  background: linear-gradient(180deg, transparent 60%, rgba(234, 106, 31, 0.22) 60%);
+}
+
+/* the kicker pill sits on the soft-orange hero - give it a white fill so it
+   stays visible against the tinted background */
+.hero .kicker {
+  background: var(--surface);
+  border: 1px solid rgba(234, 106, 31, 0.28);
 }
 
 .hero__deck {
@@ -680,25 +689,41 @@ button {
   gap: 14px;
 }
 
-/* ---------- featured banner ---------- */
+/* ---------- featured lead review (light editorial card) ---------- */
 
 .featured {
-  background: linear-gradient(140deg, #2b1709 0%, #3d200c 55%, #52290c 100%);
-  color: #e8f3ec;
+  background: var(--bg);
+  padding: 40px 0 4px;
 }
 
 .featured .container {
   display: grid;
   grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.65fr);
-  gap: 72px;
+  gap: 56px;
   align-items: center;
-  padding: 80px 0;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--primary);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 48px;
 }
 
 .featured__body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  min-width: 0;
+}
+
+.featured__top {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 4px;
 }
 
 .featured__chip {
@@ -709,23 +734,53 @@ button {
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #ffd3ad;
-  background: rgba(234, 106, 31, 0.16);
-  border: 1px solid rgba(234, 106, 31, 0.35);
+  color: var(--primary-deep);
+  background: var(--primary-soft);
+  border: 1px solid rgba(234, 106, 31, 0.3);
   border-radius: 999px;
   padding: 5px 13px;
 }
 
+.featured__platform {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  border-left: 1px solid var(--line);
+  padding-left: 16px;
+}
+
+.featured__platform-name {
+  font-family: var(--heading);
+  font-weight: 800;
+  font-size: 15px;
+  color: var(--ink);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .featured__title {
-  font-size: clamp(26px, 3vw, 36px);
-  color: #fff;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 700;
+  font-size: clamp(22px, 2.4vw, 30px);
+  line-height: 1.2;
   margin: 16px 0 12px;
+}
+
+.featured__title a {
+  color: var(--ink);
+}
+
+.featured__title a:hover {
+  color: var(--primary);
+  text-decoration: none;
 }
 
 .featured__deck {
   font-size: 16px;
   line-height: 1.7;
-  color: #d9c3ab;
+  color: var(--ink-soft);
   max-width: 60ch;
   margin: 0 0 24px;
 }
@@ -733,7 +788,7 @@ button {
 .featured__meta {
   font-size: 13.5px;
   font-weight: 500;
-  color: #c9a087;
+  color: var(--muted);
   margin: 0 0 30px;
 }
 
@@ -749,6 +804,10 @@ button {
   align-items: center;
   gap: 18px;
   text-align: center;
+  background: var(--primary-soft);
+  border: 1px solid rgba(234, 106, 31, 0.22);
+  border-radius: var(--radius);
+  padding: 32px 24px;
 }
 
 .featured__side-label {
@@ -756,7 +815,7 @@ button {
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #c9a087;
+  color: var(--muted);
 }
 
 .featured__score-num {
@@ -764,19 +823,18 @@ button {
   font-weight: 800;
   font-size: 52px;
   line-height: 1;
-  color: #ffb37a;
+  color: var(--primary-deep);
 }
 
-/* star bases are invisible on the dark banner - lighten them */
 .featured__side .stars__base {
-  color: rgba(255, 255, 255, 0.25);
+  color: rgba(13, 21, 32, 0.15);
 }
 
 /* ---------- review cards ---------- */
 
 .review-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   grid-auto-rows: 1fr;
   gap: 28px;
 }
@@ -858,7 +916,7 @@ button {
 }
 
 .review-card__title {
-  font-size: 20px;
+  font-size: 17px;
   line-height: 1.4;
   margin: 4px 0 0;
 }
@@ -895,7 +953,7 @@ button {
 }
 
 .review-card__author {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 700;
   color: var(--primary-deep);
   white-space: nowrap;
@@ -903,7 +961,7 @@ button {
 
 .review-card__read {
   margin-left: auto;
-  font-size: 12.5px;
+  font-size: 12px;
   font-weight: 600;
   color: var(--muted);
   white-space: nowrap;
@@ -1114,7 +1172,7 @@ button {
 }
 
 .article-head__title {
-  font-size: clamp(28px, 3.4vw, 42px);
+  font-size: clamp(24px, 2.9vw, 36px);
   max-width: 24ch;
   margin-bottom: 18px;
 }
@@ -1198,7 +1256,7 @@ button {
 }
 
 .article-body h2 {
-  font-size: 24px;
+  font-size: 20px;
   margin: 56px 0 8px;
 }
 
@@ -1535,7 +1593,7 @@ button {
 }
 
 .bottomline__title {
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 800;
 }
 
@@ -1721,6 +1779,13 @@ button {
   color: #fff;
 }
 
+.pagination__gap {
+  padding: 0 6px;
+  color: var(--muted);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
 .pagination__link {
   display: inline-flex;
   align-items: center;
@@ -1767,7 +1832,7 @@ button {
 }
 
 .article-cta__title {
-  font-size: 26px;
+  font-size: 22px;
   margin-bottom: 8px;
 }
 
@@ -1786,7 +1851,7 @@ button {
 }
 
 .page-head__title {
-  font-size: clamp(32px, 4vw, 44px);
+  font-size: clamp(26px, 3.2vw, 36px);
   margin: 16px 0 14px;
 }
 
@@ -1803,7 +1868,7 @@ button {
 }
 
 .prose h2 {
-  font-size: 22px;
+  font-size: 19px;
   margin: 36px 0 12px;
 }
 
@@ -1916,7 +1981,7 @@ button {
 }
 
 .form-card__title {
-  font-size: 24px;
+  font-size: 21px;
   margin-bottom: 6px;
 }
 
@@ -2211,7 +2276,7 @@ main:has(.funnel-cta) ~ .footer {
 }
 
 .notfound__title {
-  font-size: 30px;
+  font-size: 26px;
   margin: 16px 0 10px;
 }
 
@@ -2309,7 +2374,7 @@ main:has(.funnel-cta) ~ .footer {
 }
 
 .steps__title {
-  font-size: 17px;
+  font-size: 16px;
   margin: 10px 0 6px;
 }
 
@@ -2345,7 +2410,7 @@ main:has(.funnel-cta) ~ .footer {
 }
 
 .article-body .final-card__title {
-  font-size: 20px;
+  font-size: 18px;
   margin: 8px 0 0;
 }
 
@@ -2438,7 +2503,7 @@ main:has(.funnel-cta) ~ .footer {
 
 .funnel-hero__brand {
   font-family: var(--heading);
-  font-size: clamp(30px, 9vw, 72px);
+  font-size: clamp(26px, 7.5vw, 56px);
   font-weight: 800;
   letter-spacing: -0.01em;
   line-height: 1.05;
@@ -2505,7 +2570,7 @@ main:has(.funnel-cta) ~ .footer {
 }
 
 .funnel-hero__sub {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 800;
   margin: 0 0 12px;
   color: #fdf6ec;
@@ -2541,7 +2606,7 @@ main:has(.funnel-cta) ~ .footer {
 }
 
 .funnel-verdict__title {
-  font-size: clamp(24px, 3vw, 32px);
+  font-size: clamp(20px, 2.6vw, 26px);
   margin: 14px 0 10px;
 }
 
@@ -2590,7 +2655,7 @@ main:has(.funnel-cta) ~ .footer {
 }
 
 .funnel__head {
-  font-size: clamp(24px, 3vw, 32px);
+  font-size: clamp(20px, 2.6vw, 26px);
   text-align: center;
   margin: 0 0 8px;
 }
@@ -2911,7 +2976,7 @@ main:has(.funnel-cta) ~ .footer {
 
 .funnel-cta__title {
   color: #fdf6ec;
-  font-size: clamp(24px, 3vw, 32px);
+  font-size: clamp(20px, 2.6vw, 26px);
   margin: 0;
 }
 
@@ -2960,6 +3025,10 @@ main:has(.funnel-cta) ~ .footer {
     gap: 24px;
   }
 
+  .review-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .funnel__step::before,
   .funnel__step::after {
     display: none;
@@ -2968,6 +3037,16 @@ main:has(.funnel-cta) ~ .footer {
   .featured .container {
     grid-template-columns: 1fr;
     gap: 36px;
+  }
+
+  /* stack the lead review and center its content on tablet and down */
+  .featured__body {
+    align-items: center;
+    text-align: center;
+  }
+
+  .featured__top {
+    justify-content: center;
   }
 
   .how-rate__cell {
@@ -3037,6 +3116,15 @@ main:has(.funnel-cta) ~ .footer {
     grid-template-columns: 1fr;
   }
 
+  .featured .container {
+    padding: 28px 20px;
+    gap: 28px;
+  }
+
+  .featured__side {
+    padding: 26px 18px;
+  }
+
   .how-rate__cell {
     grid-template-columns: 1fr;
     gap: 12px;
@@ -3092,5 +3180,67 @@ main:has(.funnel-cta) ~ .footer {
      the fallback navigation */
   .header__links {
     display: none;
+  }
+}
+
+/* ---------- loading skeletons ---------- */
+/* Shimmer placeholders shown while the review manifest or an article chunk
+   loads - first-visit only, so the layout never jumps once data lands. */
+
+.skeleton {
+  border-radius: var(--radius-sm);
+  background: linear-gradient(100deg, #eef1f5 40%, #f9f7f4 50%, #eef1f5 60%);
+  background-size: 220% 100%;
+  animation: skeleton-sweep 1.3s ease-in-out infinite alternate;
+}
+
+@keyframes skeleton-sweep {
+  from {
+    background-position: 100% 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+
+.skeleton--kicker {
+  width: 160px;
+  height: 14px;
+}
+
+.skeleton--title {
+  width: min(620px, 100%);
+  height: 34px;
+  margin-bottom: 14px;
+}
+
+.skeleton--line {
+  width: 100%;
+  height: 16px;
+  margin-bottom: 12px;
+}
+
+.skeleton--stats {
+  width: 100%;
+  height: 260px;
+}
+
+.skeleton--card-top {
+  width: 100%;
+  height: 120px;
+}
+
+.skeleton--card-title {
+  width: 80%;
+  height: 22px;
+}
+
+.review-card--skeleton {
+  gap: 16px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeleton {
+    animation: none;
   }
 }

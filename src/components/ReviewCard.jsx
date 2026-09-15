@@ -28,7 +28,7 @@ export default function ReviewCard({ review }) {
       <h3 className="review-card__title">
         <Link to={review.path}>{review.headline}</Link>
       </h3>
-      <p className="review-card__deck">{review.deck}</p>
+      <p className="review-card__deck">{review.excerpt}</p>
 
       <div className="review-card__foot">
         <span className="review-card__author">By {review.byline}</span>

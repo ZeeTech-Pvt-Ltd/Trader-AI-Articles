@@ -1,6 +1,6 @@
 import { Link, useParams } from 'react-router-dom'
 import useMeta from '../hooks/useMeta.js'
-import { REVIEWS } from '../data/reviews/index.js'
+import useArchive from '../hooks/useArchive.js'
 import Stars from '../components/Stars.jsx'
 import VerdictChip from '../components/VerdictChip.jsx'
 import OfferForm from '../components/OfferForm.jsx'
@@ -53,7 +53,10 @@ const TESTIMONIALS = [
 
 export default function OfferPage() {
   const { keyword } = useParams()
-  const review = REVIEWS.find((r) => r.keyword === keyword || r.slug === keyword)
+  const archive = useArchive()
+  // The manifest carries every field this page renders (name, minimumDeposit,
+  // scorecard, rating, verdict, keyword, path) - no body chunk is needed.
+  const review = archive ? (archive.bySlug.get(keyword) ?? archive.byKeyword.get(keyword)) : null
 
   useMeta({
     title: review ? `Open a Free ${review.name} Account` : 'Sign up',
@@ -63,6 +66,18 @@ export default function OfferPage() {
     path: review ? `go/${review.keyword || review.slug}` : 'go',
   })
 
+  if (!archive) {
+    return (
+      <section className="funnel-hero">
+        <div className="container funnel-hero__grid">
+          <div className="funnel-hero__main">
+            <div className="skeleton skeleton--title" style={{ marginTop: 24 }} />
+            <div className="skeleton skeleton--line" style={{ width: '70%', marginTop: 20 }} />
+          </div>
+        </div>
+      </section>
+    )
+  }
   if (!review) return <NotFound />
 
   const steps = [

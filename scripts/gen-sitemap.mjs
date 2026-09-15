@@ -1,7 +1,7 @@
-// Generates public/sitemap.xml from the live reviews data + static routes.
-// Run after adding or removing a review: node scripts/gen-sitemap.mjs
+// Generates public/sitemap.xml from the generated review archive + static routes.
+// Run after regenerating reviews: node scripts/gen-sitemap.mjs
 import { writeFileSync } from 'node:fs'
-import { REVIEWS, TOTAL_PAGES } from '../src/data/reviews/index.js'
+import { readArchive } from './lib/archive-node.mjs'
 
 const STATIC = [
   { loc: '/', priority: '1.0', changefreq: 'weekly', lastmod: '2026-09-08' },
@@ -12,17 +12,21 @@ const STATIC = [
   { loc: '/terms-of-use', priority: '0.3', changefreq: 'yearly', lastmod: '2026-09-08' },
 ]
 
+const archive = readArchive()
+const today = new Date().toISOString().slice(0, 10)
+
 const url = (loc, lastmod, changefreq, priority) =>
   `  <url><loc>https://trader-ai.com${loc}</loc><lastmod>${lastmod}</lastmod><changefreq>${changefreq}</changefreq><priority>${priority}</priority></url>`
 
-// Archive pages beyond the homepage (/page/2, …)
-const archivePages = Array.from({ length: Math.max(0, TOTAL_PAGES - 1) }, (_, i) =>
-  url(`/page/${i + 2}`, '2026-09-09', 'monthly', '0.5'),
+// Archive pages beyond the homepage (/page/2, …) - desktop page size of 9.
+const totalPages = Math.ceil(archive.count / 9)
+const archivePages = Array.from({ length: Math.max(0, totalPages - 1) }, (_, i) =>
+  url(`/page/${i + 2}`, today, 'monthly', '0.5'),
 )
 
 const entries = [
   ...STATIC.map((s) => url(s.loc, s.lastmod, s.changefreq, s.priority)),
-  ...REVIEWS.map((r) => url(r.path, r.isoDate, 'monthly', '0.9')),
+  ...archive.articles.map((r) => url(r.path, r.isoDate, 'monthly', '0.9')),
   ...archivePages,
 ]
 
@@ -30,4 +34,4 @@ writeFileSync(
   'public/sitemap.xml',
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${entries.join('\n')}\n</urlset>\n`,
 )
-console.log(`wrote public/sitemap.xml (${entries.length} URLs)`)
+console.log(`wrote public/sitemap.xml (${entries.length} URLs: ${archive.count} reviews + ${archivePages.length} archive pages + ${STATIC.length} static)`)

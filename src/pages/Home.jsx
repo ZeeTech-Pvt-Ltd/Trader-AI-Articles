@@ -1,7 +1,8 @@
-import { useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import useMeta from '../hooks/useMeta.js'
-import { REVIEWS, FEATURED, PAGINATED, PAGE_SIZE, TOTAL_PAGES } from '../data/reviews/index.js'
+import useArchive from '../hooks/useArchive.js'
+import { PAGE_SIZE } from '../data/reviews/archive.js'
 import { RATING_DIMENSIONS } from '../data/site.js'
 import ReviewCard from '../components/ReviewCard.jsx'
 import Stars from '../components/Stars.jsx'
@@ -9,6 +10,20 @@ import VerdictChip from '../components/VerdictChip.jsx'
 import SectionHead from '../components/SectionHead.jsx'
 import Reveal from '../components/Reveal.jsx'
 import Icon from '../components/Icon.jsx'
+
+// With hundreds of pages, the pager shows a window: always the first and last
+// page, the current page, and one neighbour each side. Gaps render as dots.
+function pageWindow(page, totalPages) {
+  const wanted = [...new Set([1, totalPages, page - 1, page, page + 1])]
+    .filter((n) => n >= 1 && n <= totalPages)
+    .sort((a, b) => a - b)
+  const items = []
+  for (let i = 0; i < wanted.length; i++) {
+    if (i > 0 && wanted[i] - wanted[i - 1] > 1) items.push({ gap: true })
+    items.push({ n: wanted[i] })
+  }
+  return items
+}
 
 function Pagination({ page, totalPages }) {
   return (
@@ -18,16 +33,22 @@ function Pagination({ page, totalPages }) {
           ← Previous
         </Link>
       )}
-      {Array.from({ length: totalPages }, (_, i) => i + 1).map((n) => (
-        <Link
-          key={n}
-          to={n === 1 ? '/' : `/page/${n}`}
-          className={`pagination__num ${n === page ? 'is-active' : ''}`}
-          aria-current={n === page ? 'page' : undefined}
-        >
-          {n}
-        </Link>
-      ))}
+      {pageWindow(page, totalPages).map((item, i) =>
+        item.gap ? (
+          <span className="pagination__gap" aria-hidden="true" key={`gap-${i}`}>
+            …
+          </span>
+        ) : (
+          <Link
+            key={item.n}
+            to={item.n === 1 ? '/' : `/page/${item.n}`}
+            className={`pagination__num ${item.n === page ? 'is-active' : ''}`}
+            aria-current={item.n === page ? 'page' : undefined}
+          >
+            {item.n}
+          </Link>
+        ),
+      )}
       {page < totalPages && (
         <Link className="pagination__link" to={`/page/${page + 1}`}>
           Next →
@@ -37,23 +58,90 @@ function Pagination({ page, totalPages }) {
   )
 }
 
+function initials(name) {
+  return name
+    .split(/\s+/)
+    .slice(0, 2)
+    .map((w) => w[0])
+    .join('')
+    .toUpperCase()
+}
+
+// Shown while the manifest loads (a single ~300KB gzip chunk, so only on the
+// first visit). Mirrors the hero + grid so there is no layout jump.
+function HomeSkeleton() {
+  return (
+    <>
+      <section className="hero">
+        <div className="container">
+          <div className="hero__main">
+            <div className="skeleton skeleton--kicker" />
+            <div className="skeleton skeleton--title" />
+            <div className="skeleton skeleton--title" style={{ width: '70%' }} />
+            <div className="skeleton skeleton--line" />
+            <div className="skeleton skeleton--line" style={{ width: '82%' }} />
+          </div>
+          <div className="hero__stats">
+            <div className="skeleton skeleton--stats" />
+          </div>
+        </div>
+      </section>
+      <section className="section" id="reviews">
+        <div className="container">
+          <div className="review-grid">
+            {Array.from({ length: PAGE_SIZE }, (_, i) => (
+              <div className="review-card review-card--skeleton" key={i}>
+                <div className="skeleton skeleton--card-top" />
+                <div className="skeleton skeleton--card-title" />
+                <div className="skeleton skeleton--line" style={{ width: '90%' }} />
+                <div className="skeleton skeleton--line" style={{ width: '70%' }} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
+  )
+}
+
 export default function Home() {
   const { page: pageParam } = useParams()
-  const page = Math.min(Math.max(1, parseInt(pageParam, 10) || 1), TOTAL_PAGES)
+  const archive = useArchive()
+
+  // Tablet and mobile run a 2-column (1-column on phones) grid, so they get
+  // 10 reviews per page; desktop shows 9 in its 3-column grid.
+  const [compact, setCompact] = useState(
+    () => typeof window !== 'undefined' && window.matchMedia('(max-width: 1024px)').matches,
+  )
+  useEffect(() => {
+    const mq = window.matchMedia('(max-width: 1024px)')
+    const onChange = () => setCompact(mq.matches)
+    mq.addEventListener('change', onChange)
+    return () => mq.removeEventListener('change', onChange)
+  }, [])
+  const pageSize = compact ? 10 : PAGE_SIZE
+  const totalPages = Math.max(1, Math.ceil((archive?.count ?? 0) / pageSize))
+
+  const page = Math.min(Math.max(1, parseInt(pageParam, 10) || 1), totalPages)
   const isFirstPage = page === 1
-  const pageReviews = PAGINATED.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE)
+  const pageReviews = archive ? archive.articles.slice((page - 1) * pageSize, page * pageSize) : []
 
   // Live search across the whole archive - not just the current page.
   const [query, setQuery] = useState('')
   const q = query.trim().toLowerCase()
   const searching = q.length > 0
-  const results = searching
-    ? PAGINATED.filter((r) =>
-        [r.name, r.headline, r.keyword, r.byline].some(
-          (field) => field && String(field).toLowerCase().includes(q),
-        ),
-      )
-    : pageReviews
+  const results = useMemo(() => {
+    if (!archive || !searching) return []
+    return archive.articles.filter((r) =>
+      [r.name, r.headline, r.keyword, r.byline].some(
+        (field) => field && String(field).toLowerCase().includes(q),
+      ),
+    )
+  }, [archive, searching, q])
+  // A one-character query can match thousands of cards - render a capped
+  // window and ask the user to refine.
+  const resultCap = 90
+  const shownResults = results.slice(0, resultCap)
 
   useMeta(
     isFirstPage
@@ -66,14 +154,16 @@ export default function Home() {
         },
   )
 
-  const downgraded = REVIEWS.filter((r) => r.verdict.startsWith('CAUTION')).length
-  const latest = REVIEWS.reduce((a, b) => (b.isoDate > a.isoDate ? b : a), REVIEWS[0])
+  if (!archive) return <HomeSkeleton />
+
+  const downgraded = archive.cautionCount
+  const latest = archive.latestDate
 
   const HERO_STATS = [
-    { value: REVIEWS.length, label: 'Platforms reviewed', note: 'pulled from the record count, never typed' },
+    { value: archive.count, label: 'Platforms reviewed', note: 'pulled from the record count, never typed' },
     { value: 4, label: 'Checks on each platform', note: 'the four external verifications' },
     { value: downgraded, label: 'Verdicts downgraded', note: 'how many you have lowered after a re-check' },
-    { value: latest.date, label: 'Last updated', note: 'the most recent check date across the index', date: true },
+    { value: latest, label: 'Last updated', note: 'the most recent check date across the index', date: true },
   ]
 
   return (
@@ -131,18 +221,29 @@ export default function Home() {
           <section className="featured">
             <div className="container">
               <Reveal className="featured__body">
-                <span className="featured__chip">★ Lead review</span>
+                <div className="featured__top">
+                  <span className="featured__chip">★ Lead review</span>
+                  <div className="featured__platform">
+                    <span
+                      className="tile"
+                      style={{ background: archive.featured.accent }}
+                      aria-hidden="true"
+                    >
+                      {initials(archive.featured.name)}
+                    </span>
+                    <span className="featured__platform-name">{archive.featured.name}</span>
+                  </div>
+                </div>
                 <h2 className="featured__title">
-                  <Link to={FEATURED.path} style={{ color: '#fff' }}>
-                    {FEATURED.headline}
-                  </Link>
+                  <Link to={archive.featured.path}>{archive.featured.headline}</Link>
                 </h2>
-                <p className="featured__deck">{FEATURED.deck}</p>
+                <p className="featured__deck">{archive.featured.deck}</p>
                 <p className="featured__meta">
-                  By {FEATURED.byline} &nbsp;·&nbsp; {FEATURED.date} &nbsp;·&nbsp; {FEATURED.readTime}
+                  By {archive.featured.byline} &nbsp;·&nbsp; {archive.featured.date} &nbsp;·&nbsp;{' '}
+                  {archive.featured.readTime}
                 </p>
                 <div className="featured__actions">
-                  <Link to={FEATURED.path} className="btn btn--white">
+                  <Link to={archive.featured.path} className="btn btn--green">
                     Read the review
                     <Icon name="arrow-right" size={15} />
                   </Link>
@@ -150,9 +251,9 @@ export default function Home() {
               </Reveal>
               <Reveal className="featured__side" delay={120}>
                 <span className="featured__side-label">Our score</span>
-                <span className="featured__score-num">{FEATURED.rating.toFixed(1)}</span>
-                <Stars value={FEATURED.rating} style={{ fontSize: 22 }} />
-                <VerdictChip verdict={FEATURED.verdict} dark />
+                <span className="featured__score-num">{archive.featured.rating.toFixed(1)}</span>
+                <Stars value={archive.featured.rating} style={{ fontSize: 22 }} />
+                <VerdictChip verdict={archive.featured.verdict} />
               </Reveal>
             </div>
           </section>
@@ -167,10 +268,12 @@ export default function Home() {
             title={isFirstPage ? 'Every platform we’ve reviewed' : 'More platform reviews'}
             aside={
               searching
-                ? `${results.length} result${results.length === 1 ? '' : 's'} for “${query.trim()}”`
+                ? results.length > resultCap
+                  ? `Showing first ${resultCap} of ${results.length} results for “${query.trim()}” - refine your search`
+                  : `${results.length} result${results.length === 1 ? '' : 's'} for “${query.trim()}”`
                 : isFirstPage
                   ? 'New reviews added regularly'
-                  : `Page ${page} of ${TOTAL_PAGES}`
+                  : `Page ${page} of ${totalPages}`
             }
           />
 
@@ -203,13 +306,13 @@ export default function Home() {
           ) : (
             <>
               <div className="review-grid">
-                {results.map((review) => (
+                {(searching ? shownResults : pageReviews).map((review) => (
                   <Reveal key={review.slug}>
                     <ReviewCard review={review} />
                   </Reveal>
                 ))}
               </div>
-              {!searching && <Pagination page={page} totalPages={TOTAL_PAGES} />}
+              {!searching && <Pagination page={page} totalPages={totalPages} />}
             </>
           )}
         </div>
