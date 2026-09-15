@@ -86,6 +86,10 @@ if (catalog) {
   }
 }
 
+// The listing shows newest first (same sort as archive.js), so dedupe decks in
+// that display order - Sep 15, then Sep 14, and so on. Stable within a date.
+all.sort((a, b) => (isoDateOf(a.review.date) < isoDateOf(b.review.date) ? 1 : isoDateOf(a.review.date) > isoDateOf(b.review.date) ? -1 : 0))
+
 // Adjacent duplicate decks read badly in a grid. Rendered decks embed the
 // platform name, so collisions are rare - but a placeholder-less pattern can
 // repeat when two neighbours share a deposit amount. Step such decks forward

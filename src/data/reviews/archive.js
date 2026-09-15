@@ -51,26 +51,31 @@ export function loadChunk(chunkId) {
 }
 
 export function buildArchive(entries) {
-  const articles = entries.map((e) => ({
-    slug: e.s,
-    keyword: e.k,
-    name: e.n,
-    headline: e.h,
-    byline: e.b,
-    date: e.d,
-    isoDate: e.i,
-    readTime: e.t,
-    rating: e.r,
-    verdict: e.v,
-    accent: e.a,
-    path: e.p,
-    excerpt: e.e,
-    deck: e.x,
-    minimumDeposit: e.m,
-    scorecard: dimsToObject(e.c),
-    chunkId: e.g,
-    ctaUrl: e.u || ctaUrlFor(e.n),
-  }))
+  const articles = entries
+    .map((e) => ({
+      slug: e.s,
+      keyword: e.k,
+      name: e.n,
+      headline: e.h,
+      byline: e.b,
+      date: e.d,
+      isoDate: e.i,
+      readTime: e.t,
+      rating: e.r,
+      verdict: e.v,
+      accent: e.a,
+      path: e.p,
+      excerpt: e.e,
+      deck: e.x,
+      minimumDeposit: e.m,
+      scorecard: dimsToObject(e.c),
+      chunkId: e.g,
+      ctaUrl: e.u || ctaUrlFor(e.n),
+    }))
+    // Newest first: Sep 15 reviews lead the listing, then Sep 14, and so on.
+    // The sort is stable, so reviews published on the same day keep their
+    // insertion order.
+    .sort((a, b) => (a.isoDate < b.isoDate ? 1 : a.isoDate > b.isoDate ? -1 : 0))
   const byRating = [...articles].sort((a, b) => b.rating - a.rating)
   return {
     articles,
