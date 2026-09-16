@@ -1820,28 +1820,6 @@ button {
   height: 100%;
 }
 
-/* article CTA */
-
-.article-cta {
-  text-align: center;
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 56px 40px;
-  margin-top: 64px;
-}
-
-.article-cta__title {
-  font-size: 22px;
-  margin-bottom: 8px;
-}
-
-.article-cta__note {
-  font-size: 13px;
-  color: var(--muted);
-  margin: 16px 0 0;
-}
-
 /* ---------- generic pages ---------- */
 
 .page-head {

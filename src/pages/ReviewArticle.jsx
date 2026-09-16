@@ -423,17 +423,6 @@ export default function ReviewArticle() {
               </Reveal>
             ))}
           </div>
-
-          <div className="article-cta">
-            <h2 className="article-cta__title">Ready to read the rest of the reviews?</h2>
-            <Link to="/#reviews" className="btn btn--green">
-              All reviews
-              <Icon name="arrow-right" size={15} />
-            </Link>
-            <p className="article-cta__note">
-              Nothing on this page is financial advice. Trading involves risk.
-            </p>
-          </div>
         </div>
       </div>
     </>
