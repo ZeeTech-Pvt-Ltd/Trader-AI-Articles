@@ -243,7 +243,47 @@ mkdirSync(CHUNK_DIR, { recursive: true })
 
 // Stable key order -> byte-identical re-runs.
 const manifest = { v: 1, count: entries.length, articles: entries }
-writeFileSync(MANIFEST_PATH, JSON.stringify(manifest))
+const manifestJson = JSON.stringify(manifest)
+writeFileSync(MANIFEST_PATH, manifestJson)
+// A plain copy in public/ is what the browser fetches at runtime (see
+// archive.js) - index.html preloads it so the download starts with the HTML.
+writeFileSync(join(ROOT, 'public', 'manifest.json'), manifestJson)
+
+// Tiny inline home stats (featured review + counts) written into index.html
+// so the hero stats and the lead-review card paint on the very first React
+// frame, before the big manifest resolves.
+{
+  const byRating = [...all].sort((a, b) => b.review.rating - a.review.rating)
+  const featured = byRating[0].review
+  const caution = all.filter((x) => x.review.verdict.startsWith('CAUTION')).length
+  const latest = all.reduce((best, x) => (isoDateOf(x.review.date) > isoDateOf(best.review.date) ? x : best), all[0])
+  const homeStats = JSON.stringify({
+    featured: {
+      name: featured.name,
+      rating: featured.rating,
+      verdict: featured.verdict,
+      accent: featured.accent,
+      path: pathOf(featured.slug),
+      headline: featured.headline,
+      deck: featured.deck,
+      byline: featured.byline,
+      date: featured.date,
+      readTime: featured.readTime,
+    },
+    count: entries.length,
+    cautionCount: caution,
+    latestDate: latest.review.date,
+  })
+  const htmlPath = join(ROOT, 'index.html')
+  const html = readFileSync(htmlPath, 'utf8')
+  writeFileSync(
+    htmlPath,
+    html.replace(
+      /<!-- home-stats:start -->[\s\S]*?<!-- home-stats:end -->/,
+      `<!-- home-stats:start -->\n    <script type="application/json" id="home-stats">${homeStats}</script>\n    <!-- home-stats:end -->`,
+    ),
+  )
+}
 
 if (!manifestOnly) {
   const keep = new Set()

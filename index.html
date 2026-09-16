@@ -26,10 +26,28 @@
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Fonts load without blocking first paint (the swap trick) - the
+         noscript link keeps them for browsers without JS. -->
     <link
+      rel="preload"
+      as="style"
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
-      rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+      />
+    </noscript>
+    <!-- Start the review manifest download with the HTML itself, in parallel
+         with the app bundle - it is the largest asset on the page. -->
+    <link rel="preload" href="/manifest.json" as="fetch" crossorigin="anonymous" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -52,20 +70,26 @@
         ]
       }
     </script>
+    <!-- home-stats:start -->
+    <script type="application/json" id="home-stats">{"featured":{"name":"Pumpreport News","rating":4.8,"verdict":"SAFE - WITH CONDITIONS","accent":"#b91c1c","path":"/trading/pumpreport-news-review","headline":"Pumpreport News: Worth Your US$200?","deck":"A US$200 minimum deposit, a demo account and signals from AI models - the Pumpreport News pitch in one sentence. This review tests the rest.","byline":"Stanley Druckenmiller","date":"Sep 16, 2026","readTime":"10 min read"},"count":2856,"cautionCount":88,"latestDate":"Sep 16, 2026"}</script>
+    <!-- home-stats:end -->
   </head>
   <body>
     <div id="root">
       <!-- Static first-paint shell: shown until React mounts and replaces it.
-           Mirrors the homepage skeleton so the very first frame already looks
-           like the review grid, even on slow connections. -->
-      <div style="max-width:1180px;margin:0 auto;padding:56px 24px">
-        <div style="display:grid;gap:24px;grid-template-columns:1fr;max-width:1180px">
-          <div style="height:18px;width:180px;border-radius:999px;background:#f0e6dc"></div>
-          <div style="height:38px;width:min(620px,90%);border-radius:10px;background:#eee9e2"></div>
-          <div style="height:16px;width:82%;border-radius:10px;background:#f0ede7"></div>
-          <div style="height:16px;width:64%;border-radius:10px;background:#f0ede7"></div>
+           Carries the real hero copy so the LCP text paints with the HTML,
+           before any JavaScript runs. -->
+      <div style="max-width:1180px;margin:0 auto;padding:64px 24px 40px">
+        <div style="max-width:660px">
+          <span style="display:inline-block;font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#b84c0f;background:#fdeee2;border:1px solid rgba(234,106,31,.28);border-radius:999px;padding:5px 13px">2026 Review Roundup</span>
+          <h1 style="font-family:Georgia,'Times New Roman',serif;font-weight:700;font-size:clamp(26px,4vw,40px);line-height:1.15;letter-spacing:-.01em;color:#0d1520;margin:20px 0 18px">Trader AI reviews that read the fine print <em style="font-style:italic;color:#ea6a1f">so you don't have to.</em></h1>
+          <p style="font-size:16px;line-height:1.7;color:#33414f;margin:0 0 22px">Every AI trading platform promises automation, accuracy and security. Very few publish a licence number. This site reviews those platforms one at a time - we read every page they publish, check the age and ownership of their domain, and look for any independent trace of them existing. Then we publish a verdict and the evidence behind it.</p>
+          <div style="display:flex;gap:12px;flex-wrap:wrap">
+            <a href="#reviews" style="display:inline-flex;align-items:center;gap:9px;padding:12px 22px;font-size:14.5px;font-weight:700;border-radius:10px;background:#ea6a1f;color:#fff;text-decoration:none">Browse all reviews</a>
+            <a href="#method" style="display:inline-flex;align-items:center;gap:9px;padding:12px 22px;font-size:14.5px;font-weight:700;border-radius:10px;background:#fff;border:1px solid #c9d2dc;color:#0d1520;text-decoration:none">How we rate</a>
+          </div>
         </div>
-        <div style="display:grid;gap:24px;grid-template-columns:repeat(3,1fr);margin-top:44px">
+        <div style="display:grid;gap:24px;grid-template-columns:repeat(3,1fr);margin-top:48px">
           <div style="height:210px;border-radius:14px;background:#f4f1ec;border:1px solid #ece7df"></div>
           <div style="height:210px;border-radius:14px;background:#f4f1ec;border:1px solid #ece7df"></div>
           <div style="height:210px;border-radius:14px;background:#f4f1ec;border:1px solid #ece7df"></div>

@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import useMeta from '../hooks/useMeta.js'
 import useArchive from '../hooks/useArchive.js'
-import { PAGE_SIZE } from '../data/reviews/archive.js'
+import { PAGE_SIZE, readStaticHomeData } from '../data/reviews/archive.js'
 import { RATING_DIMENSIONS } from '../data/site.js'
 import ReviewCard from '../components/ReviewCard.jsx'
 import Stars from '../components/Stars.jsx'
@@ -67,40 +67,19 @@ function initials(name) {
     .toUpperCase()
 }
 
-// Shown while the manifest loads (a single ~300KB gzip chunk, so only on the
-// first visit). Mirrors the hero + grid so there is no layout jump.
-function HomeSkeleton() {
+// Shimmer cards shown while the review manifest loads (first visit only).
+function GridSkeleton() {
   return (
-    <>
-      <section className="hero">
-        <div className="container">
-          <div className="hero__main">
-            <div className="skeleton skeleton--kicker" />
-            <div className="skeleton skeleton--title" />
-            <div className="skeleton skeleton--title" style={{ width: '70%' }} />
-            <div className="skeleton skeleton--line" />
-            <div className="skeleton skeleton--line" style={{ width: '82%' }} />
-          </div>
-          <div className="hero__stats">
-            <div className="skeleton skeleton--stats" />
-          </div>
+    <div className="review-grid">
+      {Array.from({ length: PAGE_SIZE }, (_, i) => (
+        <div className="review-card review-card--skeleton" key={i}>
+          <div className="skeleton skeleton--card-top" />
+          <div className="skeleton skeleton--card-title" />
+          <div className="skeleton skeleton--line" style={{ width: '90%' }} />
+          <div className="skeleton skeleton--line" style={{ width: '70%' }} />
         </div>
-      </section>
-      <section className="section" id="reviews">
-        <div className="container">
-          <div className="review-grid">
-            {Array.from({ length: PAGE_SIZE }, (_, i) => (
-              <div className="review-card review-card--skeleton" key={i}>
-                <div className="skeleton skeleton--card-top" />
-                <div className="skeleton skeleton--card-title" />
-                <div className="skeleton skeleton--line" style={{ width: '90%' }} />
-                <div className="skeleton skeleton--line" style={{ width: '70%' }} />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-    </>
+      ))}
+    </div>
   )
 }
 
@@ -154,17 +133,21 @@ export default function Home() {
         },
   )
 
-  if (!archive) return <HomeSkeleton />
-
-  const downgraded = archive.cautionCount
-  const latest = archive.latestDate
-
-  const HERO_STATS = [
-    { value: archive.count, label: 'Platforms reviewed', note: 'pulled from the record count, never typed' },
-    { value: 4, label: 'Checks on each platform', note: 'the four external verifications' },
-    { value: downgraded, label: 'Verdicts downgraded', note: 'how many you have lowered after a re-check' },
-    { value: latest, label: 'Last updated', note: 'the most recent check date across the index', date: true },
-  ]
+  // The hero is static copy - it renders immediately, before the manifest
+  // arrives. The lead review and the stat counts come from a tiny inline
+  // snippet baked into index.html at build time, so they paint on the first
+  // frame too; the grid is the only part that waits for the full manifest.
+  const staticHome = readStaticHomeData()
+  const featured = archive?.featured ?? staticHome?.featured ?? null
+  const statSource = archive ?? staticHome
+  const HERO_STATS = statSource
+    ? [
+        { value: statSource.count, label: 'Platforms reviewed', note: 'pulled from the record count, never typed' },
+        { value: 4, label: 'Checks on each platform', note: 'the four external verifications' },
+        { value: statSource.cautionCount, label: 'Verdicts downgraded', note: 'how many you have lowered after a re-check' },
+        { value: statSource.latestDate, label: 'Last updated', note: 'the most recent check date across the index', date: true },
+      ]
+    : []
 
   return (
     <>
@@ -202,61 +185,84 @@ export default function Home() {
                   <span className="hero__stats-title">By the numbers</span>
                   <span className="hero__stats-live" aria-hidden="true" />
                 </div>
-                {HERO_STATS.map((stat) => (
-                  <div className={`hero__stat ${stat.date ? 'hero__stat--date' : ''}`} key={stat.label}>
-                    <span className="hero__stat-num">
-                      {stat.date ? stat.value : String(stat.value).padStart(2, '0')}
-                    </span>
-                    <span className="hero__stat-text">
-                      <span className="hero__stat-label">{stat.label}</span>
-                      <span className="hero__stat-note">{stat.note}</span>
-                    </span>
-                  </div>
-                ))}
+                {HERO_STATS.length ? (
+                  HERO_STATS.map((stat) => (
+                    <div className={`hero__stat ${stat.date ? 'hero__stat--date' : ''}`} key={stat.label}>
+                      <span className="hero__stat-num">
+                        {stat.date ? stat.value : String(stat.value).padStart(2, '0')}
+                      </span>
+                      <span className="hero__stat-text">
+                        <span className="hero__stat-label">{stat.label}</span>
+                        <span className="hero__stat-note">{stat.note}</span>
+                      </span>
+                    </div>
+                  ))
+                ) : (
+                  Array.from({ length: 4 }, (_, i) => (
+                    <div className="hero__stat" key={i}>
+                      <div className="skeleton skeleton--line" style={{ width: '60%' }} />
+                    </div>
+                  ))
+                )}
               </aside>
             </div>
           </section>
 
           {/* ---- lead review ---- */}
-          <section className="featured">
-            <div className="container">
-              <Reveal className="featured__body">
-                <div className="featured__top">
-                  <span className="featured__chip">★ Lead review</span>
-                  <div className="featured__platform">
-                    <span
-                      className="tile"
-                      style={{ background: archive.featured.accent }}
-                      aria-hidden="true"
-                    >
-                      {initials(archive.featured.name)}
-                    </span>
-                    <span className="featured__platform-name">{archive.featured.name}</span>
+          {featured ? (
+            <section className="featured">
+              <div className="container">
+                <Reveal className="featured__body">
+                  <div className="featured__top">
+                    <span className="featured__chip">★ Lead review</span>
+                    <div className="featured__platform">
+                      <span
+                        className="tile"
+                        style={{ background: featured.accent }}
+                        aria-hidden="true"
+                      >
+                        {initials(featured.name)}
+                      </span>
+                      <span className="featured__platform-name">{featured.name}</span>
+                    </div>
                   </div>
+                  <h2 className="featured__title">
+                    <Link to={featured.path}>{featured.headline}</Link>
+                  </h2>
+                  <p className="featured__deck">{featured.deck}</p>
+                  <p className="featured__meta">
+                    By {featured.byline} &nbsp;·&nbsp; {featured.date} &nbsp;·&nbsp;{' '}
+                    {featured.readTime}
+                  </p>
+                  <div className="featured__actions">
+                    <Link to={featured.path} className="btn btn--green">
+                      Read the review
+                      <Icon name="arrow-right" size={15} />
+                    </Link>
+                  </div>
+                </Reveal>
+                <Reveal className="featured__side" delay={120}>
+                  <span className="featured__side-label">Our score</span>
+                  <span className="featured__score-num">{featured.rating.toFixed(1)}</span>
+                  <Stars value={featured.rating} style={{ fontSize: 22 }} />
+                  <VerdictChip verdict={featured.verdict} />
+                </Reveal>
+              </div>
+            </section>
+          ) : (
+            <section className="featured">
+              <div className="container">
+                <div className="featured__body">
+                  <div className="skeleton skeleton--kicker" />
+                  <div className="skeleton skeleton--title" style={{ marginTop: 16 }} />
+                  <div className="skeleton skeleton--line" style={{ width: '80%' }} />
                 </div>
-                <h2 className="featured__title">
-                  <Link to={archive.featured.path}>{archive.featured.headline}</Link>
-                </h2>
-                <p className="featured__deck">{archive.featured.deck}</p>
-                <p className="featured__meta">
-                  By {archive.featured.byline} &nbsp;·&nbsp; {archive.featured.date} &nbsp;·&nbsp;{' '}
-                  {archive.featured.readTime}
-                </p>
-                <div className="featured__actions">
-                  <Link to={archive.featured.path} className="btn btn--green">
-                    Read the review
-                    <Icon name="arrow-right" size={15} />
-                  </Link>
+                <div className="featured__side">
+                  <div className="skeleton skeleton--stats" style={{ height: 150 }} />
                 </div>
-              </Reveal>
-              <Reveal className="featured__side" delay={120}>
-                <span className="featured__side-label">Our score</span>
-                <span className="featured__score-num">{archive.featured.rating.toFixed(1)}</span>
-                <Stars value={archive.featured.rating} style={{ fontSize: 22 }} />
-                <VerdictChip verdict={archive.featured.verdict} />
-              </Reveal>
-            </div>
-          </section>
+              </div>
+            </section>
+          )}
         </>
       )}
 
@@ -273,7 +279,9 @@ export default function Home() {
                   : `${results.length} result${results.length === 1 ? '' : 's'} for “${query.trim()}”`
                 : isFirstPage
                   ? 'New reviews added regularly'
-                  : `Page ${page} of ${totalPages}`
+                  : archive
+                    ? `Page ${page} of ${totalPages}`
+                    : ''
             }
           />
 
@@ -298,7 +306,9 @@ export default function Home() {
             )}
           </div>
 
-          {searching && results.length === 0 ? (
+          {!archive ? (
+            <GridSkeleton />
+          ) : searching && results.length === 0 ? (
             <div className="noresults">
               Nothing matched “{query.trim()}”. Try a platform name like BTC, or clear the
               search to see every review.

@@ -34,9 +34,29 @@ export function ctaUrlFor(name) {
 let manifestPromise = null
 export function loadManifest() {
   // Module-level cache: StrictMode double-effects and re-navigations share
-  // one fetch, and Vite's import() cache covers the rest.
-  manifestPromise ??= import('./manifest.json').then((m) => buildArchive(m.default?.articles ?? m.articles ?? []))
+  // one fetch. Served from public/manifest.json (written by the generator)
+  // and preloaded by index.html, so the download starts with the HTML itself.
+  manifestPromise ??= fetch('/manifest.json')
+    .then((res) => {
+      if (!res.ok) throw new Error(`manifest ${res.status}`)
+      return res.json()
+    })
+    .then((manifest) => buildArchive(manifest.articles ?? []))
   return manifestPromise
+}
+
+// Home stats baked into index.html by the generator (featured review + counts)
+// - read synchronously so the lead-review card can paint before the manifest.
+let staticHomeData = null
+export function readStaticHomeData() {
+  if (staticHomeData !== null) return staticHomeData
+  try {
+    const el = document.getElementById('home-stats')
+    staticHomeData = el ? JSON.parse(el.textContent) : null
+  } catch {
+    staticHomeData = null
+  }
+  return staticHomeData
 }
 
 const chunkCache = new Map()
