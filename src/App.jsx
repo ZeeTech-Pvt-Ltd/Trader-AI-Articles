@@ -10,12 +10,13 @@ import Home from './pages/Home.jsx'
 const ReviewArticle = lazy(() => import('./pages/ReviewArticle.jsx'))
 const OfferPage = lazy(() => import('./pages/OfferPage.jsx'))
 const About = lazy(() => import('./pages/About.jsx'))
-// Legal pages are tiny - they stay in the main bundle.
-import PrivacyPolicy from './pages/PrivacyPolicy.jsx'
-import TermsOfUse from './pages/TermsOfUse.jsx'
-import RiskDisclosure from './pages/RiskDisclosure.jsx'
-import AdvertisingDisclosure from './pages/AdvertisingDisclosure.jsx'
-import NotFound from './pages/NotFound.jsx'
+// Legal pages and the 404 are rarely the entry page - they load on demand so
+// the initial bundle stays lean.
+const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy.jsx'))
+const TermsOfUse = lazy(() => import('./pages/TermsOfUse.jsx'))
+const RiskDisclosure = lazy(() => import('./pages/RiskDisclosure.jsx'))
+const AdvertisingDisclosure = lazy(() => import('./pages/AdvertisingDisclosure.jsx'))
+const NotFound = lazy(() => import('./pages/NotFound.jsx'))
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation()
@@ -89,12 +90,47 @@ export default function App() {
               </Suspense>
             }
           />
-          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="/terms-of-use" element={<TermsOfUse />} />
-          <Route path="/risk-disclosure" element={<RiskDisclosure />} />
-          <Route path="/advertising-disclosure" element={<AdvertisingDisclosure />} />
+          <Route
+            path="/privacy-policy"
+            element={
+              <Suspense fallback={<PageLoading />}>
+                <PrivacyPolicy />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/terms-of-use"
+            element={
+              <Suspense fallback={<PageLoading />}>
+                <TermsOfUse />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/risk-disclosure"
+            element={
+              <Suspense fallback={<PageLoading />}>
+                <RiskDisclosure />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/advertising-disclosure"
+            element={
+              <Suspense fallback={<PageLoading />}>
+                <AdvertisingDisclosure />
+              </Suspense>
+            }
+          />
           <Route path="/reviews" element={<Navigate to="/" replace />} />
-          <Route path="*" element={<NotFound />} />
+          <Route
+            path="*"
+            element={
+              <Suspense fallback={<PageLoading />}>
+                <NotFound />
+              </Suspense>
+            }
+          />
         </Routes>
       </main>
       <Footer />
