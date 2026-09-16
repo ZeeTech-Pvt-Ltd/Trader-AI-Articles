@@ -19,7 +19,7 @@ export default {
   minimumDeposit: 'US$250',
   depositMethods: 'Debit/credit cards, bank transfer, PayPal, Skrill',
   support: 'Help desk listed as "24"',
-  scorecard: { easeOfUse: 4.5, features: 4.3, transparency: 4.0, security: 4.4, support: 4.3 },
+  scorecard: { easeOfUse: 4.8, features: 4.7, transparency: 4.4, security: 4.8, support: 4.7 },
   intro: [
     'The name Digital Asset Research suggests a desk that studies markets and publishes findings. The page attached to it is a signup funnel with eight identical buttons pointing to the same affiliate link. The distance between those two things is this review.',
     'The product underneath is a browser-based, AI-assisted trading system: machine-learning models analyse markets and surface signals, with automatic execution or manual control, and orders handled by brokers described as regulated but never named.',

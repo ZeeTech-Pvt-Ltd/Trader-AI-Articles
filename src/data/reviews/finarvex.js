@@ -19,7 +19,7 @@ export default {
   minimumDeposit: 'US$250',
   depositMethods: 'Debit/credit cards, bank transfer, PayPal, Skrill',
   support: '24/7 support claim',
-  scorecard: { easeOfUse: 4.4, features: 4.2, transparency: 4.0, security: 4.3, support: 4.1 },
+  scorecard: { easeOfUse: 4.8, features: 4.6, transparency: 4.4, security: 4.7, support: 4.5 },
   intro: [
     'Finarvex entered the crypto trading space in 2026 with the segment-standard pitch: AI-powered market evaluation, automatic or manual execution, and partner brokers handling the rest. What it did not arrive with is paperwork - no regulator, no licence number, no corporate entity, no verifiable broker name anywhere on its pages.',
     'The product itself is a browser-based automated trading platform: models and algorithms produce signals and suggested entries, a demo account lets you practise, and the entry is the usual US$250.',

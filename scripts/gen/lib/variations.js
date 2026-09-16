@@ -26,7 +26,7 @@ const DAYS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
 // zero, so the mean of the five dims is exactly the target (to 1 dp) while
 // each dim stays within a believable band.
 function scorecardFor(rng, target) {
-  const maxUp = Math.min(0.3, 4.7 - target)
+  const maxUp = Math.min(0.3, 4.8 - target)
   const maxDown = Math.min(0.3, target - 3.6)
   const stepsUp = Math.round(maxUp * 10)
   const stepsDown = Math.round(maxDown * 10)
@@ -46,7 +46,7 @@ function scorecardFor(rng, target) {
         (o) => Math.round((target + o / 10) * 10) / 10,
       )
       // Clamp defensively and repair the mean if a clamp bit.
-      const dims = raw.map((d) => Math.min(4.7, Math.max(3.6, d)))
+      const dims = raw.map((d) => Math.min(4.8, Math.max(3.6, d)))
       const err = Math.round((target * 5 - dims.reduce((s, d) => s + d, 0)) * 10) / 10
       if (err !== 0) dims[4] = Math.round((dims[4] + err) * 10) / 10
       return { easeOfUse: dims[0], features: dims[1], transparency: dims[2], security: dims[3], support: dims[4] }
@@ -60,7 +60,10 @@ export function variationsFor(rng, index, sourceDate, sourceReadTime) {
   const depositRoll = rng()
   const minimumDeposit = depositRoll < 0.15 ? 'US$200' : depositRoll < 0.85 ? 'US$250' : 'US$300'
   const assets = int(rng, 8, 12)
-  const targetRating = Math.round((4.0 + int(rng, 0, 6) * 0.1) * 10) / 10
+  // Ratings sit in the 4.5-4.8 band; CAUTION verdicts take the bottom of it
+  // so a caution flag never wears a top score.
+  const caution = rng() < 0.03
+  const targetRating = caution ? 4.5 : Math.round((4.5 + int(rng, 0, 3) * 0.1) * 10) / 10
   const scorecard = scorecardFor(rng, targetRating)
   const rating = Math.round(
     ((scorecard.easeOfUse + scorecard.features + scorecard.transparency + scorecard.security + scorecard.support) / 5) * 10,
@@ -75,7 +78,6 @@ export function variationsFor(rng, index, sourceDate, sourceReadTime) {
 
   const byline = BYLINES[index % BYLINES.length]
   const accent = pick(rng, ACCENTS)
-  const caution = rng() < 0.03
   const verdict = caution ? 'CAUTION - LIMITED DISCLOSURE' : 'SAFE - WITH CONDITIONS'
 
   return { minimumDeposit, assets, scorecard, rating, date, readTime, byline, accent, caution, verdict }

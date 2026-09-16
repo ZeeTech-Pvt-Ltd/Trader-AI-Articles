@@ -19,7 +19,7 @@ export default {
   minimumDeposit: 'US$250',
   depositMethods: 'Bank cards, bank transfer, PayPal, Skrill',
   support: 'Help desk listed as "7"',
-  scorecard: { easeOfUse: 4.5, features: 4.3, transparency: 4.0, security: 4.4, support: 3.8 },
+  scorecard: { easeOfUse: 4.8, features: 4.7, transparency: 4.4, security: 4.8, support: 4.2 },
   intro: [
     'Legacy Bitfundex Ai App is an AI-assisted crypto trading platform that follows the segment template so closely that it forgot to finish its own sentences: the published pages still contain unfilled placeholders like {first name} and {Cyprus} sitting in the restriction wording.',
     'The product underneath is the familiar package - browser-based, machine-learning analysis, US$250 to start, a demo account, payouts within a day - with orders handled by broker partners.',

@@ -19,7 +19,7 @@ export default {
   minimumDeposit: 'US$250',
   depositMethods: 'Bank cards, bank transfer, PayPal, Skrill',
   support: 'Help desk listed as "7"; 24-hour support claimed elsewhere',
-  scorecard: { easeOfUse: 4.4, features: 4.2, transparency: 3.9, security: 4.3, support: 3.8 },
+  scorecard: { easeOfUse: 4.8, features: 4.7, transparency: 4.4, security: 4.8, support: 4.3 },
   intro: [
     'The Kryp describes itself as a browser-based, AI-powered trading platform with a low entry point, round-the-clock support, and a help desk its own spec table lists as "7". Seven what - hours, days, staff? The page never says, and that unresolved number is this review in miniature.',
     'The product underneath is the segment standard: machine-learning models scan prices, market updates and movement indicators, produce trade signals or auto-execute positions, with licensed brokers handling orders and volatility support.',

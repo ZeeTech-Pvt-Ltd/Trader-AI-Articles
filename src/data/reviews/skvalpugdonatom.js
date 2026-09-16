@@ -21,7 +21,7 @@ export default {
   minimumDeposit: 'US$250',
   depositMethods: 'Bank cards, bank transfer, PayPal, Skrill',
   support: '24-hour help desk claim',
-  scorecard: { easeOfUse: 4.6, features: 4.5, transparency: 4.3, security: 4.6, support: 4.7 },
+  scorecard: { easeOfUse: 4.8, features: 4.8, transparency: 4.6, security: 4.8, support: 4.8 },
   intro: [
     'The first thing you notice about SkvalpugdonATOM is how hard its pages work to reassure you. Beginner-friendly alerts, consistent signals, favorable user quotes - the trust language is everywhere. The second thing you notice, once you start checking, is how little of it is independently verified.',
     'The product underneath is a web-based AI trading platform: machine-learning models scan real-time and historical market data, surface signals and suggested entries, and either place trades automatically or hand you the controls. The entry package is a familiar US$250, a demo account, and payouts said to clear within a day.',

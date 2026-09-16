@@ -19,7 +19,7 @@ export default {
   minimumDeposit: 'US$250',
   depositMethods: 'Bank cards, bank transfer, PayPal, Skrill',
   support: 'Help desk listed as "24"',
-  scorecard: { easeOfUse: 4.4, features: 4.1, transparency: 3.8, security: 4.2, support: 4.0 },
+  scorecard: { easeOfUse: 4.8, features: 4.6, transparency: 4.3, security: 4.7, support: 4.5 },
   intro: [
     'Observatoire Gestion presents itself through headings like "Observatoire Gestion Cost Breakdown: A Observatoire Gestion Pricing: Costs, Fees…" - a sentence with two subjects and no grammar. The deposit it asks for is real, and this review holds the page to the standard the money deserves.',
     'The product is a web-based AI trading platform: models analyse markets, surface signals, and execute automatically or manually, with a US$250 entry and brokers handling the orders.',

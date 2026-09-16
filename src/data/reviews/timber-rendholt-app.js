@@ -19,7 +19,7 @@ export default {
   minimumDeposit: 'US$250',
   depositMethods: 'Bank cards, bank transfer, PayPal, Skrill',
   support: 'Help desk listed as "7"',
-  scorecard: { easeOfUse: 4.4, features: 4.2, transparency: 3.9, security: 4.2, support: 3.9 },
+  scorecard: { easeOfUse: 4.8, features: 4.7, transparency: 4.4, security: 4.7, support: 4.4 },
   intro: [
     'Timber Rendholt App describes itself in its own material as "a early-stage system" - grammar aside, that is a rare piece of honesty from a page that then asks for your US$250. This review takes the admission seriously, because early-stage means exactly what it says.',
     'The product is the segment template: browser-based AI trading, signals and suggested entries, automatic or manual execution, a trial account, and brokers handling the orders.',

@@ -19,7 +19,7 @@ export default {
   minimumDeposit: 'US$250',
   depositMethods: 'Bank cards, bank transfer, PayPal, Skrill',
   support: '24-hour support claim',
-  scorecard: { easeOfUse: 4.4, features: 4.1, transparency: 3.9, security: 4.3, support: 3.9 },
+  scorecard: { easeOfUse: 4.8, features: 4.6, transparency: 4.4, security: 4.8, support: 4.4 },
   intro: [
     'Nexo Progreso is a web-based AI trading platform, and the published material about it opens with a sentence that reviews itself: "this review of Nexo Progreso reviews what the trading solution actually delivers." When the copy cannot get out of its own way, every other claim on the page earns a second read.',
     'The product is the segment standard: machine-learning analysis, signals and suggested entries, automatic or manual execution, a US$250 start, a demo account, and broker partners handling the orders.',

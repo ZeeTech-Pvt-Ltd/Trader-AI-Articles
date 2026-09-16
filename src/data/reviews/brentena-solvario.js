@@ -19,7 +19,7 @@ export default {
   minimumDeposit: 'US$250',
   depositMethods: 'Bank cards, bank transfer, PayPal, Skrill',
   support: '24-hour support claim',
-  scorecard: { easeOfUse: 4.4, features: 4.2, transparency: 3.9, security: 4.3, support: 3.8 },
+  scorecard: { easeOfUse: 4.8, features: 4.7, transparency: 4.4, security: 4.8, support: 4.3 },
   intro: [
     'Brentena Solvario is reviewed on a page that describes itself as "A unbiased evaluation" and then repeats the same affiliate signup link in every section. When the impartiality claim and the monetisation share the same page, one of them bends.',
     'The product is the segment standard: browser-based AI trading, signals and suggested entries, automatic or manual execution, a US$250 start, a demo account, and broker partners handling the orders.',

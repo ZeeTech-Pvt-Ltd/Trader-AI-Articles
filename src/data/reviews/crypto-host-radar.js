@@ -19,7 +19,7 @@ export default {
   minimumDeposit: 'US$250',
   depositMethods: 'Bank cards, bank transfer, PayPal, Skrill',
   support: 'Around-the-clock claim; one bullet says "7 customer support"',
-  scorecard: { easeOfUse: 4.5, features: 4.2, transparency: 4.0, security: 4.4, support: 3.9 },
+  scorecard: { easeOfUse: 4.8, features: 4.6, transparency: 4.4, security: 4.8, support: 4.3 },
   intro: [
     'Crypto Host Radar advertises zero platform fees, then concedes in its own fine print that broker spreads are "the real cost" - embedded in every trade and compounding over time. Both statements are true. Only one made it into the headline, and that is the gap this review measures.',
     'The product is the segment standard: browser-based AI trading, signals and suggested entries, automatic or manual execution, a US$250 start and a demo account.',

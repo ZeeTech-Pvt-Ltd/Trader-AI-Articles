@@ -21,7 +21,7 @@ export default {
   minimumDeposit: 'US$250',
   depositMethods: 'Bank cards, bank transfer, PayPal, Skrill',
   support: 'Around-the-clock support claim',
-  scorecard: { easeOfUse: 4.5, features: 4.3, transparency: 4.1, security: 4.4, support: 4.4 },
+  scorecard: { easeOfUse: 4.8, features: 4.7, transparency: 4.5, security: 4.8, support: 4.8 },
   intro: [
     'Qoin Prime Capital is the most polished page in this batch - right up until you notice the unfilled template placeholders sitting in its own restriction wording. That detail tells you more about how the marketing is produced than any testimonial on the page, and it set the tone for this review.',
     'The product underneath is a web-based, AI-powered trading platform: machine-learning models and algorithmic scanning produce signals and potential entries, with automatic execution or manual control. The entry package is the segment standard - US$250, a practice account, payouts within 24 hours - executed through regulated brokers.',

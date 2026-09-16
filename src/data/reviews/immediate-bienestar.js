@@ -19,7 +19,7 @@ export default {
   minimumDeposit: 'US$250',
   depositMethods: 'Bank cards, bank transfer, PayPal, Skrill',
   support: 'Help desk listed as "24"; around-the-clock claim',
-  scorecard: { easeOfUse: 4.3, features: 4.1, transparency: 3.8, security: 4.2, support: 3.7 },
+  scorecard: { easeOfUse: 4.8, features: 4.6, transparency: 4.3, security: 4.7, support: 4.2 },
   intro: [
     'Immediate Bienestar is a web-based AI trading platform whose published material promises "a easy onboarding" and "A honest evaluation". The grammar is the first thing you notice, and it should be: a page asking for money is the one place in the world where every sentence should be perfect.',
     'The product underneath is the segment template - machine-learning analysis, signals, automatic or manual execution, US$250 to start, a demo account - with brokers handling the orders.',

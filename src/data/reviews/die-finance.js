@@ -21,7 +21,7 @@ export default {
   minimumDeposit: 'US$250',
   depositMethods: 'Debit/credit cards, bank transfer, PayPal, Skrill',
   support: '24-hour support claim',
-  scorecard: { easeOfUse: 4.6, features: 4.4, transparency: 4.3, security: 4.6, support: 4.6 },
+  scorecard: { easeOfUse: 4.8, features: 4.7, transparency: 4.6, security: 4.8, support: 4.8 },
   intro: [
     'The pitch for Die Finance is that automation replaces effort. It does not replace risk, and that distinction runs through this entire review. The platform is a web-based, AI-assisted trading system: machine-learning models analyse markets, surface signals and suggested positions, and either place trades automatically or leave the decisions to you in manual mode.',
     'The entry package is low and sensible - US$250 to start, no account-opening fee, a practice account, and withdrawals the platform says are typically completed within a day. Execution flows through regulated broker partners, which means the real trading costs - bid-ask spreads and overnight funding - sit on their side of the fence.',

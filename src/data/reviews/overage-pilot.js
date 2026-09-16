@@ -19,7 +19,7 @@ export default {
   minimumDeposit: 'US$250',
   depositMethods: 'Bank cards, bank transfer, PayPal, Skrill',
   support: 'Around-the-clock support claim',
-  scorecard: { easeOfUse: 4.4, features: 4.2, transparency: 3.9, security: 4.2, support: 3.8 },
+  scorecard: { easeOfUse: 4.8, features: 4.7, transparency: 4.4, security: 4.7, support: 4.3 },
   intro: [
     'Overage Pilot opens its published material with two paragraphs that say nearly the same thing twice, and its sub-scores - 4.5, 4.4, 4.5 and 4.6 - do not average to the 4.6 overall it claims. When both the words and the numbers misbehave, the product earns a second look.',
     'The platform itself is the segment standard: browser-based AI trading, signals and suggested entries, automatic or manual execution, a US$250 start and a demo account, with brokers handling the orders.',

@@ -19,7 +19,7 @@ export default {
   minimumDeposit: 'US$250',
   depositMethods: 'Bank cards, bank transfer, PayPal, Skrill',
   support: '"24-hour support" claim; one bullet says "7 customer support"',
-  scorecard: { easeOfUse: 4.5, features: 4.3, transparency: 4.0, security: 4.4, support: 3.9 },
+  scorecard: { easeOfUse: 4.8, features: 4.7, transparency: 4.4, security: 4.8, support: 4.3 },
   intro: [
     'Cerfinax is described in its published material as a real and working AI trading platform - and that description comes from a page that is paid when you sign up. The recommendation itself is worthless as evidence. The product still deserves a fair check, and this review does it.',
     'The platform is an AI-assisted crypto trading system: models analyse markets, surface signals, and execute automatically or manually, with a US$250 entry and a demo account.',

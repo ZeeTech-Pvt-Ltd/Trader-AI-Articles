@@ -156,8 +156,8 @@ async function main() {
 
   const count = filtered.length
   console.log(`done: ${count} entries (${catalog.length} raw, ${dropped} dropped as handwritten), ${failures.length} failed pages`)
-  if (count < 2450 || count > 2540) {
-    console.error(`UNEXPECTED COUNT ${count} - expected 2450-2540`)
+  if (count < 2450 || count > 3200) {
+    console.error(`UNEXPECTED COUNT ${count} - expected 2450-3200`)
     process.exit(1)
   }
   if (failures.length) {

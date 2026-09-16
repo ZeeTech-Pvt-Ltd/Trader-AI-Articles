@@ -21,7 +21,7 @@ export default {
   minimumDeposit: 'US$250',
   depositMethods: 'Bank cards, bank transfer, PayPal, Skrill',
   support: 'Help desk hours not clearly stated',
-  scorecard: { easeOfUse: 4.5, features: 4.2, transparency: 4.0, security: 4.4, support: 4.0 },
+  scorecard: { easeOfUse: 4.8, features: 4.6, transparency: 4.4, security: 4.8, support: 4.4 },
   intro: [
     'Vinty AI answers most spec-table questions in a single word, and the details reward a close read. For system type: web-based. For minimum deposit: US$250. For the help desk: "7". Seven what? Hours a week? Days a week? The page never says - and that one-word answer set the tone for this entire review.',
     'The product itself is a browser-based, AI-driven trading tool: machine-learning models generate signals and suggested positions, and you can let the system execute automatically or switch to manual control. It is aimed at beginners, mid-level traders and experienced users alike.',

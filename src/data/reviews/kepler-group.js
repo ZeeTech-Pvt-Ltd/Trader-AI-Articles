@@ -19,7 +19,7 @@ export default {
   minimumDeposit: 'US$250',
   depositMethods: 'Debit/credit cards, bank transfer, PayPal, Skrill',
   support: '24/7 help desk claim',
-  scorecard: { easeOfUse: 4.6, features: 4.4, transparency: 4.4, security: 4.6, support: 4.5 },
+  scorecard: { easeOfUse: 4.8, features: 4.7, transparency: 4.7, security: 4.8, support: 4.8 },
   intro: [
     'Kepler Group is pitched at exactly one person: the cautious beginner who wants a guided, low-cost way into AI-assisted trading. The onboarding holds your hand through signup, funding and configuration, and the advice everywhere is the same - start at the floor, use the demo, watch your positions.',
     'The platform is browser-based, with AI models and algorithms surfacing signals and suggested entries, automatic or manual execution, and orders placed through licensed broker partners that apply risk controls during volatility.',

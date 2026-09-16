@@ -19,7 +19,7 @@ export default {
   minimumDeposit: 'US$250',
   depositMethods: 'Debit/credit cards, bank transfer, PayPal, Skrill',
   support: '24-hour help desk claim',
-  scorecard: { easeOfUse: 4.6, features: 4.4, transparency: 4.3, security: 4.6, support: 4.6 },
+  scorecard: { easeOfUse: 4.8, features: 4.7, transparency: 4.6, security: 4.8, support: 4.8 },
   intro: [
     'Priors markets itself to everyone - newcomers, intermediate investors and experienced traders. The strongest case it makes is the last one: a second set of eyes on markets you already understand. For anyone expecting the AI to replace their judgment, the pitch overpromises.',
     'The product is a browser-based AI trading platform: machine-learning analysis plus algorithmic scanning of live and historical prices, news and momentum signals, with automatic execution or manual control and partner brokers handling the rest.',

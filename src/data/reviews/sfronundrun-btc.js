@@ -21,7 +21,7 @@ export default {
   minimumDeposit: 'US$250',
   depositMethods: 'Bank cards, bank transfer, PayPal, Skrill',
   support: 'Help desk hours not clearly stated',
-  scorecard: { easeOfUse: 4.5, features: 4.4, transparency: 4.2, security: 4.5, support: 4.4 },
+  scorecard: { easeOfUse: 4.8, features: 4.7, transparency: 4.5, security: 4.8, support: 4.7 },
   intro: [
     'A trading platform lives and dies by its support desk, so that is where we started with Sfronundrun BTC. The platform promises payouts in under a day, but the published material never clearly states when its help desk is actually staffed - and that mismatch shaped this whole review.',
     'The product itself is an online AI-powered trading platform: machine-learning models scan price data, news and movement indicators, then surface trade signals or place trades themselves in automatic mode. A manual mode exists for traders who prefer their own judgment.',

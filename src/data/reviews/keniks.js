@@ -19,7 +19,7 @@ export default {
   minimumDeposit: 'US$250',
   depositMethods: 'Bank cards, bank transfer, PayPal, Skrill',
   support: 'Around-the-clock claim; "7 customer support" mentioned',
-  scorecard: { easeOfUse: 4.4, features: 4.2, transparency: 3.9, security: 4.2, support: 3.8 },
+  scorecard: { easeOfUse: 4.8, features: 4.7, transparency: 4.4, security: 4.7, support: 4.3 },
   intro: [
     'Keniks publishes one 4.6 figure and uses it twice: once as the platform score and once as the "early community response". One number, two meanings, and only one of them is a measurement - the other is a mood. This review unpacks which is which.',
     'The product is a browser-based AI trading platform: models analyse markets, surface signals, and execute automatically or manually, with a US$250 start and a demo account.',

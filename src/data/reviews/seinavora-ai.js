@@ -19,7 +19,7 @@ export default {
   minimumDeposit: 'US$250',
   depositMethods: 'Bank cards, bank transfer, PayPal, Skrill',
   support: '24-hour support claim',
-  scorecard: { easeOfUse: 4.5, features: 4.4, transparency: 4.2, security: 4.4, support: 4.5 },
+  scorecard: { easeOfUse: 4.8, features: 4.7, transparency: 4.5, security: 4.7, support: 4.8 },
   intro: [
     'Seinavora AI is marketed as beginner-friendly with timely alerts and high return opportunities. Both halves of that sentence deserve separate scrutiny, because a platform can be genuinely built and still wildly overpromise - and that is exactly the line this review walks.',
     'The product is a web-based, AI-assisted crypto trading system: models plus algorithmic scanning of prices, news and trend signals, automatic or manual execution, and orders processed through authorized brokerage partners.',

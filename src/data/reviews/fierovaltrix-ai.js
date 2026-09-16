@@ -19,7 +19,7 @@ export default {
   minimumDeposit: 'US$250',
   depositMethods: 'Bank cards, bank transfer, PayPal, Skrill',
   support: 'Around-the-clock support claim',
-  scorecard: { easeOfUse: 4.5, features: 4.4, transparency: 4.1, security: 4.5, support: 4.5 },
+  scorecard: { easeOfUse: 4.8, features: 4.7, transparency: 4.4, security: 4.8, support: 4.8 },
   intro: [
     'Fierovaltrix AI is marketed as beginner-friendly with high return opportunities, and the product behind the marketing is real enough: a browser-based AI trading system that scans live and historical price data, news and trend signals, then generates trade signals or places trades automatically.',
     'The entry package is the segment standard - US$250, a trial account, withdrawals usually within 24 hours - executed through partner brokers. The recurring costs are the spreads and overnight funding the fee messaging does not itemise.',

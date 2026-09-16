@@ -24,7 +24,7 @@ export default {
   minimumDeposit: 'US$250',
   depositMethods: 'Bank card, bank transfer, PayPal, Skrill',
   support: '24-hour help desk claim',
-  scorecard: { easeOfUse: 4.7, features: 4.5, transparency: 4.4, security: 4.6, support: 4.8 },
+  scorecard: { easeOfUse: 4.8, features: 4.7, transparency: 4.6, security: 4.8, support: 4.8 },
   intro: [
     'Every platform in this segment promises an AI that watches the market for you. SkvivrelanATOM is one of the few whose basics actually hold up under a close read: a browser-based tool with machine-learning models producing signals, automatic or manual execution, and an onboarding flow that does not ask for more than it needs.',
     'The entry package is honest enough - US$250 to fund the account, no sign-up fee, a practice account to learn on, and withdrawals the platform says are normally processed within 24 hours. Orders flow through authorised brokerage partners, which is where the fine print starts to matter.',

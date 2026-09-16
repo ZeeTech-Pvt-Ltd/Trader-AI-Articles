@@ -19,7 +19,7 @@ export default {
   minimumDeposit: 'US$250',
   depositMethods: 'Bank cards, bank transfer, PayPal, Skrill',
   support: '"24" and "7 customer support" both claimed',
-  scorecard: { easeOfUse: 4.4, features: 4.2, transparency: 3.9, security: 4.3, support: 3.8 },
+  scorecard: { easeOfUse: 4.8, features: 4.7, transparency: 4.4, security: 4.8, support: 4.3 },
   intro: [
     'Pioneer Kapitium App cannot decide how much support it offers: the spec table says "Customer Support 24", and the pros list says "7 customer support". Both figures sit on the same page, and neither comes with an explanation. When a platform contradicts itself about its own support, this review starts there.',
     'The product is a web-based AI trading platform: models analyse markets, surface signals, and execute automatically or manually, with broker partners handling the orders.',

@@ -19,7 +19,7 @@ export default {
   minimumDeposit: 'US$250',
   depositMethods: 'Bank cards, bank transfer, PayPal, Skrill',
   support: 'Around-the-clock claim; one bullet says "7 customer support"',
-  scorecard: { easeOfUse: 4.4, features: 4.1, transparency: 3.9, security: 4.2, support: 3.9 },
+  scorecard: { easeOfUse: 4.8, features: 4.6, transparency: 4.4, security: 4.7, support: 4.4 },
   intro: [
     'Nuqodi is a web-based AI trading platform, and its published material promises "A honest evaluation" with the same template as a dozen other pages in this index. The honesty claim and the template are in tension, and this review sorts out which one wins.',
     'The product is the segment standard: machine-learning analysis, signals, automatic or manual execution, a US$250 start and a demo account, with brokers handling the orders.',

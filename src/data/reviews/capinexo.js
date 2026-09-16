@@ -19,7 +19,7 @@ export default {
   minimumDeposit: 'US$250',
   depositMethods: 'Bank cards, bank transfer, PayPal, Skrill',
   support: 'Help desk "available around the clock"; table says "24"',
-  scorecard: { easeOfUse: 4.4, features: 4.2, transparency: 3.9, security: 4.2, support: 3.9 },
+  scorecard: { easeOfUse: 4.8, features: 4.7, transparency: 4.4, security: 4.7, support: 4.4 },
   intro: [
     'CapiNexo arrives with the segment-standard package - US$250 entry, no enrollment fee, a demo account, AI-driven signals - and a heading that promises "A In-Depth Analysis". When the first words on the page need editing, the rest of the claims earn a second look.',
     'The product itself is a web-based AI trading platform: machine-learning models analyse markets, surface signals and suggested entries, and execute automatically or leave the decisions to you.',

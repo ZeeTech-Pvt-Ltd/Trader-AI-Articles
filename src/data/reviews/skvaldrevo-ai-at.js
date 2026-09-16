@@ -19,7 +19,7 @@ export default {
   minimumDeposit: 'US$250',
   depositMethods: 'Bank cards, bank transfer, PayPal, Skrill',
   support: '24/7 help desk claim',
-  scorecard: { easeOfUse: 4.4, features: 4.2, transparency: 4.0, security: 4.4, support: 4.0 },
+  scorecard: { easeOfUse: 4.8, features: 4.6, transparency: 4.4, security: 4.8, support: 4.4 },
   intro: [
     'The most useful thing on Skvaldrevo AI AT is the demo account: virtual money, mirroring current markets, with all the signals and settings the live system uses. It teaches you the platform - and if you use it honestly, it also teaches you what losing weeks feel like.',
     'The product itself is a web-based, AI-powered trading platform: models analyse real-time and historical data, news and momentum signals, then generate signals or auto-execute, with orders handled by authorized brokerage partners.',

@@ -19,7 +19,7 @@ export default {
   minimumDeposit: 'US$250',
   depositMethods: 'Debit/credit cards, bank transfer, PayPal, Skrill',
   support: 'Round-the-clock support claim',
-  scorecard: { easeOfUse: 4.5, features: 4.3, transparency: 4.1, security: 4.4, support: 4.2 },
+  scorecard: { easeOfUse: 4.8, features: 4.7, transparency: 4.5, security: 4.8, support: 4.6 },
   intro: [
     'AlgoVerse Bot makes a small promise and breaks it immediately. The marketing says the asset selection is extensive and suits users wanting more than crypto spot markets - and then lists ten assets, every one of them crypto. That mismatch is the thread this review pulls.',
     'The product itself is an online, AI-assisted crypto trading system: models scan real-time and historical data, news and movement indicators, surface signals or place trades automatically, with broker partners handling execution and risk measures.',

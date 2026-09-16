@@ -19,7 +19,7 @@ export default {
   minimumDeposit: 'US$250',
   depositMethods: 'Bank cards, bank transfer, PayPal, Skrill',
   support: 'Help desk listed as "24"',
-  scorecard: { easeOfUse: 4.5, features: 4.3, transparency: 4.0, security: 4.4, support: 3.9 },
+  scorecard: { easeOfUse: 4.8, features: 4.7, transparency: 4.4, security: 4.8, support: 4.3 },
   intro: [
     'Nordiqo AI is the second platform in this index to carry the Nordiqo name, and the similarities do not stop there: the same template, the same US$250 entry, and the same set of gaps in the published material. That sameness is itself a finding worth reading.',
     'The product is a browser-based AI trading platform: machine-learning models analyse markets, surface signals, and execute automatically or leave the decisions to you, with brokers handling the orders.',

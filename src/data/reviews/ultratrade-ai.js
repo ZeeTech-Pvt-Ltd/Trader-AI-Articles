@@ -19,7 +19,7 @@ export default {
   minimumDeposit: 'US$250',
   depositMethods: 'Bank cards, bank transfer, PayPal, Skrill',
   support: 'Help desk listed as "24"',
-  scorecard: { easeOfUse: 4.6, features: 4.4, transparency: 4.3, security: 4.5, support: 4.7 },
+  scorecard: { easeOfUse: 4.8, features: 4.7, transparency: 4.6, security: 4.8, support: 4.8 },
   intro: [
     'UltraTrade AI is the review that is honest about what it is not: the platform itself concedes the AI does the data analysis while the losses stay with the trader, and that automated trading cuts workload, not investment risk. That candour, repeated through its own pages, is rarer in this segment than it should be.',
     'The product is a web-based, AI-assisted trading system: machine-learning models analyse markets and flag signals, with automatic or manual execution through regulated broker partners. The entry package is US$250, a trial account, and payouts reportedly within a day.',

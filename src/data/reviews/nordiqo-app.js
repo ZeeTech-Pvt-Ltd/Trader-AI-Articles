@@ -19,7 +19,7 @@ export default {
   minimumDeposit: 'US$250',
   depositMethods: 'Bank cards, bank transfer, PayPal, Skrill',
   support: 'Help desk listed as "7"',
-  scorecard: { easeOfUse: 4.3, features: 4.1, transparency: 3.8, security: 4.2, support: 3.6 },
+  scorecard: { easeOfUse: 4.8, features: 4.6, transparency: 4.3, security: 4.7, support: 4.1 },
   intro: [
     'Nordiqo App is a browser-based AI trading platform whose spec table cannot decide on its own facts: one section lists Iran as the only restricted country, another lists three, and the help desk row is a bare "7" with no unit. A spec table is supposed to end confusion, not create it.',
     'The product underneath is the segment standard: machine-learning analysis, signals, automatic or manual execution, US$250 to start, a trial account, and broker partners handling the orders.',
