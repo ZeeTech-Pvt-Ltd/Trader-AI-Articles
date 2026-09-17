@@ -130,6 +130,9 @@ export default function Home() {
           description:
             'More reviews from the Trader AI archive - what each platform claims, what we verified, and our verdict.',
           path: `page/${page}`,
+          // Pagination pages stay out of search results; the links on them are
+          // still followed so crawlers reach every review article.
+          robots: 'noindex, follow',
         },
   )
 

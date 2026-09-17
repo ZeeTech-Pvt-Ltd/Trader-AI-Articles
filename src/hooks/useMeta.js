@@ -14,8 +14,10 @@ function upsertMeta(attr, key, content) {
 
 // Per-route SEO: title, description, canonical, Open Graph and Twitter tags.
 // appendSite=false skips the "| Trader AI" suffix (used on review pages,
-// where the platform name already carries the keyword).
-export default function useMeta({ title, description, path, appendSite = true, author }) {
+// where the platform name already carries the keyword). robots defaults to
+// index, follow; pass "noindex, nofollow" for pages that must stay out of
+// search results (legal pages).
+export default function useMeta({ title, description, path, appendSite = true, author, robots = 'index, follow' }) {
   useEffect(() => {
     const fullTitle = title
       ? appendSite
@@ -28,6 +30,7 @@ export default function useMeta({ title, description, path, appendSite = true, a
     const url = `${SITE.url}${(path || '').replace(/^\//, '')}`
 
     upsertMeta('name', 'description', desc)
+    upsertMeta('name', 'robots', robots)
     if (author) upsertMeta('name', 'author', author)
     upsertMeta('property', 'og:title', fullTitle)
     upsertMeta('property', 'og:description', desc)
