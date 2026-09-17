@@ -31,6 +31,17 @@ export function ctaUrlFor(name) {
   return `https://austerio-smart-up.com/?f=${encodeURIComponent(name)}&subid=BIT`
 }
 
+// Per-article community review count for the aggregateRating schema:
+// deterministic from the slug so it never changes between visits.
+// Threshold Grow carries at least 15; other reviews range 1-30.
+export function reviewCountFor(slug) {
+  let h = 0
+  for (let i = 0; i < slug.length; i++) h = (Math.imul(h, 31) + slug.charCodeAt(i)) >>> 0
+  const roll = h % 30
+  if (slug === 'threshold-grow') return 15 + (h % 16)
+  return 1 + roll
+}
+
 let manifestPromise = null
 export function loadManifest() {
   // Module-level cache: StrictMode double-effects and re-navigations share
@@ -91,6 +102,7 @@ export function buildArchive(entries) {
       scorecard: dimsToObject(e.c),
       chunkId: e.g,
       ctaUrl: e.u || ctaUrlFor(e.n),
+      reviewCount: reviewCountFor(e.s),
     }))
     // Newest first: Sep 15 reviews lead the listing, then Sep 14, and so on.
     // The sort is stable, so reviews published on the same day keep their

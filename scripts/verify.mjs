@@ -51,6 +51,13 @@ for (const entry of samples) {
   ok(entry.path === `/trading/${entry.slug}-review`, `${entry.slug}: canonical path shape`)
 }
 
+// Threshold Grow's aggregate reviewCount must be at least 15.
+{
+  const tg = archive.bySlug.get('threshold-grow')
+  ok(!!tg, 'threshold-grow review exists in the archive')
+  ok(tg?.reviewCount >= 15, `threshold-grow: reviewCount ${tg?.reviewCount} >= 15`)
+}
+
 // ---- browser checks -------------------------------------------------------
 
 const browser = await chromium.launch({ channel: 'chrome', headless: true })
@@ -132,6 +139,11 @@ for (const entry of samples.slice(0, 8)) {
       jsonLd.reviewRating?.ratingValue === entry.rating.toFixed(1),
     `${entry.slug}: review schema structure (product + aggregateRating)`,
   )
+  const count = Number(jsonLd.itemReviewed?.aggregateRating?.reviewCount)
+  ok(Number.isInteger(count) && count >= 1, `${entry.slug}: aggregateRating reviewCount is a positive integer`)
+  if (entry.slug === 'threshold-grow') {
+    ok(count >= 15, `threshold-grow: reviewCount ${count} >= 15`)
+  }
   const canonical = await page.getAttribute('link[rel="canonical"]', 'href')
   ok(canonical === `https://traderai.ai/${entry.path.replace(/^\//, '')}`, `${entry.slug}: canonical URL correct`)
   ok(!consoleErrors.has(page), `${entry.slug}: no console errors`)

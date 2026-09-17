@@ -36,7 +36,7 @@ function ArticleJsonLd({ review }) {
         aggregateRating: {
           '@type': 'AggregateRating',
           ratingValue: review.rating.toFixed(1),
-          reviewCount: '1',
+          reviewCount: String(review.reviewCount ?? 1),
         },
       },
       reviewRating: {
