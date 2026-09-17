@@ -162,7 +162,9 @@ export default function ReviewArticle() {
   const review = ready ? { ...entry, ...body } : entry
 
   useMeta({
-    title: entry ? entry.headline : 'Review not found',
+    // The SEO title lives in the body chunk (or is a per-article override);
+    // the headline stands in until the chunk resolves.
+    title: body ? body.seoTitle || entry.headline : entry ? entry.headline : 'Review not found',
     // The full deck arrives with the body chunk; the excerpt stands in for
     // the meta description until then.
     description: body ? body.seoDescription || body.deck : entry ? entry.excerpt : null,

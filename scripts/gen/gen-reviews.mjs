@@ -24,9 +24,25 @@ const MANIFEST_PATH = join(REVIEWS_DIR, 'manifest.json')
 const CATALOG_PATH = join(ROOT, 'scripts', 'catalog.json')
 const OVERRIDES_PATH = join(__dirname, 'overrides.json')
 
-// Per-article CTA overrides (slug -> custom campaign URL). Overrides the
-// derived Austerio URL for that one review's buttons.
+// Per-article overrides (slug -> { ctaUrl?, headline?, seoTitle?,
+// seoDescription?, deck?, name? }). A custom ctaUrl overrides the derived
+// Austerio URL; the other fields override the generated copy for that review.
 const overrides = existsSync(OVERRIDES_PATH) ? JSON.parse(readFileSync(OVERRIDES_PATH, 'utf8')) : {}
+const OVERRIDE_FIELDS = ['name', 'headline', 'seoTitle', 'seoDescription', 'deck', 'ctaUrl']
+
+function applyOverrides(review) {
+  const patch = overrides[review.slug]
+  if (!patch || typeof patch !== 'object') return review
+  const next = { ...review }
+  for (const field of OVERRIDE_FIELDS) {
+    if (patch[field] !== undefined) next[field] = patch[field]
+  }
+  // A changed headline carries the SEO title with it unless one is given.
+  if (patch.headline && patch.seoTitle === undefined && patch.headline !== review.headline) {
+    next.seoTitle = patch.headline
+  }
+  return next
+}
 
 const DIM_KEYS = ['easeOfUse', 'features', 'transparency', 'security', 'support']
 const BODY_FIELDS = [
@@ -81,10 +97,7 @@ function bodyOf(review, customCtaUrl) {
 
 const all = []
 for (const rawReview of handwritten) {
-  const review = overrides[rawReview.slug]
-    ? { ...rawReview, ctaUrl: overrides[rawReview.slug] }
-    : rawReview
-  all.push({ review, generated: false })
+  all.push({ review: applyOverrides(rawReview), generated: false })
 }
 if (catalog) {
   const handwrittenSlugs = new Set(handwritten.map((r) => r.slug))
@@ -92,8 +105,7 @@ if (catalog) {
   for (const entry of catalog.entries) {
     if (handwrittenSlugs.has(entry.slug)) continue
     const built = buildArticle(entry, index, rngFor(entry.slug))
-    const review = overrides[entry.slug] ? { ...built, ctaUrl: overrides[entry.slug] } : built
-    all.push({ review, generated: true })
+    all.push({ review: applyOverrides(built), generated: true })
     index++
   }
 }
