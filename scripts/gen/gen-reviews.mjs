@@ -30,9 +30,9 @@ const overrides = existsSync(OVERRIDES_PATH) ? JSON.parse(readFileSync(OVERRIDES
 
 const DIM_KEYS = ['easeOfUse', 'features', 'transparency', 'security', 'support']
 const BODY_FIELDS = [
-  'tagline', 'seoTitle', 'seoDescription', 'targetMarket', 'depositMethods',
-  'support', 'intro', 'whatItClaims', 'whatWeChecked', 'steps', 'pros',
-  'cons', 'redFlags', 'faqs', 'bottomLine', 'domain',
+  'tagline', 'seoTitle', 'seoDescription', 'deck', 'targetMarket',
+  'depositMethods', 'support', 'intro', 'whatItClaims', 'whatWeChecked',
+  'steps', 'pros', 'cons', 'redFlags', 'faqs', 'bottomLine', 'domain',
 ]
 const CHUNK_SIZE = 10
 const manifestOnly = process.argv.includes('--manifest-only')
@@ -61,8 +61,9 @@ function manifestEntry(review, chunkId, customCtaUrl) {
     v: review.verdict,
     a: review.accent,
     p: pathOf(review.slug),
+    // e = excerpt (cards/search); the full deck lives in the body chunk so
+    // the manifest stays as small as possible.
     e: excerptOf(review.deck),
-    x: review.deck,
     m: review.minimumDeposit,
     c: DIM_KEYS.map((key) => review.scorecard[key]),
     g: chunkId,

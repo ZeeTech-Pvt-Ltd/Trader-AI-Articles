@@ -141,7 +141,9 @@ export default function Home() {
   // snippet baked into index.html at build time, so they paint on the first
   // frame too; the grid is the only part that waits for the full manifest.
   const staticHome = readStaticHomeData()
-  const featured = archive?.featured ?? staticHome?.featured ?? null
+  // The inline home-stats snippet carries the featured review's full deck;
+  // the manifest only carries excerpts, so prefer the snippet for display.
+  const featured = staticHome?.featured ?? archive?.featured ?? null
   const statSource = archive ?? staticHome
   const HERO_STATS = statSource
     ? [

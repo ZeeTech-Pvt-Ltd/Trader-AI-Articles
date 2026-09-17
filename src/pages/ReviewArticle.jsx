@@ -163,7 +163,9 @@ export default function ReviewArticle() {
 
   useMeta({
     title: entry ? entry.headline : 'Review not found',
-    description: body ? body.seoDescription || entry.deck : entry ? entry.deck : null,
+    // The full deck arrives with the body chunk; the excerpt stands in for
+    // the meta description until then.
+    description: body ? body.seoDescription || body.deck : entry ? entry.excerpt : null,
     path: entry ? entry.path : pathname,
     appendSite: false,
     author: entry ? entry.byline : null,
@@ -232,7 +234,12 @@ export default function ReviewArticle() {
           </div>
 
           <h1 className="article-head__title">{entry.headline}</h1>
-          <p className="article-head__deck">{entry.deck}</p>
+          {review.deck ? (
+            <p className="article-head__deck">{review.deck}</p>
+          ) : (
+            /* reserve the deck line while the body chunk loads - no layout shift */
+            <div className="skeleton skeleton--line" style={{ maxWidth: 640, margin: '0 0 22px' }} />
+          )}
 
           <div className="article-head__meta">
             <span className="article-head__byline">

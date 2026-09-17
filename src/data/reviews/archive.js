@@ -97,7 +97,10 @@ export function buildArchive(entries) {
       accent: e.a,
       path: e.p,
       excerpt: e.e,
-      deck: e.x,
+      // The full deck lives in the body chunk (the manifest only carries the
+      // excerpt); the home page's lead review reads its deck from the inline
+      // home-stats snippet instead.
+      deck: null,
       minimumDeposit: e.m,
       scorecard: dimsToObject(e.c),
       chunkId: e.g,
