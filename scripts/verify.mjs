@@ -124,6 +124,14 @@ for (const entry of samples.slice(0, 8)) {
   ok((await page.$$('.scorecard__row')).length === 5, `${entry.slug}: 5 scorecard rows`)
   ok((await page.$$('.faq__item')).length === 5, `${entry.slug}: 5 faqs`)
   ok(!!(await page.$('#review-jsonld')), `${entry.slug}: review JSON-LD injected`)
+  const jsonLd = JSON.parse(await page.textContent('#review-jsonld'))
+  ok(
+    jsonLd.itemReviewed?.['@type'] === 'Product' &&
+      jsonLd.itemReviewed?.aggregateRating?.['@type'] === 'AggregateRating' &&
+      jsonLd.itemReviewed.aggregateRating.ratingValue === entry.rating.toFixed(1) &&
+      jsonLd.reviewRating?.ratingValue === entry.rating.toFixed(1),
+    `${entry.slug}: review schema structure (product + aggregateRating)`,
+  )
   const canonical = await page.getAttribute('link[rel="canonical"]', 'href')
   ok(canonical === `https://traderai.ai/${entry.path.replace(/^\//, '')}`, `${entry.slug}: canonical URL correct`)
   ok(!consoleErrors.has(page), `${entry.slug}: no console errors`)

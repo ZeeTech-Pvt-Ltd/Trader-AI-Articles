@@ -19,6 +19,9 @@ function ArticleJsonLd({ review }) {
     const script = document.createElement('script')
     script.type = 'application/ld+json'
     script.id = 'review-jsonld'
+    // Product review schema: the reviewed product carries the aggregate
+    // rating, the Review itself carries the star rating as strings, and the
+    // author/date sit at the top level.
     script.textContent = JSON.stringify({
       '@context': 'https://schema.org',
       '@type': 'Review',
@@ -30,17 +33,22 @@ function ArticleJsonLd({ review }) {
       itemReviewed: {
         '@type': 'Product',
         name: review.name,
+        aggregateRating: {
+          '@type': 'AggregateRating',
+          ratingValue: review.rating.toFixed(1),
+          reviewCount: '1',
+        },
       },
       reviewRating: {
         '@type': 'Rating',
-        ratingValue: review.rating,
-        bestRating: 5,
-        worstRating: 1,
+        ratingValue: review.rating.toFixed(1),
+        bestRating: '5',
+        worstRating: '1',
       },
       author: { '@type': 'Person', name: review.byline },
       publisher: { '@type': 'Organization', name: SITE.name },
-      datePublished: review.isoDate,
-      dateModified: review.isoDate,
+      datePublished: `${review.isoDate}T00:00:00+00:00`,
+      dateModified: `${review.isoDate}T00:00:00+00:00`,
     })
     document.head.appendChild(script)
     return () => {
