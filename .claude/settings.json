@@ -27,7 +27,10 @@
       "Bash(curl -s -o /dev/null -w \"%{http_code} in %{time_total}s\\\\n\" -m 10 http://localhost:5185/)",
       "Bash(curl -s -o /dev/null -w \"%{http_code} in %{time_total}s\\\\n\" -m 10 http://localhost:5185/trading/rendaven-review)",
       "Bash(curl -s -o /dev/null -w \"%{http_code} in %{time_total}s\\\\n\" -m 10 http://localhost:5185/trading/lyra-vestgrove-review)",
-      "Bash(tasklist)"
+      "Bash(tasklist)",
+      "Read(//c/Users/samee/Desktop/Trader AI/**)",
+      "Bash(cd \"/c/Users/samee/Desktop/Trader AI\" && npm run build 2>&1 | tail -2 && grep -o 'fetchpriority=\"[a-z]*\"' dist/index.html | sort | uniq -c && node scripts/verify.mjs 2>&1 | tail -2)",
+      "Bash(cd \"/c/Users/samee/Desktop/Trader AI\" && npm run build 2>&1 | tail -12)"
     ],
     "additionalDirectories": [
       "C:\\Users\\samee\\.claude\\projects\\c--Users-samee\\memory"
