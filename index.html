@@ -44,10 +44,9 @@
         href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
       />
     </noscript>
-    <!-- Start the review manifest download with the HTML itself. Low priority
-         so it never steals bandwidth from the app bundle on slow connections
-         - the page's first paint does not depend on it. -->
-    <link rel="preload" href="/manifest.json" as="fetch" crossorigin="anonymous" fetchpriority="low" />
+    <!-- Start the review manifest download with the HTML itself, in parallel
+         with the app bundle - it is the largest asset on the page. -->
+    <link rel="preload" href="/manifest.json" as="fetch" crossorigin="anonymous" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -102,6 +101,6 @@
         </div>
       </div>
     </div>
-    <script type="module" src="/src/main.jsx" fetchpriority="high"></script>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

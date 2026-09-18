@@ -13,7 +13,7 @@ const css = readFileSync(`dist/assets/${cssFile}`, 'utf8')
 
 const htmlPath = 'dist/index.html'
 const html = readFileSync(htmlPath, 'utf8')
-let updated = html.replace(
+const updated = html.replace(
   /<link rel="stylesheet" crossorigin href="\/assets\/index-[^"]*\.css">/,
   `<style>${css}</style>`,
 )
@@ -21,11 +21,5 @@ if (!updated.includes('<style>')) {
   console.error('stylesheet link not found in dist/index.html')
   process.exit(1)
 }
-// Vite drops custom attributes from the entry script tag - mark it high
-// priority so the app bundle wins bandwidth over the manifest preload.
-updated = updated.replace(
-  /<script type="module" crossorigin src="\/assets\/index-[^"]*\.js"><\/script>/,
-  (tag) => tag.replace('<script', '<script fetchpriority="high"'),
-)
 writeFileSync(htmlPath, updated)
 console.log(`inlined ${cssFile} (${css.length} bytes) into dist/index.html`)
