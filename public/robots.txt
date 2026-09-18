@@ -1,4 +1,9 @@
 User-agent: *
 Allow: /
+Disallow: /page/
+Disallow: /reviews/page/
+Disallow: /articles/page/
+Disallow: /author/
+Disallow: /authors/
 
 Sitemap: https://traderai.ai/sitemap.xml
