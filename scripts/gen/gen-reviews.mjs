@@ -22,6 +22,7 @@ const REVIEWS_DIR = join(ROOT, 'src', 'data', 'reviews')
 const CHUNK_DIR = join(REVIEWS_DIR, 'generated')
 const MANIFEST_PATH = join(REVIEWS_DIR, 'manifest.json')
 const CATALOG_PATH = join(ROOT, 'scripts', 'catalog.json')
+const CATALOG2_PATH = join(ROOT, 'scripts', 'catalog-ai-trading-platform.json')
 const OVERRIDES_PATH = join(__dirname, 'overrides.json')
 
 // Per-article overrides (slug -> { ctaUrl?, headline?, seoTitle?,
@@ -58,8 +59,14 @@ const manifestOnly = process.argv.includes('--manifest-only')
 const { PAGINATED } = await import(pathToFileURL(join(REVIEWS_DIR, 'index.js')).href)
 const handwritten = PAGINATED
 
+// Two content sources feed the archive: bitcointechtalk.com (catalog.json)
+// and ai-trading-platform.com (catalog-ai-trading-platform.json). The second
+// catalog holds only reviews missing from the first, and duplicates across
+// catalogs are skipped at generation time.
 const catalog = existsSync(CATALOG_PATH) ? JSON.parse(readFileSync(CATALOG_PATH, 'utf8')) : null
-if (!catalog) console.log('catalog.json missing - generating fixture from the 31 handwritten reviews only')
+const catalog2 = existsSync(CATALOG2_PATH) ? JSON.parse(readFileSync(CATALOG2_PATH, 'utf8')) : null
+const generatedSources = [catalog, catalog2].filter(Boolean)
+if (!generatedSources.length) console.log('no catalogs found - generating fixture from the 31 handwritten reviews only')
 
 // ---- build all articles ---------------------------------------------------
 
@@ -99,14 +106,17 @@ const all = []
 for (const rawReview of handwritten) {
   all.push({ review: applyOverrides(rawReview), generated: false })
 }
-if (catalog) {
-  const handwrittenSlugs = new Set(handwritten.map((r) => r.slug))
+{
+  const seen = new Set(handwritten.map((r) => r.slug))
   let index = handwritten.length
-  for (const entry of catalog.entries) {
-    if (handwrittenSlugs.has(entry.slug)) continue
-    const built = buildArticle(entry, index, rngFor(entry.slug))
-    all.push({ review: applyOverrides(built), generated: true })
-    index++
+  for (const cat of generatedSources) {
+    for (const entry of cat.entries) {
+      if (seen.has(entry.slug)) continue
+      seen.add(entry.slug)
+      const built = buildArticle(entry, index, rngFor(entry.slug))
+      all.push({ review: applyOverrides(built), generated: true })
+      index++
+    }
   }
 }
 
@@ -217,12 +227,13 @@ if (generatedCount > 0) {
   }
 }
 
-if (catalog) {
-  // The source keeps growing, so assert exactness against the catalog rather
-  // than a fixed ceiling; the range is a sanity net for crawl corruption.
-  const expected = handwritten.length + catalog.entries.length
+if (generatedSources.length) {
+  // Assert exactness against the catalogs (duplicates across sources are
+  // deduped at build time); the range is a sanity net for crawl corruption.
+  const expected =
+    handwritten.length + generatedSources.reduce((sum, c) => sum + c.entries.length, 0)
   check(all.length === expected, `total articles ${all.length} != expected ${expected}`)
-  check(all.length >= 2450 && all.length <= 3000, `total articles ${all.length} outside 2450-3000`)
+  check(all.length >= 2450 && all.length <= 3200, `total articles ${all.length} outside 2450-3200`)
 }
 
 // ---- write manifest + chunks ----------------------------------------------

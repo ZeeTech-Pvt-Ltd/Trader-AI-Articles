@@ -31,10 +31,19 @@
       "Read(//c/Users/samee/Desktop/Trader AI/**)",
       "Bash(cd \"/c/Users/samee/Desktop/Trader AI\" && npm run build 2>&1 | tail -2 && grep -o 'fetchpriority=\"[a-z]*\"' dist/index.html | sort | uniq -c && node scripts/verify.mjs 2>&1 | tail -2)",
       "Bash(cd \"/c/Users/samee/Desktop/Trader AI\" && npm run build 2>&1 | tail -12)",
-      "Bash(node --input-type=module -e ' *)"
+      "Bash(node --input-type=module -e ' *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" https://ai-trading-platform.com/)",
+      "Bash(curl -s https://ai-trading-platform.com/)",
+      "Bash(curl -s https://ai-trading-platform.com/ -o /tmp/atp.html)",
+      "Bash(curl -s https://ai-trading-platform.com/reviews -o /tmp/atp-reviews.html)",
+      "Bash(curl -s https://ai-trading-platform.com/articles -o /tmp/atp-articles.html)",
+      "Bash(node scripts/compare-ai-trading-platform.mjs)",
+      "Bash(grep -E \"pages:|source reviews|on Trader AI|missing|not on this source|failed\" \"/c/Users/samee/AppData/Local/Temp/claude/c--Users-samee-Desktop-Trader-AI/1c8a6976-d67c-4f03-93e3-690645b2e70c/tasks/b9n35o5u8.output\" && echo \"---missing list---\" && sed -n '/--- missing slugs ---/,$p' \"/c/Users/samee/AppData/Local/Temp/claude/c--Users-samee-Desktop-Trader-AI/1c8a6976-d67c-4f03-93e3-690645b2e70c/tasks/b9n35o5u8.output\" | head -c 2500)",
+      "Bash(node scripts/crawl-ai-trading-platform.mjs)"
     ],
     "additionalDirectories": [
-      "C:\\Users\\samee\\.claude\\projects\\c--Users-samee\\memory"
+      "C:\\Users\\samee\\.claude\\projects\\c--Users-samee\\memory",
+      "C:\\Users\\samee\\AppData\\Local\\Temp\\claude\\c--Users-samee-Desktop-Trader-AI\\1c8a6976-d67c-4f03-93e3-690645b2e70c\\tasks"
     ]
   }
 }
