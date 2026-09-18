@@ -30,7 +30,8 @@
       "Bash(tasklist)",
       "Read(//c/Users/samee/Desktop/Trader AI/**)",
       "Bash(cd \"/c/Users/samee/Desktop/Trader AI\" && npm run build 2>&1 | tail -2 && grep -o 'fetchpriority=\"[a-z]*\"' dist/index.html | sort | uniq -c && node scripts/verify.mjs 2>&1 | tail -2)",
-      "Bash(cd \"/c/Users/samee/Desktop/Trader AI\" && npm run build 2>&1 | tail -12)"
+      "Bash(cd \"/c/Users/samee/Desktop/Trader AI\" && npm run build 2>&1 | tail -12)",
+      "Bash(node --input-type=module -e ' *)"
     ],
     "additionalDirectories": [
       "C:\\Users\\samee\\.claude\\projects\\c--Users-samee\\memory"

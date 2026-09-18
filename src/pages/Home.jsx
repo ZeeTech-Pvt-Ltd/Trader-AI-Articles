@@ -169,10 +169,9 @@ export default function Home() {
                 </h1>
                 <p className="hero__deck">
                   Every AI trading platform promises automation, accuracy and security. Very
-                  few publish a licence number. This site reviews those platforms one at a
-                  time - we read every page they publish, check the age and ownership of
-                  their domain, and look for any independent trace of them existing. Then we
-                  publish a verdict and the evidence behind it.
+                  few publish a licence number. We read every page they publish, check the
+                  age and ownership of their domain, and look for any independent trace.
+                  Then we publish a verdict and the evidence.
                 </p>
                 <div className="hero__actions">
                   <a className="btn btn--green" href="#reviews">

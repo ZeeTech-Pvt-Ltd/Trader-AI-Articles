@@ -44,10 +44,9 @@
         href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
       />
     </noscript>
-    <!-- Start the review manifest download with the HTML itself. Low priority
-         so it never steals bandwidth from the app bundle on slow connections
-         - the page's first paint does not depend on it. -->
-    <link rel="preload" href="/manifest.json" as="fetch" crossorigin="anonymous" fetchpriority="low" />
+    <!-- Start the review manifest download with the HTML itself, in parallel
+         with the app bundle - it is the largest asset on the page. -->
+    <link rel="preload" href="/manifest.json" as="fetch" crossorigin="anonymous" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -83,7 +82,7 @@
         <div style="max-width:660px">
           <span style="display:inline-block;font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#b84c0f;background:#fdeee2;border:1px solid rgba(234,106,31,.28);border-radius:999px;padding:5px 13px">2026 Review Roundup</span>
           <h1 style="font-family:Georgia,'Times New Roman',serif;font-weight:700;font-size:clamp(26px,4vw,40px);line-height:1.15;letter-spacing:-.01em;color:#0d1520;margin:20px 0 18px">Trader AI reviews that read the fine print <em style="font-style:italic;color:#ea6a1f">so you don't have to.</em></h1>
-          <p style="font-size:16px;line-height:1.7;color:#33414f;margin:0 0 22px">Every AI trading platform promises automation, accuracy and security. Very few publish a licence number. This site reviews those platforms one at a time - we read every page they publish, check the age and ownership of their domain, and look for any independent trace of them existing. Then we publish a verdict and the evidence behind it.</p>
+          <p style="font-size:16px;line-height:1.7;color:#33414f;margin:0 0 22px">Every AI trading platform promises automation, accuracy and security. Very few publish a licence number. We read every page they publish, check the age and ownership of their domain, and look for any independent trace. Then we publish a verdict and the evidence.</p>
           <div style="display:flex;gap:12px;flex-wrap:wrap">
             <a href="#reviews" style="display:inline-flex;align-items:center;gap:9px;padding:12px 22px;font-size:14.5px;font-weight:700;border-radius:10px;background:#ea6a1f;color:#fff;text-decoration:none">Browse all reviews</a>
             <a href="#method" style="display:inline-flex;align-items:center;gap:9px;padding:12px 22px;font-size:14.5px;font-weight:700;border-radius:10px;background:#fff;border:1px solid #c9d2dc;color:#0d1520;text-decoration:none">How we rate</a>
@@ -102,6 +101,6 @@
         </div>
       </div>
     </div>
-    <script type="module" src="/src/main.jsx" fetchpriority="high"></script>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
