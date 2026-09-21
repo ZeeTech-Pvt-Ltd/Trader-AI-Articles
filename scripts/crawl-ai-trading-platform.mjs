@@ -107,8 +107,18 @@ for (let i = 0; i < missing.length; i++) {
 }
 process.stdout.write('\n')
 
+// Merge with any existing catalog entries (never drop previously crawled
+// articles) - the file holds everything ever fetched from this source.
+const existing = existsSync(OUT) ? JSON.parse(readFileSync(OUT, 'utf8')).entries : []
+const bySlug = new Map(existing.map((e) => [e.slug, e]))
+for (const e of entries) bySlug.set(e.slug, e)
+
 writeFileSync(
   OUT,
-  JSON.stringify({ fetched: new Date().toISOString(), source: BASE, failures, entries }, null, 2),
+  JSON.stringify(
+    { fetched: new Date().toISOString(), source: BASE, failures, entries: [...bySlug.values()] },
+    null,
+    2,
+  ),
 )
-console.log(`wrote ${OUT} (${entries.length} entries, ${failures.length} failures)`)
+console.log(`wrote ${OUT} (${bySlug.size} entries, ${failures.length} failures)`)
