@@ -103,16 +103,15 @@ function initials(name) {
 
 // The review page's action button. Points at the review's Austerio campaign
 // URL (derived in the archive layer) unless one is set, falling back to the
-// site's own /go/<keyword> page.
+// site's own /go/<keyword> page. External links open in the same tab (no
+// target="_blank") per the funnel flow - the campaign landing takes over.
 function CtaButton({ label, to }) {
   const external = /^https?:/i.test(to)
   return (
     <a
       className="btn btn--green btn--cta"
       href={to}
-      {...(external
-        ? { target: '_blank', rel: 'noopener noreferrer nofollow sponsored' }
-        : {})}
+      {...(external ? { rel: 'noopener noreferrer nofollow sponsored' } : {})}
     >
       {label}
       <Icon name="arrow-right" size={16} />
