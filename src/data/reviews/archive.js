@@ -27,8 +27,9 @@ export function dimsToObject(dims) {
 
 // Same derivation as src/data/reviews/index.js - every review's CTA buttons
 // point at the Austerio campaign landing unless the review overrides it.
+// src=TAI tags leads coming from this site.
 export function ctaUrlFor(name) {
-  return `https://austerio-smart-up.com/?f=${encodeURIComponent(name)}&subid=BIT`
+  return `https://austerio-smart-up.com/?f=${encodeURIComponent(name)}&subid=BIT&src=TAI`
 }
 
 // Per-article community review count for the aggregateRating schema:

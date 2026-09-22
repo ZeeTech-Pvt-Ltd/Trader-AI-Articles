@@ -16,7 +16,7 @@ export function pathOf(slug) {
 }
 
 export function ctaUrlOf(name) {
-  return `https://austerio-smart-up.com/?f=${encodeURIComponent(name)}&subid=BIT`
+  return `https://austerio-smart-up.com/?f=${encodeURIComponent(name)}&subid=BIT&src=TAI`
 }
 
 export function excerptOf(deck) {
