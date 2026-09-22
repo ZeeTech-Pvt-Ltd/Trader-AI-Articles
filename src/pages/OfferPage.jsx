@@ -136,7 +136,7 @@ export default function OfferPage() {
 
           <div className="funnel-hero__formwrap" id="signup">
             <p className="funnel-hero__sub">Sign up and get instant access</p>
-            <OfferForm offerName={review.keyword || review.slug} platform={review.name} />
+            <OfferForm offerName={`${review.keyword || review.slug}-TAI`} platform={review.name} />
           </div>
         </div>
       </section>
