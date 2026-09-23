@@ -541,6 +541,13 @@
       "sourcePath": "/trading/greenwood-finlore-review",
       "sourceDate": "Sep 22, 2026",
       "sourceReadTime": "10 min read"
+    },
+    {
+      "slug": "westrise-corebit",
+      "name": "Westrise Corebit",
+      "sourcePath": "/trading/westrise-corebit-review",
+      "sourceDate": "Sep 23, 2026",
+      "sourceReadTime": "10 min read"
     }
   ]
 }
