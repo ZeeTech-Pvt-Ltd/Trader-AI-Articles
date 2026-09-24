@@ -4,9 +4,9 @@ import { POOLS } from './pools.js'
 import { render, renderList } from './templates.js'
 import { variationsFor } from './variations.js'
 
-export function buildArticle(catalogEntry, index, rng) {
+export function buildArticle(catalogEntry, index, rng, patch = {}) {
   const { slug, name, sourceDate, sourceReadTime } = catalogEntry
-  const vars = variationsFor(rng, index, sourceDate, sourceReadTime)
+  const vars = variationsFor(rng, index, sourceDate, sourceReadTime, patch.minimumDeposit)
   const ctx = {
     name,
     min: vars.minimumDeposit,

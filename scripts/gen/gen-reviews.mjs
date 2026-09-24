@@ -29,7 +29,7 @@ const OVERRIDES_PATH = join(__dirname, 'overrides.json')
 // seoDescription?, deck?, name? }). A custom ctaUrl overrides the derived
 // Austerio URL; the other fields override the generated copy for that review.
 const overrides = existsSync(OVERRIDES_PATH) ? JSON.parse(readFileSync(OVERRIDES_PATH, 'utf8')) : {}
-const OVERRIDE_FIELDS = ['name', 'headline', 'seoTitle', 'seoDescription', 'deck', 'ctaUrl']
+const OVERRIDE_FIELDS = ['name', 'headline', 'seoTitle', 'seoDescription', 'deck', 'ctaUrl', 'minimumDeposit']
 
 function applyOverrides(review) {
   const patch = overrides[review.slug]
@@ -113,7 +113,9 @@ for (const rawReview of handwritten) {
     for (const entry of cat.entries) {
       if (seen.has(entry.slug)) continue
       seen.add(entry.slug)
-      const built = buildArticle(entry, index, rngFor(entry.slug))
+      // minimumDeposit is passed into the builder so template copy renders
+      // with it; the other fields patch the finished review.
+      const built = buildArticle(entry, index, rngFor(entry.slug), overrides[entry.slug] ?? {})
       all.push({ review: applyOverrides(built), generated: true })
       index++
     }

@@ -56,9 +56,11 @@ function scorecardFor(rng, target) {
   return { easeOfUse: target, features: target, transparency: target, security: target, support: Math.round((target - 0.1) * 10) / 10 }
 }
 
-export function variationsFor(rng, index, sourceDate, sourceReadTime) {
+export function variationsFor(rng, index, sourceDate, sourceReadTime, minDepOverride) {
   const depositRoll = rng()
-  const minimumDeposit = depositRoll < 0.15 ? 'US$200' : depositRoll < 0.85 ? 'US$250' : 'US$300'
+  const minimumDeposit =
+    minDepOverride ||
+    (depositRoll < 0.15 ? 'US$200' : depositRoll < 0.85 ? 'US$250' : 'US$300')
   const assets = int(rng, 8, 12)
   // Ratings sit in the 4.5-4.8 band; CAUTION verdicts take the bottom of it
   // so a caution flag never wears a top score.

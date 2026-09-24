@@ -1,36 +1,100 @@
 {
-  "lyra-vestgrove": { "ctaUrl": "https://lyravestgrove-au.com/" },
-  "dorivo": { "ctaUrl": "https://dorivo-au.net/" },
-  "gem-wealthholm": { "ctaUrl": "https://gemwealth-holm.com/" },
-  "zephgain": { "ctaUrl": "https://zephgain-au.com/" },
-  "zephgain-app": { "ctaUrl": "https://zephgain-au.com/" },
-  "zephgain-ai": { "ctaUrl": "https://zephgain-au.com/" },
-  "polar-zinsmere": { "ctaUrl": "https://polar-zinsmere.com/" },
-  "bright-kapitune": { "ctaUrl": "https://bright-kapitune-au.com/" },
-  "bright-kapitune-ai": { "ctaUrl": "https://bright-kapitune-au.com/" },
-  "cevsterflax": { "ctaUrl": "https://cevsterflax-ai.com/" },
-  "marble-rendaven": { "ctaUrl": "https://rendaven.com/" },
-  "nexora-ai-platform": { "ctaUrl": "https://nexora-ai-platform.com/" },
-  "nexoras": { "ctaUrl": "https://nexora-ai-platform.com/" },
-  "nexora-exchange-platform": { "ctaUrl": "https://nexora-ai-platform.com/" },
-  "nexora-ai": { "ctaUrl": "https://nexora-ai-platform.com/" },
-  "crown-nexora": { "ctaUrl": "https://nexora-ai-platform.com/" },
-  "fels-wertburg": { "ctaUrl": "https://fels-wertburgai.com/" },
-  "gewinode-raven": { "ctaUrl": "https://gewinoderaven.com/" },
-  "raven-gewinode": { "ctaUrl": "https://gewinoderaven.com/" },
-  "nobiloption-ai": { "ctaUrl": "https://ai-nobiloption.com/" },
-  "memorifund-ai": { "ctaUrl": "https://memorifund-ai-platform.com/" },
-  "sense-broker-ai": { "ctaUrl": "https://ie-sensebroker.com/" },
-  "sensebroker-ai": { "ctaUrl": "https://ie-sensebroker.com/" },
-  "mining-ai": { "ctaUrl": "https://mining-ai-platform.com/" },
-  "mining-ai-uk": { "ctaUrl": "https://mining-ai-platform.com/" },
-  "forgreserve-ai": { "ctaUrl": "https://forg-reserveai.com/" },
-  "trader-ai": { "ctaUrl": "https://traderai-au.com/" },
-  "solid-warranture": { "ctaUrl": "https://warranturesolid.com/" },
-  "warranture-solid": { "ctaUrl": "https://warranturesolid.com/" },
-  "solid-warranture-ai": { "ctaUrl": "https://warranturesolid.com/" },
-  "reine-fondange": { "ctaUrl": "https://reinefondange-ai.com/" },
-  "trader-pro-ai": { "ctaUrl": "https://protrader-ai.com/" },
+  "lyra-vestgrove": {
+    "ctaUrl": "https://lyravestgrove-au.com/"
+  },
+  "dorivo": {
+    "ctaUrl": "https://dorivo-au.net/"
+  },
+  "gem-wealthholm": {
+    "ctaUrl": "https://gemwealth-holm.com/"
+  },
+  "zephgain": {
+    "ctaUrl": "https://zephgain-au.com/"
+  },
+  "zephgain-app": {
+    "ctaUrl": "https://zephgain-au.com/"
+  },
+  "zephgain-ai": {
+    "ctaUrl": "https://zephgain-au.com/"
+  },
+  "polar-zinsmere": {
+    "ctaUrl": "https://polar-zinsmere.com/"
+  },
+  "bright-kapitune": {
+    "ctaUrl": "https://bright-kapitune-au.com/"
+  },
+  "bright-kapitune-ai": {
+    "ctaUrl": "https://bright-kapitune-au.com/"
+  },
+  "cevsterflax": {
+    "ctaUrl": "https://cevsterflax-ai.com/"
+  },
+  "marble-rendaven": {
+    "ctaUrl": "https://rendaven.com/"
+  },
+  "nexora-ai-platform": {
+    "ctaUrl": "https://nexora-ai-platform.com/"
+  },
+  "nexoras": {
+    "ctaUrl": "https://nexora-ai-platform.com/"
+  },
+  "nexora-exchange-platform": {
+    "ctaUrl": "https://nexora-ai-platform.com/"
+  },
+  "nexora-ai": {
+    "ctaUrl": "https://nexora-ai-platform.com/"
+  },
+  "crown-nexora": {
+    "ctaUrl": "https://nexora-ai-platform.com/"
+  },
+  "fels-wertburg": {
+    "ctaUrl": "https://fels-wertburgai.com/"
+  },
+  "gewinode-raven": {
+    "ctaUrl": "https://gewinoderaven.com/"
+  },
+  "raven-gewinode": {
+    "ctaUrl": "https://gewinoderaven.com/"
+  },
+  "nobiloption-ai": {
+    "ctaUrl": "https://ai-nobiloption.com/"
+  },
+  "memorifund-ai": {
+    "ctaUrl": "https://memorifund-ai-platform.com/"
+  },
+  "sense-broker-ai": {
+    "ctaUrl": "https://ie-sensebroker.com/"
+  },
+  "sensebroker-ai": {
+    "ctaUrl": "https://ie-sensebroker.com/"
+  },
+  "mining-ai": {
+    "ctaUrl": "https://mining-ai-platform.com/"
+  },
+  "mining-ai-uk": {
+    "ctaUrl": "https://mining-ai-platform.com/"
+  },
+  "forgreserve-ai": {
+    "ctaUrl": "https://forg-reserveai.com/"
+  },
+  "trader-ai": {
+    "ctaUrl": "https://traderai-au.com/"
+  },
+  "solid-warranture": {
+    "ctaUrl": "https://warranturesolid.com/"
+  },
+  "warranture-solid": {
+    "ctaUrl": "https://warranturesolid.com/"
+  },
+  "solid-warranture-ai": {
+    "ctaUrl": "https://warranturesolid.com/"
+  },
+  "reine-fondange": {
+    "ctaUrl": "https://reinefondange-ai.com/"
+  },
+  "trader-pro-ai": {
+    "ctaUrl": "https://protrader-ai.com/"
+  },
   "pumpreport-news": {
     "headline": "Pumpreport news 2026 Review: What You Need to Know",
     "seoTitle": "Is Pumpreport news Legit? Our Honest 2026 Review & Verdict",
@@ -314,12 +378,26 @@
   "westrise-corebit": {
     "headline": "Westrise Corebit Review 2026: Key Facts to Know",
     "seoTitle": "Westrise Corebit Review 2026: Scam or Legit?",
-    "seoDescription": "Westrise Corebit Review 2026 explores its features, claims, and trading experience to help you assess whether Westrise Corebit is scam or legit."
+    "seoDescription": "Westrise Corebit Review 2026 explores its features, claims, and trading experience to help you assess whether Westrise Corebit is scam or legit.",
+    "minimumDeposit": "A$250"
   },
   "greenwood-finlore": {
     "headline": "Greenwood Finlore Review 2026: What You Should Know",
     "seoTitle": "Greenwood Finlore Review: Scam or Legit in 2026?",
-    "seoDescription": "Greenwood Finlore Review 2026 explores its features, claims, and potential risks to help you decide if Greenwood Finlore is legit or worth avoiding."
+    "seoDescription": "Greenwood Finlore Review 2026 explores its features, claims, and potential risks to help you decide if Greenwood Finlore is legit or worth avoiding.",
+    "minimumDeposit": "A$250"
+  },
+  "pure-linemark": {
+    "minimumDeposit": "A$300"
+  },
+  "bitlionex-port": {
+    "minimumDeposit": "A$250"
+  },
+  "bitnovlex-limited": {
+    "minimumDeposit": "A$300"
+  },
+  "skyward-invexa": {
+    "minimumDeposit": "A$250"
   },
   "albenzin": {
     "headline": "Albenzin Review 2026: Is It Worth Exploring?",
