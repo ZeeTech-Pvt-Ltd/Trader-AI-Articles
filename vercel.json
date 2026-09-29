@@ -1,5 +1,10 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/" }],
+  "rewrites": [
+{
+"source": "/((?!wp-content|wp-admin|wp-includes).*)",
+"destination": "/index.html"
+}
+],
   "headers": [
     {
       "source": "/privacy-policy",
