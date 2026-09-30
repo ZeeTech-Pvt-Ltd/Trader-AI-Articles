@@ -42,6 +42,10 @@ function applyOverrides(review) {
   if (patch.headline && patch.seoTitle === undefined && patch.headline !== review.headline) {
     next.seoTitle = patch.headline
   }
+  // A renamed platform carries its keyword (offer name) unless one is given.
+  if (patch.name && patch.keyword === undefined && patch.name !== review.name) {
+    next.keyword = patch.name
+  }
   return next
 }
 

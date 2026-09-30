@@ -5,7 +5,10 @@ import { render, renderList } from './templates.js'
 import { variationsFor } from './variations.js'
 
 export function buildArticle(catalogEntry, index, rng, patch = {}) {
-  const { slug, name, sourceDate, sourceReadTime } = catalogEntry
+  const { slug, sourceDate, sourceReadTime } = catalogEntry
+  // A name patch must apply before templates render so every {name} mention
+  // in the copy uses the new name.
+  const name = patch.name || catalogEntry.name
   const vars = variationsFor(rng, index, sourceDate, sourceReadTime, patch.minimumDeposit)
   const ctx = {
     name,
