@@ -29,7 +29,7 @@ const OVERRIDES_PATH = join(__dirname, 'overrides.json')
 // seoDescription?, deck?, name? }). A custom ctaUrl overrides the derived
 // Austerio URL; the other fields override the generated copy for that review.
 const overrides = existsSync(OVERRIDES_PATH) ? JSON.parse(readFileSync(OVERRIDES_PATH, 'utf8')) : {}
-const OVERRIDE_FIELDS = ['name', 'headline', 'seoTitle', 'seoDescription', 'deck', 'ctaUrl', 'minimumDeposit']
+const OVERRIDE_FIELDS = ['name', 'keyword', 'headline', 'seoTitle', 'seoDescription', 'deck', 'ctaUrl', 'minimumDeposit']
 
 function applyOverrides(review) {
   const patch = overrides[review.slug]
