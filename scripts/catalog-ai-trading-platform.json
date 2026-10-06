@@ -1199,6 +1199,20 @@
       "sourcePath": "/trading/sydrix-review",
       "sourceDate": "Oct 5, 2026",
       "sourceReadTime": "10 min read"
+    },
+    {
+      "slug": "fianca-noxis",
+      "name": "Fianca Noxis",
+      "sourcePath": "/trading/fianca-noxis-review",
+      "sourceDate": "Oct 6, 2026",
+      "sourceReadTime": "10 min read"
+    },
+    {
+      "slug": "warrior-coin-ai",
+      "name": "Warrior Coin AI",
+      "sourcePath": "/trading/warrior-coin-ai-review",
+      "sourceDate": "Oct 6, 2026",
+      "sourceReadTime": "10 min read"
     }
   ]
 }
