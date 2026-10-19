@@ -24,6 +24,7 @@ const MANIFEST_PATH = join(REVIEWS_DIR, 'manifest.json')
 const CATALOG_PATH = join(ROOT, 'scripts', 'catalog.json')
 const CATALOG2_PATH = join(ROOT, 'scripts', 'catalog-ai-trading-platform.json')
 const OVERRIDES_PATH = join(__dirname, 'overrides.json')
+const FACTS_PATH = join(ROOT, 'scripts', 'facts-site-trust.json')
 
 // Per-article overrides (slug -> { ctaUrl?, headline?, seoTitle?,
 // seoDescription?, deck?, name? }). A custom ctaUrl overrides the derived
@@ -62,6 +63,11 @@ const manifestOnly = process.argv.includes('--manifest-only')
 
 const { PAGINATED } = await import(pathToFileURL(join(REVIEWS_DIR, 'index.js')).href)
 const handwritten = PAGINATED
+
+// Per-slug fact packs (original copy written from research on the actual
+// platform - see scripts/facts-site-trust.json) replace the pooled fact
+// sections for those reviews.
+const factPacks = existsSync(FACTS_PATH) ? JSON.parse(readFileSync(FACTS_PATH, 'utf8')) : {}
 
 // Two content sources feed the archive: bitcointechtalk.com (catalog.json)
 // and ai-trading-platform.com (catalog-ai-trading-platform.json). The second
@@ -118,8 +124,11 @@ for (const rawReview of handwritten) {
       if (seen.has(entry.slug)) continue
       seen.add(entry.slug)
       // minimumDeposit is passed into the builder so template copy renders
-      // with it; the other fields patch the finished review.
-      const built = buildArticle(entry, index, rngFor(entry.slug), overrides[entry.slug] ?? {})
+      // with it; the other fields patch the finished review. Fact packs feed
+      // the builder directly and never touch the override fields.
+      const patch = { ...(overrides[entry.slug] ?? {}) }
+      if (factPacks[entry.slug]) patch.facts = factPacks[entry.slug]
+      const built = buildArticle(entry, index, rngFor(entry.slug), patch)
       all.push({ review: applyOverrides(built), generated: true })
       index++
     }

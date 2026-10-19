@@ -481,5 +481,8 @@
   },
   "ai-instant-trade": {
     "name": "AL Instant Trade"
+  },
+  "stone-credholm": {
+    "name": "Stone Credholm Platform"
   }
 }

@@ -28,8 +28,15 @@ export function buildArticle(catalogEntry, index, rng, patch = {}) {
     render(latins(rng, POOLS.introC, 1)[0], ctx),
   ]
 
-  const whatItClaims = renderList(latins(rng, POOLS.claims, 5), ctx)
-  const whatWeChecked = renderList(latins(rng, POOLS.checks, 6), ctx)
+  // A fact pack (written from research on the actual platform) replaces the
+  // pooled fact sections; everything else stays templated.
+  const facts = patch.facts || {}
+  const whatItClaims = facts.claims?.length
+    ? facts.claims
+    : renderList(latins(rng, POOLS.claims, 5), ctx)
+  const whatWeChecked = facts.checks?.length
+    ? facts.checks
+    : renderList(latins(rng, POOLS.checks, 6), ctx)
 
   const steps = [
     { title: 'Register', text: render(latins(rng, POOLS.stepTexts.register, 1)[0], ctx) },
@@ -37,14 +44,16 @@ export function buildArticle(catalogEntry, index, rng, patch = {}) {
     { title: 'Configure', text: render(latins(rng, POOLS.stepTexts.configure, 1)[0], ctx) },
   ]
 
-  const pros = renderList(latins(rng, POOLS.pros, 4), ctx)
-  const cons = renderList(latins(rng, POOLS.cons, 4), ctx)
+  const pros = facts.pros?.length ? facts.pros : renderList(latins(rng, POOLS.pros, 4), ctx)
+  const cons = facts.cons?.length ? facts.cons : renderList(latins(rng, POOLS.cons, 4), ctx)
 
   // Red flags: 3 for SAFE verdicts, 4 (with a caution-flavoured extra) for
   // CAUTION verdicts, so the caution mark always has visible teeth.
   const flagCount = vars.caution ? 4 : 3
-  const redFlags = renderList(latins(rng, POOLS.redFlags, flagCount), ctx)
-  if (vars.caution) {
+  const redFlags = facts.redFlags?.length
+    ? [...facts.redFlags]
+    : renderList(latins(rng, POOLS.redFlags, flagCount), ctx)
+  if (vars.caution && !facts.redFlags?.length) {
     redFlags.push(render(pick(rng, POOLS.redFlagsCaution), ctx))
   }
 
@@ -76,10 +85,10 @@ export function buildArticle(catalogEntry, index, rng, patch = {}) {
     rating: vars.rating,
     assets: vars.assets,
     verdict: vars.verdict,
-    targetMarket: pick(rng, POOLS.targetMarketVariants),
+    targetMarket: facts.targetMarket || pick(rng, POOLS.targetMarketVariants),
     minimumDeposit: vars.minimumDeposit,
-    depositMethods: pick(rng, POOLS.depositMethodVariants),
-    support: pick(rng, POOLS.supportVariants),
+    depositMethods: facts.depositMethods || pick(rng, POOLS.depositMethodVariants),
+    support: facts.support || pick(rng, POOLS.supportVariants),
     scorecard: vars.scorecard,
     intro,
     whatItClaims,

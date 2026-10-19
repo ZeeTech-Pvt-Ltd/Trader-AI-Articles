@@ -1,0 +1,1081 @@
+{
+  "adroite-capitorc": {
+    "claims": [
+      "AI calls sorted into confidence tiers, with stronger grades allowing bigger positions.",
+      "A risk slider capping how much any single signal can commit.",
+      "A no-cost trial that shows the same graded alerts as a real account.",
+      "Crypto, shares and indices accessible from one browser dashboard.",
+      "A $250 start, free registration and payouts advertised inside 24 hours."
+    ],
+    "checks": [
+      "The tier grades: assigned in-house, with no outside audit of how they resolve.",
+      "The risk slider: whether a top grade really deserves a larger stake.",
+      "The fee framing: no platform fee, but a broker spread on every order.",
+      "The operator trail: no company, regulator or licence named on public pages.",
+      "The payout promise: 24-hour withdrawals, timing said to shift by broker and region.",
+      "The market mix: crypto leads, with shares and indices a much thinner add-on."
+    ],
+    "cons": [
+      "Confidence grades are the platform marking its own work.",
+      "Stock and index coverage trails the crypto menu.",
+      "The broker spread takes a cut of every trade.",
+      "No operator, regulator or brokerage is disclosed.",
+      "A high grade can tempt oversizing despite the slider."
+    ],
+    "redFlags": [
+      "Self-issued confidence scores presented as performance evidence.",
+      "No named operator or regulator anywhere on the site.",
+      "Satisfaction figures reported by the platform itself.",
+      "Advertised returns that users say they do not see in practice."
+    ]
+  },
+  "billz-edge": {
+    "claims": [
+      "A pre-trade look at the margin and spread cost before an order is confirmed.",
+      "Signals aimed at short-dated derivative contracts rather than spot holdings.",
+      "Auto-execution inside your risk limits, or manual approval trade by trade.",
+      "Transfers in and out pitched as free, with no platform-side charge.",
+      "A demo sharing the live instrument list and the same preview logic."
+    ],
+    "checks": [
+      "The margin preview: whether its estimate survives contact with an actual fill.",
+      "The slippage blind spot: previewed costs, but no promise on execution price.",
+      "The fee claim: free transfers and no platform charge, with the spread doing the work.",
+      "The leverage warning: contracts that can outrun the balance behind them.",
+      "The operator trail: no company, regulator or executing broker named.",
+      "Short-dated contract slippage that the site does not discuss."
+    ],
+    "cons": [
+      "Leverage cuts in both directions, and losses can arrive fast.",
+      "Spreads run wider on the short-dated contracts the engine favours.",
+      "No operator, regulator or executing broker is identified.",
+      "The preview cannot predict the slippage a live order may suffer.",
+      "The strategy controls presume more experience than a beginner has."
+    ],
+    "redFlags": [
+      "A leveraged product with no named broker or regulator.",
+      "Execution costs on quick contracts left unexplained.",
+      "Fee-free language that hides the spread as the true cost.",
+      "No independent audit of the signal engine's performance."
+    ]
+  },
+  "bistar-rastanstvo": {
+    "claims": [
+      "A strict ceiling on the share of the account any single coin may hold.",
+      "Signals that must obey the cap even when several point the same way.",
+      "A weekly rundown of every call, its outcome and any ceiling it hit.",
+      "Automatic or manual execution, with a demo applying identical rules.",
+      "A $250 minimum, free sign-up and withdrawals advertised within a day."
+    ],
+    "checks": [
+      "The exposure cap: whether a breaching trade is genuinely trimmed or skipped.",
+      "The weekly digest: a useful ledger, but written by the platform alone.",
+      "The fee framing: no platform fee, with a broker spread on every position.",
+      "The operator trail: neither the firm nor a regulator appears on the site.",
+      "The cap trade-off: how often it blocks a call that would have worked.",
+      "The payout promise: 24-hour wording, with broker and region caveats."
+    ],
+    "cons": [
+      "The cap can shut out a winning call along with the reckless ones.",
+      "The digest is produced in-house and never audited.",
+      "No firm or regulator identifies itself on the site.",
+      "Each position pays a spread, and the rate depends on the broker.",
+      "Configuring the caps takes a little practice."
+    ],
+    "redFlags": [
+      "A performance digest published without outside review.",
+      "No company or regulatory licence disclosed.",
+      "A concentration cap that still leaves market risk intact.",
+      "Payout timing rests with an unnamed broker."
+    ]
+  },
+  "bky-capital": {
+    "claims": [
+      "A commodities-led menu, with crypto and index instruments as companions.",
+      "Signal output paused around scheduled economic data releases.",
+      "Automatic execution within risk limits, or manual confirmation of each call.",
+      "A practice account that follows the identical calendar logic and market list.",
+      "A $250 start, free registration, 24-hour payouts and constant support."
+    ],
+    "checks": [
+      "The calendar pause: exactly how long the engine stays quiet either side of a release.",
+      "The news rule: a headline feature whose window is never specified.",
+      "The cost side: commodity spreads run wide, with no published range.",
+      "The fee framing: no platform charge; the broker spread covers the real cost.",
+      "The operator trail: no company, regulator or broker named.",
+      "The interface gap: whether a novice can size a position from what is shown."
+    ],
+    "cons": [
+      "Commodity spreads run wider and shift more than crypto costs.",
+      "The calendar rule can silence signals at awkward moments.",
+      "The site names neither the firm, its regulator nor the broker.",
+      "The dashboard leaves too much unexplained for a first-timer.",
+      "The duration of the pre-release pause goes unstated."
+    ],
+    "redFlags": [
+      "A core feature with unpublished parameters - the news blackout.",
+      "No company name or regulatory licence anywhere.",
+      "Commodity spread ranges kept off the public pages.",
+      "Signal handling around data releases left unexplained."
+    ]
+  },
+  "bold-gainorelle": {
+    "claims": [
+      "A loss ceiling configured before the engine may open a position.",
+      "Each call vetted against your cap before it can reach a broker.",
+      "Derivatives take top billing, alongside advertised crypto, share, commodity and currency markets.",
+      "A no-cost demo with the same protections switched on as a live account.",
+      "A $250 minimum, free registration and payouts advertised inside 24 hours."
+    ],
+    "checks": [
+      "The onboarding order: risk limits set before any trade can be placed.",
+      "The ceiling itself: a brake on damage, never a shield from loss.",
+      "The broker chain: orders forwarded to partners that are never named.",
+      "The fee framing: nothing charged up front; the spread is collected per trade.",
+      "The returns on the site: advertised figures with no independent audit.",
+      "The operator trail: no legal entity, watchdog or licence listed."
+    ],
+    "cons": [
+      "The business behind the brand never identifies itself.",
+      "A loss ceiling caps damage without removing market risk.",
+      "The futures emphasis narrows the appeal.",
+      "Browser only, with no standalone mobile app.",
+      "Published performance claims are unaudited."
+    ],
+    "redFlags": [
+      "Unaudited return figures framed as evidence.",
+      "No operator, regulator or executing broker disclosed.",
+      "A risk ceiling marketed in a way that could imply safety.",
+      "Payout timing left to unnamed brokers."
+    ]
+  },
+  "capitalx-broking": {
+    "claims": [
+      "A safety buffer that reviews trades after the model and before the broker.",
+      "Open exposure reduced automatically when volatility climbs.",
+      "Shares in the foreground, with crypto, commodities and currencies also covered.",
+      "A practice account run on the same rules that govern live orders.",
+      "A $250 start, free registration, no platform fee and 24-hour payouts."
+    ],
+    "checks": [
+      "The protection layer: whether exposure visibly shrinks during a turbulent session.",
+      "The broker chain: execution outsourced to partners that are never identified.",
+      "The spread schedule: the cost that matters, and nowhere on the site.",
+      "The fee framing: no platform charge, with spreads doing the charging.",
+      "The custody question: tools provided, funds never held in-house.",
+      "The operator trail: no company, regulator or licence number published."
+    ],
+    "cons": [
+      "No regulator and no licence number are shown.",
+      "Protection controls soften losses but cannot stop them.",
+      "Broker spreads are kept off the site.",
+      "Newcomers may find the control panel crowded.",
+      "Browser-only access, with no dedicated mobile app."
+    ],
+    "redFlags": [
+      "An unpublished spread schedule behind a no-fee claim.",
+      "No named operator or regulator for a product handling live capital.",
+      "Protection claims that no outside party can check.",
+      "Executing brokers left unnamed."
+    ]
+  },
+  "carlos-capital": {
+    "claims": [
+      "One promoted signal on the dashboard instead of a crowded alert feed.",
+      "AI ranking that lifts a single setup above the rest.",
+      "Crypto coverage that lists Bitcoin, Ethereum and Solana among its markets, Chainlink included.",
+      "A demo showing the same leading call as the funded account.",
+      "A $250 minimum, free registration, 24-hour payouts and round-the-clock support."
+    ],
+    "checks": [
+      "The single-signal format: how often the promoted idea actually rotates.",
+      "The reasoning gap: the calm screen hides why a call was chosen.",
+      "The opportunity rate: a slow feed may not suit active traders.",
+      "The fee framing: no platform charge, though every trade carries a spread.",
+      "The operator trail: no company, regulator or licence named.",
+      "The payout promise: 24-hour wording, subject to broker and region."
+    ],
+    "cons": [
+      "The sparse screen conceals the logic behind a signal.",
+      "Active traders may find the flow of ideas limiting.",
+      "The operator, regulator and licence details are all absent.",
+      "Every position carries a broker spread.",
+      "No dedicated mobile app."
+    ],
+    "redFlags": [
+      "No named operator or regulator behind the calm interface.",
+      "Signal reasoning withheld from the user.",
+      "Performance claims with no independent audit.",
+      "Broker partners kept anonymous."
+    ]
+  },
+  "champlain-capital": {
+    "claims": [
+      "Futures given top billing rather than a side menu.",
+      "A broker risk watcher described as active when prices drop sharply.",
+      "Pattern-derived alerts that can fire automatically or wait for approval.",
+      "A demo covering the same instruments as the live account, futures included.",
+      "A $250 minimum, free registration and 24-hour payouts."
+    ],
+    "checks": [
+      "The risk watcher: a safeguard described but never tied to a named broker.",
+      "The futures mechanics: margin and contract sizes a beginner must absorb.",
+      "The cost schedule: spreads and commissions absent from the site.",
+      "The broker chain: execution and custody held by unnamed partners.",
+      "The operator trail: no company, regulator or licence number.",
+      "The menu breadth: how many of the advertised instruments are actually reachable."
+    ],
+    "cons": [
+      "Contract mechanics may be too much for a first-timer.",
+      "Without a named broker, the risk monitor cannot be checked.",
+      "Neither spread nor commission figures appear before you trade.",
+      "Marketing promises an asset range testing could not confirm.",
+      "No standalone mobile app."
+    ],
+    "redFlags": [
+      "A safety feature with no named broker behind it.",
+      "No operator or regulator disclosed.",
+      "Unpublished spread and commission schedule.",
+      "Leveraged futures that can outrun a novice's controls."
+    ]
+  },
+  "cytcrop": {
+    "claims": [
+      "Models that weigh price action, headlines and trend data in a single pass.",
+      "News sentiment blended with momentum before a signal is issued.",
+      "Markets beyond crypto: forex, shares, futures, commodities and bonds all listed.",
+      "A free simulated-funds demo, with manual approval available on every call.",
+      "A $250 minimum, free registration and 24-hour payouts."
+    ],
+    "checks": [
+      "The news layer: whether sentiment sharpens calls or misreads ambiguous headlines.",
+      "The user-score quotes: figures displayed without a traceable origin.",
+      "The cost schedule: spreads and commissions left unpublished.",
+      "The fee framing: no platform charge, but the broker spread still applies.",
+      "The operator trail: no company, regulator or licence number named.",
+      "The track record: a young service with little history to inspect."
+    ],
+    "cons": [
+      "The firm and its regulator are both left unnamed.",
+      "User ratings appear without a source.",
+      "Spread and commission detail is missing.",
+      "Sentiment analysis can misread an ambiguous headline.",
+      "Not enough history yet for a meaningful track record."
+    ],
+    "redFlags": [
+      "Unsourced user ratings used as social proof.",
+      "No named operator or regulator.",
+      "Trading costs left unpublished.",
+      "Headline-driven signals vulnerable to misreading the news."
+    ]
+  },
+  "davlat-dasturi": {
+    "claims": [
+      "A sparse three-step onboarding aimed at first-time users.",
+      "One toggle separating automatic execution from manual approval.",
+      "Markets span crypto, bonds, shares and commodities, with derivatives also listed.",
+      "A simulated-funds demo open before any deposit.",
+      "A $250 minimum, free registration and payouts advertised within 24 hours."
+    ],
+    "checks": [
+      "The fee wording: no charges claimed, spreads left unexplained.",
+      "The performance quotes: landing-page figures with no source attached.",
+      "The broker partners: mentioned in passing, never named.",
+      "Who runs the platform, and under what licence, is unclear.",
+      "The mode switch: whether manual approval is truly one toggle.",
+      "The asset menu: bonds and commodities promised beside crypto."
+    ],
+    "cons": [
+      "Nobody is named as the operator behind the site.",
+      "The site mentions broker partners without ever naming one.",
+      "Fee language is broad and leaves spreads unexplained.",
+      "Performance claims have no source behind them.",
+      "No long public record exists."
+    ],
+    "redFlags": [
+      "Performance figures on the landing page with no attribution.",
+      "No named operator, regulator or broker.",
+      "Fee claims broad enough to hide the real cost.",
+      "A short public history behind the brand."
+    ]
+  },
+  "drakmyelo-ixvaren": {
+    "claims": [
+      "Forex as the core market, with crypto and other assets in support.",
+      "Rule-based models reading live prices to produce currency signals.",
+      "Manual confirmation that can hold each signal until you approve.",
+      "A free simulated-funds demo with card and e-wallet funding.",
+      "A $250 minimum, free registration and 24-hour payouts."
+    ],
+    "checks": [
+      "The forex focus: whether alerts keep pace with fast currency moves.",
+      "The manual pause: how approval behaves when prices are moving.",
+      "The fee wording: broad claims with no itemised spread or commission.",
+      "The broker chain: partners mentioned but never identified.",
+      "The operator trail: no company, regulator or licence published.",
+      "The payout promise: 24-hour wording that has not been independently timed."
+    ],
+    "cons": [
+      "No company name or regulatory licence is disclosed.",
+      "Broker partners remain unidentified.",
+      "Fee statements are broad, not itemised.",
+      "Currency calls can shift before a novice has time to act.",
+      "Published performance has no independent audit."
+    ],
+    "redFlags": [
+      "A forex product with no named broker or regulator.",
+      "Fee language that never reaches a specific spread.",
+      "Unaudited performance claims.",
+      "Fast signals that may outpace novice execution."
+    ]
+  },
+  "echo-intelligence": {
+    "claims": [
+      "Commodities first, with crypto, forex, shares and futures alongside.",
+      "Commodity watchlists and relevant news placed beside the signals.",
+      "A demo positioned as the natural first stop, not an optional extra.",
+      "Automatic execution or manual approval for every signal.",
+      "A $250 minimum, free registration and 24-hour payouts."
+    ],
+    "checks": [
+      "The demo-first pitch: whether the free account is usable before funding.",
+      "The commodity focus: how signals react when a headline lands.",
+      "The broker chain: execution delegated to partners no one names.",
+      "The cost schedule: spreads and commissions left off the site.",
+      "The operator trail: no company, regulator or licence number named.",
+      "The performance claims: figures quoted without an independent source."
+    ],
+    "cons": [
+      "Neither the company nor its regulator can be identified.",
+      "Broker partners and licence details are kept out of view.",
+      "Neither spread nor commission information is available.",
+      "Performance figures come with no independent backing.",
+      "Commodity signals can be jolted by a sudden news shock."
+    ],
+    "redFlags": [
+      "No named operator, broker partner or regulator.",
+      "Unpublished spread and commission schedule.",
+      "Unaudited performance claims.",
+      "Commodity markets that can jump on one headline."
+    ]
+  },
+  "eisnouvo-ai": {
+    "claims": [
+      "AI engine that applies user risk limits before a signal becomes an order.",
+      "Three guardrails: maximum position size, per-asset exposure and a daily loss cap.",
+      "Free browser demo that runs the live signal feed and the same risk rules.",
+      "Execution through regulated partner brokers, with custody and pricing held by the broker.",
+      "Entry from $250, free registration, no platform fee and payouts advertised within 24 hours."
+    ],
+    "checks": [
+      "The risk-first pitch: limits enforced before execution, not after the position is open.",
+      "The guardrail menu: position cap, asset exposure and daily loss limit all adjustable.",
+      "The fee framing: no platform fee, but a broker spread embedded in every trade.",
+      "The demo promise: live-grade alerts and guardrails available in trial mode.",
+      "The payout story: 24-hour clearing advertised, though broker and region decide timing.",
+      "The oversight gap: ownership, licensing and regulatory contact absent from public pages."
+    ],
+    "cons": [
+      "Extra confirmation steps can delay fast manual trades.",
+      "No independent firm has reviewed the signal track record.",
+      "Trading costs sit in the spread, charged per position.",
+      "Fewer markets are covered than several competing platforms.",
+      "Ownership and regulatory oversight are missing from the site."
+    ],
+    "redFlags": [
+      "Ownership, regulator and licence details are all absent.",
+      "Track record is unchecked and covers no full market cycle.",
+      "Signal logic is never explained to account holders.",
+      "Payout speed is set by third parties, not the headline."
+    ]
+  },
+  "ewarookad": {
+    "claims": [
+      "Equity-focused AI signals, paired with a crypto feed on one dashboard.",
+      "Shared watchlist that shows equities and major digital assets together.",
+      "Automatic execution or manual approval, routed through partner brokers.",
+      "Free demo and a $250 minimum, with no sign-up or platform fees.",
+      "Withdrawals advertised within 24 hours, with round-the-clock support."
+    ],
+    "checks": [
+      "The stock-first angle: equity signals lead while crypto follows on the same screen.",
+      "The shared watchlist: one view for shares and coins, as advertised.",
+      "The spread test: fee-free marketing checked against the real cost of a filled order.",
+      "The audit gap: nobody independent has reviewed the stock signal history.",
+      "The broker question: regulated partners referenced but never named.",
+      "The payout claim: 24-hour clearing advertised against the time actually taken."
+    ],
+    "cons": [
+      "Stock signal history lacks any independent review.",
+      "Ownership and regulatory oversight are not disclosed.",
+      "A broker markup is baked into each completed trade.",
+      "Several asset classes make the layout feel cluttered.",
+      "There is not enough history to judge a full market cycle."
+    ],
+    "redFlags": [
+      "Company, regulator and executing broker all stay hidden.",
+      "Stock signals are unchecked and results remain unproven.",
+      "User complaints point to a gap between marketing and outcomes.",
+      "How signals are generated is never explained."
+    ]
+  },
+  "granite-equitorage": {
+    "claims": [
+      "Futures contracts as the home market, with signals tuned to contract rhythms.",
+      "Alerts include a recommended position size plus a clear point to exit.",
+      "Adjustable risk settings built directly into the signal workflow.",
+      "Free demo mirrors the live futures contract feed and risk settings.",
+      "Entry from $250, free registration, no platform fee and 24-hour withdrawals."
+    ],
+    "checks": [
+      "The futures focus: contracts positioned as the primary market, not an add-on.",
+      "The risk workflow: position size and abandonment point attached to each alert.",
+      "The leverage warning: small price moves can produce large losses.",
+      "The record question: contract signals unaudited and history still short.",
+      "The fee line: no platform charge, but a spread on every contract.",
+      "The operator gap: no regulator, licence or broker partner disclosed."
+    ],
+    "cons": [
+      "Futures leverage can amplify losses quickly.",
+      "Contract results lack independent review.",
+      "Each trade carries a broker markup.",
+      "Ownership and licensing are not disclosed.",
+      "Operating history is too brief for a verdict."
+    ],
+    "redFlags": [
+      "Unnamed operator, regulator and broker partner.",
+      "Unaudited futures performance record.",
+      "Leveraged contracts carry outsized loss risk.",
+      "Which contracts are chosen, and why, is never explained."
+    ]
+  },
+  "gyors-piacitar": {
+    "claims": [
+      "Latency-led engine that sends alerts the moment a setup is detected.",
+      "Lean dashboard with fewer panels and a single, readable signal.",
+      "Automatic execution or manual confirmation through partner brokers.",
+      "Trial mode mirrors the paid feed without delay.",
+      "Entry from $250, free registration, no platform fee and 24-hour payouts."
+    ],
+    "checks": [
+      "The speed pitch: alerts pushed immediately rather than batched on a schedule.",
+      "The latency numbers: published without third-party measurement.",
+      "The lean interface: fewer panels, one current signal at a glance.",
+      "The overtrading risk: a fast feed can multiply trades and costs.",
+      "The fee framing: no platform fee, spread embedded in every fill.",
+      "The paper trail: ownership and licensing never disclosed."
+    ],
+    "cons": [
+      "Speed can encourage overtrading for users who chase every alert.",
+      "No independent review of the signal history.",
+      "Every completed trade carries a broker markup.",
+      "Ownership and oversight are absent from the site.",
+      "Fast delivery is not evidence that a signal is accurate."
+    ],
+    "redFlags": [
+      "Unaudited signal record with no independent performance check.",
+      "Latency claims measured by nobody outside the platform.",
+      "No named operator or regulator behind the site.",
+      "The marketing treats speed as proof of accuracy."
+    ]
+  },
+  "haveningry": {
+    "claims": [
+      "Crypto-first coverage that adds equities, forex, commodities, metals and CFDs.",
+      "Claimed Australian licence, full registration and regulatory compliance.",
+      "Account security includes two-factor login, encrypted traffic and mostly offline asset storage.",
+      "Marketing quotes 85% signal accuracy and a 14% to 19% return range.",
+      "Entry from $250, free demo, 24-hour withdrawals and 24/7 support."
+    ],
+    "checks": [
+      "The Australian licence: no regulator, registration or company name anywhere.",
+      "The address mismatch: a London contact page beneath an Australian-focused pitch.",
+      "The accuracy figure: 85% claimed with no audit trail.",
+      "The return range: 14% to 19% quoted without supporting data.",
+      "The support hours: two pages give conflicting schedules.",
+      "The withdrawal story: two pages describe checks differently."
+    ],
+    "cons": [
+      "The claimed Australian licence lacks any identifying details.",
+      "Two pages give different support schedules.",
+      "Performance numbers are quoted without any verification.",
+      "Payout instructions change depending on which page you read.",
+      "Spread costs stay unpublished until trading begins."
+    ],
+    "redFlags": [
+      "Licensed and fully registered claim with no legal entity or regulator named.",
+      "London contact address contradicts the Australian positioning.",
+      "The advertised accuracy and yield range have no supporting evidence.",
+      "Calculator example projects a $250 gain from a $250 deposit over 50 days."
+    ]
+  },
+  "heluxkiapp": {
+    "claims": [
+      "Rule-based AI models applied to live price data across several asset classes.",
+      "Fixed-income and bond markets sit beside crypto and other assets.",
+      "Automated execution with a manual toggle in the main dashboard.",
+      "Identity verification required before any live trading unlocks.",
+      "A $250 starting point, no sign-up charge and play-money trial."
+    ],
+    "checks": [
+      "The bond angle: fixed income presented as a focus rather than a footnote.",
+      "The fee line: transaction, deposit and withdrawal charges denied, spreads left unquantified.",
+      "The broker claim: partners called approved or regulated, none identified.",
+      "The operator gap: company, regulator and licence all missing from the site.",
+      "The ratings source: user scores quoted without a visible reference.",
+      "The bond depth: coverage described as thin beside the crypto list."
+    ],
+    "cons": [
+      "No company name appears on the platform.",
+      "Regulator, licence and executing brokers all go unlisted.",
+      "Fixed income gets less depth than digital assets.",
+      "Zero-fee messaging ignores the cost inside pricing.",
+      "Testimonials and scores appear with no attribution."
+    ],
+    "redFlags": [
+      "Nobody can tell who operates the platform.",
+      "Executing brokers are called approved yet stay anonymous.",
+      "Fee-free marketing with no spread or commission schedule.",
+      "User ratings published without any visible source."
+    ]
+  },
+  "inishvorn": {
+    "claims": [
+      "Derivatives framed as the main market on offer.",
+      "Onboarding built around risk controls for leveraged products.",
+      "AI and rule-based models generate signals, with manual approval available.",
+      "Broad crypto list plus references to shares, commodities and bonds.",
+      "Entry from $250, free registration, fee-free deposits and a free demo."
+    ],
+    "checks": [
+      "The derivatives focus: leveraged products placed at the centre of the offer.",
+      "The risk pitch: settings moved ahead of the first automated trade.",
+      "The fee-free language: no spread or commission schedule published.",
+      "The broker question: partners called approved but never named.",
+      "The operator gap: company, regulator and licence all undisclosed.",
+      "The withdrawal claim: one-day clearing advertised, never independently tested."
+    ],
+    "cons": [
+      "Ownership and regulatory standing stay unconfirmed.",
+      "Approved brokers remain anonymous to users.",
+      "Trading costs are absent from published materials.",
+      "Leverage can hurt newcomers faster than they expect.",
+      "Zero-fee language clashes with hidden execution pricing."
+    ],
+    "redFlags": [
+      "No operating company or regulator disclosed anywhere.",
+      "Fee-free marketing without any cost disclosure.",
+      "Leveraged derivatives aimed partly at beginners.",
+      "Approved brokers remain anonymous."
+    ]
+  },
+  "krest-phuntgrowe": {
+    "claims": [
+      "Stocks lead the offer, with crypto and other markets available too.",
+      "Signals can run on autopilot or wait for user approval.",
+      "Risk levels can be changed from the dashboard.",
+      "Identity checks are required before real money trades.",
+      "A $250 entry, free demo, constant support and next-day payouts."
+    ],
+    "checks": [
+      "The equity focus: stocks central rather than an afterthought.",
+      "The manual toggle: every signal can wait for confirmation.",
+      "The broker claim: a regulated network referenced, no name published.",
+      "The operator gap: company, regulator and licence all unpublished.",
+      "The performance figures: quoted without methodology or sources.",
+      "The asset balance: fewer stock names than coins in practice."
+    ],
+    "cons": [
+      "Regulated brokers are claimed, but none are named.",
+      "Ownership and licensing go unpublished.",
+      "Results are quoted with no method or evidence.",
+      "Fewer equities than coins appear in the actual lineup.",
+      "Payout speed is promised, not shown."
+    ],
+    "redFlags": [
+      "Regulated broker network claimed but never named.",
+      "Ownership and oversight remain unidentified.",
+      "Performance claims published without methodology.",
+      "Payout claims have not been put to an independent test."
+    ]
+  },
+  "lithvestor": {
+    "claims": [
+      "Arbitrage engine that watches several venues for price differences.",
+      "One venue supplies the buy, another the sell, and the gap is kept.",
+      "Traders choose markets, define risk and set the bot to auto or manual.",
+      "Free demo shows the arbitrage logic against live prices.",
+      "Entry from $250, free registration and no platform fee."
+    ],
+    "checks": [
+      "The arbitrage premise: same asset, two venues, gap captured before it closes.",
+      "The venue disclosure: which platforms and brokers handle each leg.",
+      "The spread drag: execution costs charged on every leg.",
+      "The record: outside reviewers have never seen the arbitrage results.",
+      "The operator gap: company, regulator and licence all unnamed.",
+      "The model's limits: gaps vanish fast and rivals hunt the same ones."
+    ],
+    "cons": [
+      "A gap may disappear while the order is in flight.",
+      "Capturing a gap still leaves room for losses.",
+      "Each leg carries its own broker markup.",
+      "Ownership and oversight are absent from public pages.",
+      "Too little history exists for a firm verdict."
+    ],
+    "redFlags": [
+      "The counterparties and venues for each leg stay secret.",
+      "Operator and regulator identities are not disclosed.",
+      "Nobody independent has checked the arbitrage returns.",
+      "The edge assumes gaps survive execution costs and competition."
+    ]
+  },
+  "lodeminting": {
+    "claims": [
+      "Marketed as a signal matcher, not a broker.",
+      "The engine reads a huge stream of market data nonstop.",
+      "The feed offers coin ideas and pre-built portfolios.",
+      "A partner firm is assigned to price trades and custody money.",
+      "Free demo, $250 entry, 24/7 support and 24-hour withdrawals."
+    ],
+    "checks": [
+      "The signal stream: constant buy and sell alerts, volume framed as a feature.",
+      "The accuracy figure: headline number with no published method or audit.",
+      "The broker reveal: partner firm unnamed until after registration.",
+      "The fee framing: no platform fee, spread set by the matched broker.",
+      "The regulator question: no regulator or operator identified.",
+      "The overtrading risk: a busy feed can push trade frequency higher."
+    ],
+    "cons": [
+      "The main accuracy number lacks verification.",
+      "Your broker's identity is hidden until after funding.",
+      "A broker markup is charged on each completed trade.",
+      "Regulatory oversight is absent from public materials.",
+      "A constant stream of alerts invites excessive trading."
+    ],
+    "redFlags": [
+      "The broker is withheld until after registration.",
+      "Accuracy and return claims are unaudited.",
+      "No regulator or operator identified on the site.",
+      "Alert volume presented as evidence of signal quality."
+    ]
+  },
+  "loxaris": {
+    "claims": [
+      "AI entries sit inside a framework of protective rules.",
+      "Controls trim exposure or pause new entries during sharp market falls.",
+      "Promotion leans on commodities, while crypto and other markets fill the list.",
+      "Manual and automatic execution modes both available.",
+      "Entry from $250, free demo, 24/7 support and one-day withdrawals."
+    ],
+    "checks": [
+      "The safeguard pitch: exposure trimmed and new entries paused during sell-offs.",
+      "The documentation gap: protective rules described in prose, never published.",
+      "The testing gap: no outside party has stress-tested the safeguards.",
+      "The asset mix: commodities lead the marketing, crypto dominates the list.",
+      "The operator question: no company or regulator named.",
+      "The fee line: no platform fee stated, spread charged on every position."
+    ],
+    "cons": [
+      "Nobody outside the company has tested the safeguards.",
+      "Promotion emphasizes commodities, yet coins dominate the actual coverage.",
+      "Each position carries a broker markup.",
+      "Ownership and regulatory oversight are undisclosed.",
+      "Its track record is too brief to assess."
+    ],
+    "redFlags": [
+      "Protective rules remain undocumented.",
+      "No named operator or regulator.",
+      "Return figures have never been checked by outsiders.",
+      "Commodity emphasis is not matched by demonstrated coverage."
+    ]
+  },
+  "meer-dividbrook": {
+    "claims": [
+      "Bonds are the headline market, alongside crypto and other assets.",
+      "Machine-generated signals combined with rule-based models.",
+      "Risk settings adjustable without switching account type.",
+      "Identity verification completed before live trading.",
+      "Entry from $250, free demo, no platform fee and 24-hour withdrawals."
+    ],
+    "checks": [
+      "The bond-first pitch: fixed income as the core, crypto as the volatile sleeve.",
+      "The bond coverage: asserted in marketing, hard to confirm in the demo.",
+      "The asset balance: more coins than bonds in the actual lineup.",
+      "The operator gap: company, regulator, licence and broker all unnamed.",
+      "The fee framing: no platform fee, broker spread on every trade.",
+      "The performance record: returns advertised without independent audit."
+    ],
+    "cons": [
+      "Fixed-income access is difficult to confirm during the trial.",
+      "Digital assets outnumber bonds in the visible lineup.",
+      "Every trade carries a broker markup.",
+      "Ownership and oversight are undisclosed.",
+      "Its operating history is brief."
+    ],
+    "redFlags": [
+      "Bond access is claimed more than shown.",
+      "No operator, regulator, licence or broker identified.",
+      "Advertised returns are unaudited.",
+      "Coverage claims are not documented before deposit."
+    ]
+  },
+  "metreturneth": {
+    "claims": [
+      "Rule-based automation with position caps, a daily loss ceiling and selectable markets.",
+      "A free demo built on the same rules the live engine follows.",
+      "Automatic execution or alert mode, with fills handled by partner brokers.",
+      "A $250 minimum, free registration and no platform fee beyond broker spreads.",
+      "Payouts advertised within 24 hours, round-the-clock support and four funding methods."
+    ],
+    "checks": [
+      "The guardrails: whether trade caps bind the engine before orders, or only warn on screen.",
+      "The demo claim: does the trial version run the identical rule set or an easier one?",
+      "The fee framing: no platform charge, yet a spread is baked into every fill.",
+      "The ownership question: no operator, broker or regulator named on the site.",
+      "The performance numbers: platform-reported, with no independent audit attached.",
+      "The 24-hour payout: advertised plainly, yet broker and region can stretch it."
+    ],
+    "cons": [
+      "Conservative defaults may keep the engine quiet for long stretches.",
+      "The site names no operating company, broker or licensing authority.",
+      "Every position still pays a broker spread, even with no platform fee.",
+      "Advertised results lack independent verification.",
+      "Regional restrictions rule out some traders before they start."
+    ],
+    "redFlags": [
+      "Anonymous ownership: no company, broker or regulator named anywhere public.",
+      "Self-reported performance figures with no independent audit.",
+      "The model's actual rules stay hidden, leaving the automation a black box."
+    ]
+  },
+  "mexaro-dulin": {
+    "claims": [
+      "A scanner ranking crypto, forex, shares and commodities on a single dashboard.",
+      "Each setup graded for momentum, volatility and trend alignment, with a short trigger note.",
+      "Automatic execution of top-ranked signals, or manual confirmation of every alert.",
+      "A free demo, a $250 minimum and no sign-up or platform fee beyond spreads.",
+      "Withdrawals advertised within 24 hours and support available at all hours."
+    ],
+    "checks": [
+      "The ranking method: scored with confidence, yet the weighting is never disclosed.",
+      "The alert volume: volatile sessions flood the feed, a detail the marketing omits.",
+      "The fee framing: no platform fee, though every ranked trade pays a broker spread.",
+      "The ownership trail: no operator, broker or regulator named on the site.",
+      "The performance record: platform-reported and unaudited, so rankings prove nothing.",
+      "The 24-hour payout: broker and region can stretch the advertised window."
+    ],
+    "cons": [
+      "Volatile sessions flood the feed with alerts, burying the handful worth reading.",
+      "Ranking scores are proprietary and cannot be independently checked.",
+      "A newcomer may find the multi-market sweep more noise than guidance.",
+      "Ownership, brokerage and licensing details are all absent.",
+      "Advertised returns are unaudited despite the data-driven presentation."
+    ],
+    "redFlags": [
+      "Unpublished ranking formula behind confident-looking scores.",
+      "No named company, broker or regulator on any public page.",
+      "Self-reported returns presented alongside genuine timestamped signals.",
+      "Volatile-session alert floods that encourage overtrading."
+    ]
+  },
+  "nexus-trade-ai": {
+    "claims": [
+      "Each signal comes with a short written rationale in everyday language.",
+      "Paper, live and historical results labelled separately to show their status.",
+      "Automatic execution within settings, or manual mode that waits for approval.",
+      "A free demo, a $250 minimum and no platform fee beyond broker spreads.",
+      "Withdrawals within 24 hours, around-the-clock support and four payment methods."
+    ],
+    "checks": [
+      "The rationale: generated by the same engine that made the call, so no outside confirmation.",
+      "The result labels: paper, live or historical, each carrying a different evidential weight.",
+      "The backtest problem: historical numbers are not evidence of future returns.",
+      "The fee framing: no platform fee claimed, spreads still charged on every fill.",
+      "The ownership gap: operator and regulator both unnamed.",
+      "The demo claim: same explained feed as live, which a trial run can confirm."
+    ],
+    "cons": [
+      "A model that writes its own rationale can dress up a weak call convincingly.",
+      "Backtested and paper results carry no independent audit.",
+      "The operator and any regulator are unnamed.",
+      "Jargon in the interface may slow anyone new to trading.",
+      "Spreads apply to every executed position."
+    ],
+    "redFlags": [
+      "Self-explanation presented as transparency, sourced from the same model.",
+      "No named operator or regulator behind the product.",
+      "Performance figures unverified and partly paper-based.",
+      "Polished explanations may build false confidence in weak signals."
+    ]
+  },
+  "renevex": {
+    "claims": [
+      "Sizing that adapts itself as volatility rises or falls, without waiting for the user.",
+      "Futures, forex, shares and crypto covered through one browser interface.",
+      "Automatic execution at the suggested size, or manual review before each position.",
+      "A free demo, $250 minimum and no platform fee beyond broker spreads.",
+      "Payouts inside 24 hours and support available every hour."
+    ],
+    "checks": [
+      "The sizing model: inputs undisclosed, so the adjustment cannot be reproduced.",
+      "The leverage exposure: futures can amplify drawdowns just as easily as gains.",
+      "Calm markets may see the model shrink positions more than necessary.",
+      "The identity checks: required before trading, but the operator remains unnamed.",
+      "The fee story: no platform fee, spreads still charged on every trade.",
+      "The return figures: unaudited, and better read as ambitions than evidence."
+    ],
+    "cons": [
+      "Futures leverage can deepen losses faster than a beginner expects.",
+      "The sizing model can leave positions too small when markets are quiet.",
+      "No operator, broker or regulator named.",
+      "Sizing inputs are not disclosed.",
+      "Advertised returns remain unaudited."
+    ],
+    "redFlags": [
+      "Leverage marketed as risk management without a named regulator.",
+      "Anonymous operator despite mandatory identity verification.",
+      "Proprietary sizing model with no audit or published inputs.",
+      "Unaudited returns presented beside polished risk controls."
+    ]
+  },
+  "calderive": {
+    "claims": [
+      "Crypto, forex, shares, commodities and CFDs all reachable from a single login.",
+      "Automation that can pause for manual approval on every single order.",
+      "Each order ticket ships with stop-loss and take-profit inputs.",
+      "Encryption and identity verification applied at registration.",
+      "A free demo, $250 minimum, 24-hour payouts and no platform fee beyond spreads."
+    ],
+    "checks": [
+      "The approval switch: does it truly gate every automated order, or just some?",
+      "Costs across asset classes: no single headline spread, and the range is wide.",
+      "The KYC process: real enough at sign-up, yet data handling stays unexplained.",
+      "The operator question: no company, regulator or partner broker named.",
+      "The withdrawal route: identity checks can add delay to the 24-hour claim.",
+      "The depth claim: five markets listed, though coverage runs unevenly across them."
+    ],
+    "cons": [
+      "The dashboard is busy enough to intimidate someone on their first trade.",
+      "Spreads shift between asset classes with no single headline figure.",
+      "Market depth is lopsided, with crypto getting the most attention.",
+      "Ownership, regulation and brokerage partners all go unnamed.",
+      "Verification steps may delay the first withdrawal."
+    ],
+    "redFlags": [
+      "Unnamed operator on a platform handling five markets and identity documents.",
+      "No regulator or licence published despite KYC at registration.",
+      "Security claims around encryption and verification lack any outside audit.",
+      "Multi-asset breadth used as marketing while market depth stays uneven."
+    ]
+  },
+  "exolventra": {
+    "claims": [
+      "Two automation routes: custom bot rules or copying a marketplace strategy.",
+      "More than 10,000 users and 2.5 million executed trades, per the platform.",
+      "Awards from 2023 and 2024 displayed as trust markers.",
+      "Marketplace listings expose each strategy's past results for inspection.",
+      "A free demo covering both modes, a $250 minimum and 24-hour withdrawals."
+    ],
+    "checks": [
+      "The user count: 10,000 claimed but never tied to an independent audit.",
+      "The trade volume: 2.5 million executions presented without a source.",
+      "The badges: 2023 and 2024 awards with no visible panel or criteria behind them.",
+      "The marketplace histories: platform-supplied, so past returns stay unverified.",
+      "The fee framing: no platform fee, spreads charged on copied and custom trades alike.",
+      "The operator gap: no company or regulator named on the public pages."
+    ],
+    "cons": [
+      "The audience and volume numbers come from the company, with no audit behind them.",
+      "The award badges rest on the platform's own word, with no judging body cited.",
+      "Yesterday's best strategy can fail once market conditions shift.",
+      "Building custom rules expects some grounding in trading logic.",
+      "Spreads apply on top of every strategy result."
+    ],
+    "redFlags": [
+      "Big user and volume numbers used as trust signals without verification.",
+      "Self-reported industry awards with no visible judging body.",
+      "No named operator or regulator behind a copy-trading marketplace.",
+      "Past strategy performance presented as a guide to future returns."
+    ]
+  },
+  "fossentra": {
+    "claims": [
+      "Execution in under 250 milliseconds, presented as a headline speed advantage.",
+      "Signal accuracy above 68%, quoted as a performance benchmark.",
+      "British funding rails: CHAPS, debit card and Faster Payments.",
+      "Withdrawals advertised within roughly 36 hours.",
+      "A browser terminal with no download, a free demo and a $250 minimum."
+    ],
+    "checks": [
+      "The 250ms claim: no independent timing test or methodology published.",
+      "The 68% accuracy figure: period, sample and calculation all left unexplained.",
+      "The payout window: about 36 hours advertised, under 24 hours in the review's test.",
+      "The UK angle: local funding rails, but no named operator or regulator.",
+      "The browser-only design: responsive on desktop, tight on a phone screen.",
+      "The fee position: no monthly charge, spreads charged on every automated trade."
+    ],
+    "cons": [
+      "Mobile users get a browser page rather than a dedicated app.",
+      "The speed and accuracy numbers rest on the company's word alone.",
+      "Funding rails built for Britain are less useful elsewhere.",
+      "No operator or regulator named.",
+      "On a handset, the interface gets crowded and harder to navigate."
+    ],
+    "redFlags": [
+      "Precise performance figures, 250ms and 68%, with no methodology or audit.",
+      "UK-facing branding with no named regulatory oversight.",
+      "No native app, so mobile users depend entirely on a cramped browser view.",
+      "Operator identity missing while speed claims carry the pitch."
+    ]
+  },
+  "fxalchemist": {
+    "claims": [
+      "Forex automation that installs directly into MetaTrader 4 and MetaTrader 5.",
+      "A drawdown brake that stops opening trades once losses cross a chosen percentage.",
+      "A focused list of five currency pairs rather than a sprawling market menu.",
+      "A published track record available for inspection before subscribing.",
+      "A free demo, $250 minimum, 24-hour payouts and no headline platform fee."
+    ],
+    "checks": [
+      "The drawdown rule: does the pause trigger reliably and at the configured level?",
+      "The track record: self-published and unaudited, so it proves only what the vendor says.",
+      "The pricing page: optional subscription tiers hinted at under a no-fee banner.",
+      "The coverage: five pairs may not satisfy traders who want a wider currency menu.",
+      "The MetaTrader fit: convenient for existing MT4/MT5 users, a learning curve for others.",
+      "The ownership gap: no operator or regulator named."
+    ],
+    "cons": [
+      "Track record is self-reported with no independent audit.",
+      "Subscription tiers complicate the no-platform-fee message.",
+      "The five-pair focus may be too tight for some.",
+      "Getting set up expects prior time inside MetaTrader.",
+      "A hard stop can leave the account watching a rebound from the sidelines."
+    ],
+    "redFlags": [
+      "No-fee headline undercut by vague subscription tiers.",
+      "Self-published track record used as the main evidence of performance.",
+      "No named operator or regulator behind a forex product.",
+      "The pause rule can freeze trading just as a rebound begins."
+    ]
+  },
+  "monstead": {
+    "claims": [
+      "A time-stamped log of signals, fills and manual overrides.",
+      "Permission tiers that decide which users may alter the configuration.",
+      "Per-market position caps that apply before any order goes out.",
+      "Live views of open exposure and what the engine is doing.",
+      "A free demo, $250 minimum, 24-hour payouts and no platform fee beyond spreads."
+    ],
+    "checks": [
+      "The log's credibility: kept by the company, so it is a record rather than independent proof.",
+      "The permission setup: useful for teams, extra friction for a single trader.",
+      "The panels: powerful, but heavy reading for someone new to the platform.",
+      "The ownership gap: no operator company or regulator named.",
+      "The demo claim: same controls as live, which a trial run can confirm.",
+      "The fee framing: no platform charge, broker spreads on every order."
+    ],
+    "cons": [
+      "The configuration screens demand patience from newcomers.",
+      "Activity logs stay inside the company and are never externally reviewed.",
+      "No operator company or regulator named.",
+      "Every order carries a broker spread that differs by provider.",
+      "Permission settings add steps that one-person accounts may not want."
+    ],
+    "redFlags": [
+      "Accountability branding backed by logs the company itself controls.",
+      "No named operator or regulator despite detailed permission features.",
+      "The audit trail is presented as proof when it is only an internal record.",
+      "Complex control setup that may create a false sense of safety."
+    ]
+  },
+  "pixum-ai": {
+    "claims": [
+      "Signals from machine-learning models built on past price data.",
+      "Protective exits and an allocation ceiling configured ahead of any trade.",
+      "Strategy backtesting against historical prices, offered as a pre-live check.",
+      "Multi-factor authentication and encryption protecting the account.",
+      "A free demo, $250 minimum, 24-hour payouts and no platform fee beyond spreads."
+    ],
+    "checks": [
+      "The backtest display: historical results sit beside live signals, inviting comparisons the data cannot support.",
+      "The model notes: promotional prose where technical documentation would help.",
+      "The US-first framing: sign-up rules may turn away applicants the pitch attracted.",
+      "The operator gap: no company, regulator or broker named.",
+      "The risk controls: stop-loss and take-profit are real, but only as good as the fill.",
+      "The security claim: MFA and encryption offered, with no independent audit."
+    ],
+    "cons": [
+      "The US-first pitch limits who can actually sign up.",
+      "Historical backtests say little about how live signals will perform.",
+      "No operator, regulator or broker named.",
+      "Model documentation stops at a high-level sketch.",
+      "Every trade pays a spread, and the rate differs by provider."
+    ],
+    "redFlags": [
+      "Backtests presented close to live signals, inviting hindsight confidence.",
+      "No named operator or regulator behind a security-focused pitch.",
+      "Geographic rules that may rule out applicants the pitch attracted.",
+      "Thin model documentation for a platform selling AI precision."
+    ]
+  },
+  "trilox-ai": {
+    "claims": [
+      "Two execution modes: fully automatic, or semi-automatic with approval before each trade.",
+      "Preferences for markets, risk tolerance and approval rules set once in a dashboard.",
+      "A free demo running the same feed and modes as the live service.",
+      "A $250 entry point, free registration and no platform fee beyond spreads.",
+      "Withdrawals within 24 hours and support reachable at any hour."
+    ],
+    "checks": [
+      "The two modes: automatic versus approval-based, with the difference testable in the demo.",
+      "The reasoning layer: a short summary rather than a full account of each setup.",
+      "The preference-driven design: results are only as good as the settings chosen.",
+      "The operator gap: no company, regulator or partner broker named.",
+      "The performance record: no independent data on how the signals have done.",
+      "The fee story: no platform charge, spreads on every trade varying by broker."
+    ],
+    "cons": [
+      "Results hinge on the user's own settings rather than a proven default.",
+      "No operator, regulator or broker named.",
+      "Each setup comes with only a brief rationale.",
+      "Every trade pays a spread that differs by broker.",
+      "Approval mode demands attention whenever a setup appears."
+    ],
+    "redFlags": [
+      "No named ownership behind an automated trading product.",
+      "Thin signal explanations for a system handling execution.",
+      "No independent record of signal performance.",
+      "Approval mode can become a habit rather than a real check."
+    ]
+  },
+  "stone-credholm": {
+    "claims": [
+      "An FCA-style regulatory framework, presented as the platform's central trust signal.",
+      "Speed-focused order routing that aims for fills near the quoted price.",
+      "User-set risk limits with automatic exits triggered at chosen thresholds.",
+      "A wide funding menu spanning cards, PayPal, Apple Pay, Google Pay, SEPA, USDT and bank transfer.",
+      "A free demo, $250 minimum, 24-hour payouts and no platform fee beyond spreads."
+    ],
+    "checks": [
+      "The regulation story: FCA-style wording, but no licence number or legal entity on the page.",
+      "The accuracy figure: prominent in marketing, with no independent audit behind it.",
+      "Emergency exits in fast markets may execute well away from the intended level.",
+      "The payment breadth: SEPA and USDT settlement times vary by region.",
+      "The fee position: no platform charge, spreads baked into every order.",
+      "The verification burden: a long payment menu means more identity checks."
+    ],
+    "cons": [
+      "FCA-style regulation claimed, but no licence number published.",
+      "Signal accuracy claims lack independent audit.",
+      "Forced exits may fill at disappointing prices when markets move quickly.",
+      "No company name is attached to the operation.",
+      "The broad payment menu brings extra account checks."
+    ],
+    "redFlags": [
+      "Regulation as the main selling point, with no verifiable licence details.",
+      "Public pages carry neither a company registration nor a broker entity.",
+      "Unaudited accuracy claims paired with automatic exit promises.",
+      "Slippage on emergency exits understated in the marketing."
+    ]
+  }
+}
