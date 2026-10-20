@@ -1,5 +1,5 @@
 {
-  "fetched": "2026-10-20T07:07:13.330Z",
+  "fetched": "2026-10-20T09:40:17.418Z",
   "source": "https://ai-trading-platform.com",
   "failures": [],
   "entries": [
@@ -1843,6 +1843,342 @@
       "sourcePath": "/trading/cape-signal-method-method-review",
       "sourceDate": "Oct 20, 2026",
       "sourceReadTime": "4 min read"
+    },
+    {
+      "slug": "rqpbinary",
+      "name": "Rqpbinary",
+      "sourcePath": "/trading/rqpbinary-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "quantovaai",
+      "name": "Quantovaai",
+      "sourcePath": "/trading/quantovaai-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "newsquawk",
+      "name": "Newsquawk",
+      "sourcePath": "/trading/newsquawk-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "apexquant",
+      "name": "Apexquant",
+      "sourcePath": "/trading/apexquant-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "signaldesk",
+      "name": "Signaldesk",
+      "sourcePath": "/trading/signaldesk-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "perpsfun",
+      "name": "Perpsfun",
+      "sourcePath": "/trading/perpsfun-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "thriftidom",
+      "name": "Thriftidom",
+      "sourcePath": "/trading/thriftidom-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "quantex",
+      "name": "Quantex",
+      "sourcePath": "/trading/quantex-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "cryptyx",
+      "name": "Cryptyx",
+      "sourcePath": "/trading/cryptyx-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "botarenax",
+      "name": "Botarenax",
+      "sourcePath": "/trading/botarenax-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "primestrate",
+      "name": "Primestrate",
+      "sourcePath": "/trading/primestrate-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "naija-ai",
+      "name": "Naija Ai",
+      "sourcePath": "/trading/naija-ai-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "prf-invest",
+      "name": "Prf Invest",
+      "sourcePath": "/trading/prf-invest-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "master-ict",
+      "name": "Master Ict",
+      "sourcePath": "/trading/master-ict-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "aitradefrance-france",
+      "name": "Aitradefrance France",
+      "sourcePath": "/trading/aitradefrance-france-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "capitalais-france",
+      "name": "Capitalais France",
+      "sourcePath": "/trading/capitalais-france-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "vortex-fx",
+      "name": "Vortex Fx",
+      "sourcePath": "/trading/vortex-fx-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "smart-capital",
+      "name": "Smart Capital",
+      "sourcePath": "/trading/smart-capital-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "goldzoneweb-reborn",
+      "name": "Goldzoneweb Reborn",
+      "sourcePath": "/trading/goldzoneweb-reborn-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "blizzerdpro-france",
+      "name": "Blizzerdpro France",
+      "sourcePath": "/trading/blizzerdpro-france-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "nusa-bitpulse",
+      "name": "Nusa Bitpulse",
+      "sourcePath": "/trading/nusa-bitpulse-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "futures-trading",
+      "name": "Futures Trading",
+      "sourcePath": "/trading/futures-trading-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "northshield-advisory",
+      "name": "Northshield Advisory",
+      "sourcePath": "/trading/northshield-advisory-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "netrivexo-france",
+      "name": "Netrivexo France",
+      "sourcePath": "/trading/netrivexo-france-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "trader-pro",
+      "name": "Trader Pro",
+      "sourcePath": "/trading/trader-pro-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "trading-calculators",
+      "name": "Trading Calculators",
+      "sourcePath": "/trading/trading-calculators-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "bitmeridian-al",
+      "name": "Bitmeridian Al",
+      "sourcePath": "/trading/bitmeridian-al-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "xtrade-france",
+      "name": "Xtrade France",
+      "sourcePath": "/trading/xtrade-france-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "tiger-finance",
+      "name": "Tiger Finance",
+      "sourcePath": "/trading/tiger-finance-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "profitwise-group",
+      "name": "Profitwise Group",
+      "sourcePath": "/trading/profitwise-group-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "hedgeflow-france",
+      "name": "Hedgeflow France",
+      "sourcePath": "/trading/hedgeflow-france-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "trx-journal",
+      "name": "Trx Journal",
+      "sourcePath": "/trading/trx-journal-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "naijaai-program",
+      "name": "Naijaai Program",
+      "sourcePath": "/trading/naijaai-program-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "riche-gestoire-france",
+      "name": "Riche Gestoire France",
+      "sourcePath": "/trading/riche-gestoire-france-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "the-agentic-trader",
+      "name": "The Agentic Trader",
+      "sourcePath": "/trading/the-agentic-trader-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "velocity-trade-fx",
+      "name": "Velocity Trade Fx",
+      "sourcePath": "/trading/velocity-trade-fx-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "cm-markets-arabia",
+      "name": "Cm Markets Arabia",
+      "sourcePath": "/trading/cm-markets-arabia-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "sign-prime-fx",
+      "name": "Sign Prime Fx",
+      "sourcePath": "/trading/sign-prime-fx-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "avantage-finance-france",
+      "name": "Avantage Finance France",
+      "sourcePath": "/trading/avantage-finance-france-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "prime-wealth-benefits",
+      "name": "Prime Wealth Benefits",
+      "sourcePath": "/trading/prime-wealth-benefits-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "lornex-trade-france",
+      "name": "Lornex Trade France",
+      "sourcePath": "/trading/lornex-trade-france-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "tesla-trade-options",
+      "name": "Tesla Trade Options",
+      "sourcePath": "/trading/tesla-trade-options-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "prime-chain-broker",
+      "name": "Prime Chain Broker",
+      "sourcePath": "/trading/prime-chain-broker-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "mr-investing-ai",
+      "name": "Mr Investing Ai",
+      "sourcePath": "/trading/mr-investing-ai-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "trader-pro-france",
+      "name": "Trader Pro France",
+      "sourcePath": "/trading/trader-pro-france-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "orbit-chain-capital",
+      "name": "Orbit Chain Capital",
+      "sourcePath": "/trading/orbit-chain-capital-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "top-pro-tradex",
+      "name": "Top Pro Tradex",
+      "sourcePath": "/trading/top-pro-tradex-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "capital-ai-app",
+      "name": "Capital Ai App",
+      "sourcePath": "/trading/capital-ai-app-review",
+      "sourceDate": null,
+      "sourceReadTime": null
     }
   ]
 }
