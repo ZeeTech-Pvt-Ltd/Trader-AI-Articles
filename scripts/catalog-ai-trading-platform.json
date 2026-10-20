@@ -1,5 +1,5 @@
 {
-  "fetched": "2026-10-20T09:40:17.418Z",
+  "fetched": "2026-10-20T12:14:41.729Z",
   "source": "https://ai-trading-platform.com",
   "failures": [],
   "entries": [
@@ -2179,6 +2179,34 @@
       "sourcePath": "/trading/capital-ai-app-review",
       "sourceDate": "Oct 20, 2026",
       "sourceReadTime": null
+    },
+    {
+      "slug": "havuno-weroxi",
+      "name": "Havuno Weroxi",
+      "sourcePath": "/trading/havuno-weroxi-review",
+      "sourceDate": "Oct 20, 2026",
+      "sourceReadTime": "10 min read"
+    },
+    {
+      "slug": "krelix-barden",
+      "name": "Krelix Barden",
+      "sourcePath": "/trading/krelix-barden-review",
+      "sourceDate": "Oct 20, 2026",
+      "sourceReadTime": "10 min read"
+    },
+    {
+      "slug": "vexaril-cormedax",
+      "name": "Vexaril Cormedax",
+      "sourcePath": "/trading/vexaril-cormedax-review",
+      "sourceDate": "Oct 20, 2026",
+      "sourceReadTime": "10 min read"
+    },
+    {
+      "slug": "slurvenix",
+      "name": "Slurvenix",
+      "sourcePath": "/trading/slurvenix-review",
+      "sourceDate": "Oct 20, 2026",
+      "sourceReadTime": "10 min read"
     }
   ]
 }
