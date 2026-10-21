@@ -1,5 +1,5 @@
 {
-  "fetched": "2026-10-20T12:14:41.729Z",
+  "fetched": "2026-10-21T08:25:08.061Z",
   "source": "https://ai-trading-platform.com",
   "failures": [],
   "entries": [
@@ -2206,6 +2206,34 @@
       "name": "Slurvenix",
       "sourcePath": "/trading/slurvenix-review",
       "sourceDate": "Oct 20, 2026",
+      "sourceReadTime": "10 min read"
+    },
+    {
+      "slug": "lamparo",
+      "name": "Lamparo",
+      "sourcePath": "/trading/lamparo-review",
+      "sourceDate": "Oct 21, 2026",
+      "sourceReadTime": "10 min read"
+    },
+    {
+      "slug": "avritura",
+      "name": "Avritura",
+      "sourcePath": "/trading/avritura-review",
+      "sourceDate": "Oct 21, 2026",
+      "sourceReadTime": "10 min read"
+    },
+    {
+      "slug": "mintforge-capital",
+      "name": "Mintforge Capital",
+      "sourcePath": "/trading/mintforge-capital-review",
+      "sourceDate": "Oct 21, 2026",
+      "sourceReadTime": "10 min read"
+    },
+    {
+      "slug": "nembo-crescitone-italia",
+      "name": "Nembo Crescitone Italia",
+      "sourcePath": "/trading/nembo-crescitone-italia-review",
+      "sourceDate": "Oct 21, 2026",
       "sourceReadTime": "10 min read"
     }
   ]
