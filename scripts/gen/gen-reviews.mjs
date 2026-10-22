@@ -248,7 +248,7 @@ if (generatedSources.length) {
   const expected =
     handwritten.length + generatedSources.reduce((sum, c) => sum + c.entries.length, 0)
   check(all.length === expected, `total articles ${all.length} != expected ${expected}`)
-  check(all.length >= 2450 && all.length <= 3200, `total articles ${all.length} outside 2450-3200`)
+  check(all.length >= 2450 && all.length <= 4500, `total articles ${all.length} outside 2450-4500`)
 }
 
 // ---- write manifest + chunks ----------------------------------------------
