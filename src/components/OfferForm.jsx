@@ -1,3 +1,5 @@
+'use client'
+
 import { useEffect, useRef, useState } from 'react'
 import intlTelInput from 'intl-tel-input'
 import 'intl-tel-input/dist/css/intlTelInput.min.css'

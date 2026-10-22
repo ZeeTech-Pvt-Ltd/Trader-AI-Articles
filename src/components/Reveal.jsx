@@ -1,3 +1,5 @@
+'use client'
+
 import { useEffect, useRef } from 'react'
 
 // Scroll-reveal wrapper: fades content up the first time it enters the viewport.

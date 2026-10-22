@@ -1,4 +1,7 @@
-import { Link, useLocation } from 'react-router-dom'
+'use client'
+
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { NAV_LINKS } from '../data/site.js'
 import LogoMark from './LogoMark.jsx'
 
@@ -15,7 +18,8 @@ function isReviewsActive(pathname, hash) {
 }
 
 export default function Header() {
-  const { pathname, hash } = useLocation()
+  const pathname = usePathname()
+  const hash = typeof window !== 'undefined' ? window.location.hash : ''
 
   const linkActive = (link) => {
     if (link.to === '/') return pathname === '/' && hash !== '#reviews'
@@ -27,7 +31,7 @@ export default function Header() {
   return (
     <header className="header">
       <div className="container">
-        <Link to="/" className="header__brand">
+        <Link href="/" className="header__brand">
           <LogoMark size={40} />
           <span className="header__name">
             Trader AI
@@ -39,7 +43,7 @@ export default function Header() {
           <ul className="header__links">
             {NAV_LINKS.map((link) => (
               <li key={link.label}>
-                <Link to={link.to} className={linkActive(link) ? 'active' : ''}>
+                <Link href={link.to} className={linkActive(link) ? 'active' : ''}>
                   {link.label}
                 </Link>
               </li>
@@ -47,7 +51,7 @@ export default function Header() {
           </ul>
         </nav>
 
-        <Link to="/#reviews" className="btn btn--green btn--sm header__cta">
+        <Link href="/#reviews" className="btn btn--green btn--sm header__cta">
           All reviews
         </Link>
       </div>

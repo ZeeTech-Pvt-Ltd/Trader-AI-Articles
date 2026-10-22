@@ -1,16 +1,11 @@
-import { Link, useParams } from 'react-router-dom'
-import useMeta from '../hooks/useMeta.js'
-import useArchive from '../hooks/useArchive.js'
-import Stars from '../components/Stars.jsx'
-import VerdictChip from '../components/VerdictChip.jsx'
-import OfferForm from '../components/OfferForm.jsx'
-import Scorecard from '../components/Scorecard.jsx'
-import Icon from '../components/Icon.jsx'
-import NotFound from './NotFound.jsx'
-
-// One static funnel page for every article. Unique angle: this is the only
-// signup page that leads with the review desk's own verdict and scorecard.
-// The keyword drives the offername, the copy and the SEO - nothing else changes.
+import { notFound } from 'next/navigation'
+import Link from 'next/link'
+import { readArchive, getReviewByKeyword, getReviewBySlug } from '../../../lib/server-data.js'
+import Stars from '../../../components/Stars.jsx'
+import VerdictChip from '../../../components/VerdictChip.jsx'
+import OfferFormLoader from '../../../components/OfferFormLoader.jsx'
+import Scorecard from '../../../components/Scorecard.jsx'
+import Icon from '../../../components/Icon.jsx'
 
 const MARKETS = ['BTC', 'ETH', 'SOL', 'BNB', 'USDT', 'DOGE', 'LTC', 'BCH', 'XRP', 'ADA']
 
@@ -32,7 +27,6 @@ const FEATURES = [
   },
 ]
 
-// Placeholder community quotes - replace with real user copy before launch.
 const TESTIMONIALS = [
   {
     name: 'Liam T.',
@@ -51,34 +45,44 @@ const TESTIMONIALS = [
   },
 ]
 
-export default function OfferPage() {
-  const { keyword } = useParams()
-  const archive = useArchive()
-  // The manifest carries every field this page renders (name, minimumDeposit,
-  // scorecard, rating, verdict, keyword, path) - no body chunk is needed.
-  const review = archive ? (archive.bySlug.get(keyword) ?? archive.byKeyword.get(keyword)) : null
+export const dynamicParams = true
 
-  useMeta({
-    title: review ? `Open a Free ${review.name} Account` : 'Sign up',
-    description: review
-      ? `Register for ${review.name}: ${review.minimumDeposit} minimum deposit, practice account included. Start in minutes.`
-      : null,
-    path: review ? `go/${review.keyword || review.slug}` : 'go',
-  })
+export function generateStaticParams() {
+  const archive = readArchive()
+  return [...new Set(archive.articles.map((r) => r.keyword))].map((keyword) => ({
+    keyword: String(keyword),
+  }))
+}
 
-  if (!archive) {
-    return (
-      <section className="funnel-hero">
-        <div className="container funnel-hero__grid">
-          <div className="funnel-hero__main">
-            <div className="skeleton skeleton--title" style={{ marginTop: 24 }} />
-            <div className="skeleton skeleton--line" style={{ width: '70%', marginTop: 20 }} />
-          </div>
-        </div>
-      </section>
-    )
+// Some dev/proxy environments deliver the param still percent-encoded for
+// multi-word keywords - decode defensively (same behavior as react-router).
+function normalizeKeyword(raw) {
+  try {
+    return decodeURIComponent(raw)
+  } catch {
+    return raw
   }
-  if (!review) return <NotFound />
+}
+
+export async function generateMetadata({ params }) {
+  const { keyword: raw } = await params
+  const keyword = normalizeKeyword(raw)
+  const review = getReviewBySlug(keyword) ?? getReviewByKeyword(keyword)
+  if (!review) return {}
+  return {
+    title: `Open a Free ${review.name} Account`,
+    description: `Register for ${review.name}: ${review.minimumDeposit} minimum deposit, practice account included. Start in minutes.`,
+    alternates: { canonical: `/go/${review.keyword || review.slug}` },
+    robots: 'index, follow',
+  }
+}
+
+export default async function OfferPage({ params }) {
+  const { keyword: raw } = await params
+  const keyword = normalizeKeyword(raw)
+  // The manifest carries every field this page renders - no body chunk needed.
+  const review = getReviewBySlug(keyword) ?? getReviewByKeyword(keyword)
+  if (!review) notFound()
 
   const steps = [
     {
@@ -110,8 +114,8 @@ export default function OfferPage() {
             <span className="kicker funnel-hero__kicker">Trader AI verified</span>
             <h1 className="funnel-hero__brand">{review.name}</h1>
             <p className="funnel-hero__tagline">
-              Don't miss your chance to put {review.name}'s market analysis to work - and
-              start building your trading setup today.
+              Don&apos;t miss your chance to put {review.name}&apos;s market analysis to work -
+              and start building your trading setup today.
             </p>
             <div className="funnel-hero__rating">
               <Stars value={review.rating} style={{ fontSize: 16 }} />
@@ -127,7 +131,7 @@ export default function OfferPage() {
               ))}
             </ul>
             <p className="funnel-hero__reviewlink">
-              <Link to={review.path}>
+              <Link href={review.path}>
                 Read the full review
                 <Icon name="arrow-right" size={14} />
               </Link>
@@ -136,7 +140,7 @@ export default function OfferPage() {
 
           <div className="funnel-hero__formwrap" id="signup">
             <p className="funnel-hero__sub">Sign up and get instant access</p>
-            <OfferForm offerName={`${review.keyword || review.slug}-TAI`} platform={review.name} />
+            <OfferFormLoader offerName={`${review.keyword || review.slug}-TAI`} platform={review.name} />
           </div>
         </div>
       </section>
@@ -145,14 +149,14 @@ export default function OfferPage() {
       <section className="funnel-verdict">
         <div className="container funnel-verdict__grid">
           <div className="funnel-verdict__main">
-            <span className="kicker">The desk's verdict</span>
+            <span className="kicker">The desk&apos;s verdict</span>
             <h2 className="funnel-verdict__title">How our desk scored {review.name}</h2>
             <p className="funnel-verdict__text">
               Every platform on Trader AI is scored on five fixed dimensions - ease of
               use, features, transparency, security and support. {review.name} landed at{' '}
               {review.rating.toFixed(1)} out of 5.
             </p>
-            <Link to={review.path} className="funnel-verdict__link">
+            <Link href={review.path} className="funnel-verdict__link">
               Read the full review
               <Icon name="arrow-right" size={14} />
             </Link>

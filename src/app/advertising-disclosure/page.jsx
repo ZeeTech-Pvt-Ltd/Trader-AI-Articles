@@ -1,10 +1,15 @@
-import LegalPage from '../components/LegalPage.jsx'
+import LegalPage from '../../components/LegalPage.jsx'
 
 // Template text - review with a lawyer before launch.
-export default function AdvertisingDisclosure() {
+export const metadata = {
+  title: 'Advertising Disclosure',
+  robots: { index: false, follow: false },
+}
+
+export default function Page() {
   return (
     <LegalPage title="Advertising Disclosure" kicker="Legal" updated="September 8, 2026">
-      <p>
+<p>
         Trader AI is reader-first, but it is not free to run. This page explains
         exactly how the site makes money and what that does - and does not - change about
         our reviews.
