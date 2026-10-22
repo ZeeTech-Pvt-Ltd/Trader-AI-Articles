@@ -65,9 +65,15 @@ const consoleErrors = new Map()
 
 async function newPage(width, height = 900) {
   const page = await browser.newPage({ viewport: { width, height } })
-  page.on('pageerror', (err) => consoleErrors.set(page, err.message))
+  // Ignore errors originating in external vendor scripts (the Clarity tag
+  // crashes intermittently in headless Chrome regardless of our code).
+  const external = (text) =>
+    text.includes('clarity.ms') || text.includes('a[c] is not a function')
+  page.on('pageerror', (err) => {
+    if (!external(String(err.stack || err.message))) consoleErrors.set(page, err.message)
+  })
   page.on('console', (msg) => {
-    if (msg.type() === 'error') consoleErrors.set(page, msg.text())
+    if (msg.type() === 'error' && !external(msg.text())) consoleErrors.set(page, msg.text())
   })
   return page
 }
@@ -100,22 +106,32 @@ const totalPages = Math.ceil(archive.count / 9)
   await page.close()
 }
 
-// Search works and caps.
+// Search works and caps. The island fetches the manifest lazily on first
+// input, so wait for the result count instead of a fixed timeout.
 {
   const page = await newPage(1440)
   await page.goto(BASE, { waitUntil: 'networkidle' })
   await page.fill('.searchbox input', 'aurora')
-  await page.waitForTimeout(300)
+  await page.waitForFunction(
+    () => document.querySelectorAll('.review-card:not(.review-card--skeleton)').length >= 1,
+    { timeout: 15000 },
+  )
   const cards = (await page.$$('.review-card:not(.review-card--skeleton)')).length
   ok(cards >= 1, `search "aurora" returns results (${cards})`)
   const aside = await page.textContent('.section-head')
   ok(aside.includes('result'), 'search aside shows result count')
   await page.fill('.searchbox input', 'a')
-  await page.waitForTimeout(300)
+  await page.waitForFunction(
+    () => document.querySelector('.section-head')?.textContent.includes('Showing first 90'),
+    { timeout: 15000 },
+  )
   const capText = await page.textContent('.section-head')
   ok(capText.includes('Showing first 90'), 'broad search caps at 90 results')
   await page.fill('.searchbox input', '')
-  await page.waitForTimeout(300)
+  await page.waitForFunction(
+    () => document.querySelectorAll('.review-card:not(.review-card--skeleton)').length === 9,
+    { timeout: 15000 },
+  )
   ok((await page.$$('.review-card:not(.review-card--skeleton)')).length === 9, 'clearing search restores the grid')
   await page.close()
 }
@@ -177,10 +193,19 @@ for (const entry of samples.slice(0, 3)) {
   await page.close()
 }
 
-// Responsive: no horizontal overflow, correct column counts.
+// Responsive: no horizontal overflow, correct column counts. On ≤1024px the
+// client island re-slices the grid to 10 after hydration - wait for it.
 for (const [width, cols, cards] of [[1024, 2, 10], [390, 1, 10]]) {
   const page = await newPage(width)
   await page.goto(BASE, { waitUntil: 'networkidle' })
+  await page
+    .waitForFunction(
+      (expected) =>
+        document.querySelectorAll('.review-card:not(.review-card--skeleton)').length === expected,
+      cards,
+      { timeout: 15000 },
+    )
+    .catch(() => {})
   const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth)
   ok(overflow <= 0, `no horizontal overflow at ${width}px`)
   ok((await page.$$('.review-card:not(.review-card--skeleton)')).length === cards, `${cards} cards at ${width}px`)

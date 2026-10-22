@@ -2264,11 +2264,16 @@ main:has(.funnel-cta) ~ .footer {
 }
 
 /* ---------- reveal ---------- */
+/* Hidden only when JS is present (the layout adds a `js` class on <html>):
+   server-rendered content stays visible without JavaScript. */
 
 .reveal {
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.js .reveal:not(.is-visible) {
   opacity: 0;
   transform: translateY(16px);
-  transition: opacity 0.55s ease, transform 0.55s ease;
 }
 
 .reveal.is-visible {
@@ -3005,6 +3010,12 @@ main:has(.funnel-cta) ~ .footer {
 
   .review-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  /* 9 cards in a 2-column grid = 4 rows of 2 + 1 orphan; let the last
+     wrapper (Reveal) span full width */
+  .review-grid > *:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
   }
 
   .funnel__step::before,

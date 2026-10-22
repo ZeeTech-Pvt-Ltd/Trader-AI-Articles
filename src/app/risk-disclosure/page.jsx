@@ -1,10 +1,15 @@
-import LegalPage from '../components/LegalPage.jsx'
+import LegalPage from '../../components/LegalPage.jsx'
 
 // Template text - review with a lawyer before launch.
-export default function RiskDisclosure() {
+export const metadata = {
+  title: 'Risk Disclosure',
+  robots: { index: false, follow: false },
+}
+
+export default function Page() {
   return (
     <LegalPage title="Risk Disclosure" kicker="Legal" updated="September 8, 2026">
-      <p>
+<p>
         This disclosure applies to every page of Trader AI and to every platform
         we review. Read it before you act on anything you read here.
       </p>

@@ -1,14 +1,6 @@
-import useMeta from '../hooks/useMeta.js'
-
-// Shared template for legal pages. NOTE: copy below is template text -
-// have it reviewed by a lawyer before launch.
+// Shared template for legal pages (server component). NOTE: copy below is
+// template text - have it reviewed by a lawyer before launch.
 export default function LegalPage({ title, kicker, updated, children }) {
-  useMeta({
-    title,
-    description: `${title} - ${updated}.`,
-    path: window.location.pathname,
-    robots: 'noindex, nofollow',
-  })
   return (
     <div className="section">
       <div className="container">

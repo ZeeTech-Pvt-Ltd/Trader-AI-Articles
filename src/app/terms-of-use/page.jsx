@@ -1,10 +1,15 @@
-import LegalPage from '../components/LegalPage.jsx'
+import LegalPage from '../../components/LegalPage.jsx'
 
 // Template text - review with a lawyer before launch.
-export default function TermsOfUse() {
+export const metadata = {
+  title: 'Terms of Use',
+  robots: { index: false, follow: false },
+}
+
+export default function Page() {
   return (
     <LegalPage title="Terms of Use" kicker="Legal" updated="September 8, 2026">
-      <p>
+<p>
         By accessing traderai.ai (“the site”), you agree to these terms. If you
         do not agree, please do not use the site.
       </p>

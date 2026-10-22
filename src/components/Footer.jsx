@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 import { SITE } from '../data/site.js'
 import LogoMark from './LogoMark.jsx'
 
@@ -21,7 +21,7 @@ export default function Footer() {
       <div className="container">
         <div className="footer__grid">
           <div>
-            <Link to="/" className="footer__brand">
+            <Link href="/" className="footer__brand">
               <LogoMark size={40} />
               <span className="footer__brand-name">
                 Trader AI
@@ -39,7 +39,7 @@ export default function Footer() {
             <ul className="footer__list">
               {SITE_LINKS.map((link) => (
                 <li key={link.to}>
-                  <Link to={link.to}>{link.label}</Link>
+                  <Link href={link.to}>{link.label}</Link>
                 </li>
               ))}
             </ul>
@@ -50,7 +50,7 @@ export default function Footer() {
             <ul className="footer__list">
               {LEGAL_LINKS.map((link) => (
                 <li key={link.to}>
-                  <Link to={link.to}>{link.label}</Link>
+                  <Link href={link.to}>{link.label}</Link>
                 </li>
               ))}
             </ul>

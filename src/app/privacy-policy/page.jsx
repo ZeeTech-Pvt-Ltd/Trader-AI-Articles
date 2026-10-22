@@ -1,10 +1,15 @@
-import LegalPage from '../components/LegalPage.jsx'
+import LegalPage from '../../components/LegalPage.jsx'
 
 // Template text - review with a lawyer before launch.
-export default function PrivacyPolicy() {
+export const metadata = {
+  title: 'Privacy Policy',
+  robots: { index: false, follow: false },
+}
+
+export default function Page() {
   return (
     <LegalPage title="Privacy Policy" kicker="Legal" updated="September 8, 2026">
-      <p>
+<p>
         Trader AI (“we”, “the desk”) operates the website at
         traderai.ai. This policy explains what information we collect when you
         visit the site or contact us, and how it is used.

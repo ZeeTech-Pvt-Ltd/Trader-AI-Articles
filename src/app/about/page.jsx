@@ -1,15 +1,14 @@
-import useMeta from '../hooks/useMeta.js'
-import { RATING_DIMENSIONS, FAQ_GENERAL } from '../data/site.js'
-import FaqList from '../components/FaqList.jsx'
+import { RATING_DIMENSIONS, FAQ_GENERAL } from '../../data/site.js'
+import FaqList from '../../components/FaqList.jsx'
 
-export default function About() {
-  useMeta({
-    title: 'About the Desk',
-    description:
-      'Who writes for Trader AI, how a platform gets scored, and the rules the desk works by.',
-    path: 'about',
-  })
+export const metadata = {
+  title: 'About the Desk',
+  description: 'Who writes for Trader AI, how a platform gets scored, and the rules the desk works by.',
+  alternates: { canonical: '/about' },
+  robots: 'index, follow',
+}
 
+export default function AboutPage() {
   return (
     <div className="section">
       <div className="container">
