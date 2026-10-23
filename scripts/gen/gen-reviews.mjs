@@ -243,10 +243,12 @@ if (generatedCount > 0) {
 }
 
 if (generatedSources.length) {
-  // Assert exactness against the catalogs (duplicates across sources are
-  // deduped at build time); the range is a sanity net for crawl corruption.
-  const expected =
-    handwritten.length + generatedSources.reduce((sum, c) => sum + c.entries.length, 0)
+  // Assert exactness against the catalogs with cross-source slug dedupe
+  // (the same platform can appear in both catalogs); the range is a sanity
+  // net for crawl corruption.
+  const uniqueSlugs = new Set()
+  for (const cat of generatedSources) for (const e of cat.entries) uniqueSlugs.add(e.slug)
+  const expected = handwritten.length + uniqueSlugs.size
   check(all.length === expected, `total articles ${all.length} != expected ${expected}`)
   check(all.length >= 2450 && all.length <= 4500, `total articles ${all.length} outside 2450-4500`)
 }
