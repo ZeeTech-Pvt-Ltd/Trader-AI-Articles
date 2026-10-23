@@ -1,5 +1,5 @@
 {
-  "fetched": "2026-10-23T06:03:23.473Z",
+  "fetched": "2026-10-23T08:03:00.844Z",
   "source": "https://ai-trading-platform.com",
   "failures": [],
   "entries": [
@@ -3292,6 +3292,671 @@
       "sourcePath": "/trading/cove-investholm-review",
       "sourceDate": "Oct 23, 2026",
       "sourceReadTime": "6 min read"
+    },
+    {
+      "slug": "vixionbot",
+      "name": "Vixionbot",
+      "sourcePath": "/trading/vixionbot-review",
+      "sourceDate": "Oct 23, 2026",
+      "sourceReadTime": "10 min read"
+    },
+    {
+      "slug": "pantedmme",
+      "name": "Pantedmme",
+      "sourcePath": "/trading/pantedmme-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "mercvelotra",
+      "name": "Mercvelotra",
+      "sourcePath": "/trading/mercvelotra-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "maturility",
+      "name": "Maturility",
+      "sourcePath": "/trading/maturility-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "fortunode",
+      "name": "Fortunode",
+      "sourcePath": "/trading/fortunode-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "cenotur",
+      "name": "Cenotur",
+      "sourcePath": "/trading/cenotur-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "gainexio",
+      "name": "Gainexio",
+      "sourcePath": "/trading/gainexio-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "peakvext",
+      "name": "Peakvext",
+      "sourcePath": "/trading/peakvext-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "qubittradeai",
+      "name": "Qubittradeai",
+      "sourcePath": "/trading/qubittradeai-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "investwise",
+      "name": "Investwise",
+      "sourcePath": "/trading/investwise-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "loddverdom",
+      "name": "Loddverdom",
+      "sourcePath": "/trading/loddverdom-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "tradingedgecapitals",
+      "name": "Tradingedgecapitals",
+      "sourcePath": "/trading/tradingedgecapitals-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "fundoraid",
+      "name": "Fundoraid",
+      "sourcePath": "/trading/fundoraid-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "yurofex",
+      "name": "Yurofex",
+      "sourcePath": "/trading/yurofex-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "swapkoire",
+      "name": "Swapkoire",
+      "sourcePath": "/trading/swapkoire-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "nexusaurum",
+      "name": "Nexusaurum",
+      "sourcePath": "/trading/nexusaurum-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "padmainvest",
+      "name": "Padmainvest",
+      "sourcePath": "/trading/padmainvest-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "hrinvest",
+      "name": "Hrinvest",
+      "sourcePath": "/trading/hrinvest-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "novomijena",
+      "name": "Novomijena",
+      "sourcePath": "/trading/novomijena-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "futureassetventures",
+      "name": "Futureassetventures",
+      "sourcePath": "/trading/futureassetventures-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "goldmillionbot",
+      "name": "Goldmillionbot",
+      "sourcePath": "/trading/goldmillionbot-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "folio",
+      "name": "Folio",
+      "sourcePath": "/trading/folio-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "essorlance",
+      "name": "Essorlance",
+      "sourcePath": "/trading/essorlance-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "zenithtrade",
+      "name": "Zenithtrade",
+      "sourcePath": "/trading/zenithtrade-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "influxchain",
+      "name": "Influxchain",
+      "sourcePath": "/trading/influxchain-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "recia-canjeaje",
+      "name": "Recia Canjeaje",
+      "sourcePath": "/trading/recia-canjeaje-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "radiant-fondell",
+      "name": "Radiant Fondell",
+      "sourcePath": "/trading/radiant-fondell-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "rilvane-finance",
+      "name": "Rilvane Finance",
+      "sourcePath": "/trading/rilvane-finance-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "storm-verdis",
+      "name": "Storm Verdis",
+      "sourcePath": "/trading/storm-verdis-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "nestval-partners",
+      "name": "Nestval Partners",
+      "sourcePath": "/trading/nestval-partners-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "lodecrest-capital",
+      "name": "Lodecrest Capital",
+      "sourcePath": "/trading/lodecrest-capital-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "lys-vrdiance",
+      "name": "Lys Vrdiance",
+      "sourcePath": "/trading/lys-vrdiance-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "summit-vestora",
+      "name": "Summit Vestora",
+      "sourcePath": "/trading/summit-vestora-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "foyle-rendode",
+      "name": "Foyle Rendode",
+      "sourcePath": "/trading/foyle-rendode-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "peak-vaultex",
+      "name": "Peak Vaultex",
+      "sourcePath": "/trading/peak-vaultex-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "gaugewell-analytics",
+      "name": "Gaugewell Analytics",
+      "sourcePath": "/trading/gaugewell-analytics-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "true-meritbanwick",
+      "name": "True Meritbanwick",
+      "sourcePath": "/trading/true-meritbanwick-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "veltrix-trade",
+      "name": "Veltrix Trade",
+      "sourcePath": "/trading/veltrix-trade-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "nalvurikenz-ai",
+      "name": "Nalvurikenz Ai",
+      "sourcePath": "/trading/nalvurikenz-ai-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "vague-placencia",
+      "name": "Vague Placencia",
+      "sourcePath": "/trading/vague-placencia-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "lantern-kryptis",
+      "name": "Lantern Kryptis",
+      "sourcePath": "/trading/lantern-kryptis-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "marble-zinsvale",
+      "name": "Marble Zinsvale",
+      "sourcePath": "/trading/marble-zinsvale-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "north-compoundage",
+      "name": "North Compoundage",
+      "sourcePath": "/trading/north-compoundage-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "green-capvridge",
+      "name": "Green Capvridge",
+      "sourcePath": "/trading/green-capvridge-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "keen-proceedance",
+      "name": "Keen Proceedance",
+      "sourcePath": "/trading/keen-proceedance-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "worthen-wealth",
+      "name": "Worthen Wealth",
+      "sourcePath": "/trading/worthen-wealth-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "ombrena-castelia",
+      "name": "Ombrena Castelia",
+      "sourcePath": "/trading/ombrena-castelia-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "thervalon-crest",
+      "name": "Thervalon Crest",
+      "sourcePath": "/trading/thervalon-crest-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "prime-vestora",
+      "name": "Prime Vestora",
+      "sourcePath": "/trading/prime-vestora-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "mintor-group",
+      "name": "Mintor Group",
+      "sourcePath": "/trading/mintor-group-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "sage-wertgrove",
+      "name": "Sage Wertgrove",
+      "sourcePath": "/trading/sage-wertgrove-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "kl-hodnotn",
+      "name": "Kl Hodnotn",
+      "sourcePath": "/trading/kl-hodnotn-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "neon-zinsik",
+      "name": "Neon Zinsik",
+      "sourcePath": "/trading/neon-zinsik-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "crypto-trade",
+      "name": "Crypto Trade",
+      "sourcePath": "/trading/crypto-trade-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "wixonal-ai",
+      "name": "Wixonal Ai",
+      "sourcePath": "/trading/wixonal-ai-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "noble-kapitvale",
+      "name": "Noble Kapitvale",
+      "sourcePath": "/trading/noble-kapitvale-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "weissgold-capital",
+      "name": "Weissgold Capital",
+      "sourcePath": "/trading/weissgold-capital-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "crypto-valorif",
+      "name": "Crypto Valorif",
+      "sourcePath": "/trading/crypto-valorif-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "cristal-fondelle",
+      "name": "Cristal Fondelle",
+      "sourcePath": "/trading/cristal-fondelle-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "kedgeway-prime",
+      "name": "Kedgeway Prime",
+      "sourcePath": "/trading/kedgeway-prime-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "terbit-untungtek",
+      "name": "Terbit Untungtek",
+      "sourcePath": "/trading/terbit-untungtek-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "keen-upswellidge",
+      "name": "Keen Upswellidge",
+      "sourcePath": "/trading/keen-upswellidge-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "futuristic-capitex",
+      "name": "Futuristic Capitex",
+      "sourcePath": "/trading/futuristic-capitex-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "coursewick-prime",
+      "name": "Coursewick Prime",
+      "sourcePath": "/trading/coursewick-prime-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "zealkeep-reserve",
+      "name": "Zealkeep Reserve",
+      "sourcePath": "/trading/zealkeep-reserve-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "vesto-digital",
+      "name": "Vesto Digital",
+      "sourcePath": "/trading/vesto-digital-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "rieka-vernova",
+      "name": "Rieka Vernova",
+      "sourcePath": "/trading/rieka-vernova-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "deft-meritonace",
+      "name": "Deft Meritonace",
+      "sourcePath": "/trading/deft-meritonace-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "zestor-ventures",
+      "name": "Zestor Ventures",
+      "sourcePath": "/trading/zestor-ventures-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "nexus-ai",
+      "name": "Nexus Ai",
+      "sourcePath": "/trading/nexus-ai-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "corslake-advisors",
+      "name": "Corslake Advisors",
+      "sourcePath": "/trading/corslake-advisors-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "open-mintwardage",
+      "name": "Open Mintwardage",
+      "sourcePath": "/trading/open-mintwardage-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "vector-coinly",
+      "name": "Vector Coinly",
+      "sourcePath": "/trading/vector-coinly-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "nomad-bitgrove",
+      "name": "Nomad Bitgrove",
+      "sourcePath": "/trading/nomad-bitgrove-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "perle-rendonge",
+      "name": "Perle Rendonge",
+      "sourcePath": "/trading/perle-rendonge-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "sourcevane-markets",
+      "name": "Sourcevane Markets",
+      "sourcePath": "/trading/sourcevane-markets-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "futuristic-wertium",
+      "name": "Futuristic Wertium",
+      "sourcePath": "/trading/futuristic-wertium-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "silver-kapithaven",
+      "name": "Silver Kapithaven",
+      "sourcePath": "/trading/silver-kapithaven-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "dawn-capitium",
+      "name": "Dawn Capitium",
+      "sourcePath": "/trading/dawn-capitium-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "falcon-markets",
+      "name": "Falcon Markets",
+      "sourcePath": "/trading/falcon-markets-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "cortex-tradero",
+      "name": "Cortex Tradero",
+      "sourcePath": "/trading/cortex-tradero-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "steady-vintageward",
+      "name": "Steady Vintageward",
+      "sourcePath": "/trading/steady-vintageward-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "mirelo-canivo",
+      "name": "Mirelo Canivo",
+      "sourcePath": "/trading/mirelo-canivo-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "talviro-menqari",
+      "name": "Talviro Menqari",
+      "sourcePath": "/trading/talviro-menqari-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "meridian-kapithal",
+      "name": "Meridian Kapithal",
+      "sourcePath": "/trading/meridian-kapithal-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "tok-kapitura",
+      "name": "Tok Kapitura",
+      "sourcePath": "/trading/tok-kapitura-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "prism-brandvault",
+      "name": "Prism Brandvault",
+      "sourcePath": "/trading/prism-brandvault-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "propfirm-smasher",
+      "name": "Propfirm Smasher",
+      "sourcePath": "/trading/propfirm-smasher-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "noble-venmere",
+      "name": "Noble Venmere",
+      "sourcePath": "/trading/noble-venmere-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "raven-quantis",
+      "name": "Raven Quantis",
+      "sourcePath": "/trading/raven-quantis-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "klarvo-insights",
+      "name": "Klarvo Insights",
+      "sourcePath": "/trading/klarvo-insights-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "grant-support-programme",
+      "name": "Grant Support Programme",
+      "sourcePath": "/trading/grant-support-programme-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "frame-2u-avapro",
+      "name": "Frame 2u Avapro",
+      "sourcePath": "/trading/frame-2u-avapro-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "prymaxasset-td-globals",
+      "name": "Prymaxasset Td Globals",
+      "sourcePath": "/trading/prymaxasset-td-globals-review",
+      "sourceDate": null,
+      "sourceReadTime": null
+    },
+    {
+      "slug": "capital-trust-holdings",
+      "name": "Capital Trust Holdings",
+      "sourcePath": "/trading/capital-trust-holdings-review",
+      "sourceDate": null,
+      "sourceReadTime": null
     }
   ]
 }
