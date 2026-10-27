@@ -1,6 +1,7 @@
 // Generates public/sitemap.xml from the generated review archive + static routes.
 // Run after regenerating reviews: node scripts/gen-sitemap.mjs
 import { writeFileSync } from 'node:fs'
+import { readdirSync, existsSync, statSync } from 'node:fs'
 import { readArchive } from './lib/archive-node.mjs'
 
 // Legal pages are noindexed - they stay out of the sitemap too.
@@ -16,9 +17,18 @@ const url = (loc, lastmod, changefreq, priority) =>
 
 // Pagination pages (/page/2, …) are noindexed - they stay out of the sitemap
 // too. Review articles are still reachable through the pagination links.
+// Drop-folder posts (content/posts/<type>/<slug>.json) served under /articles/.
+const DROP = 'content/posts'
+const dropEntries = existsSync(DROP)
+  ? readdirSync(DROP, { withFileTypes: true }).filter((d) => d.isDirectory()).flatMap((d) =>
+      readdirSync(`${DROP}/${d.name}`).filter((f) => f.endsWith('.json')).map((f) =>
+        url(`/articles/${d.name}/${f.slice(0, -5)}`, statSync(`${DROP}/${d.name}/${f}`).mtime.toISOString().slice(0, 10), 'monthly', '0.8')))
+  : []
+
 const entries = [
   ...STATIC.map((s) => url(s.loc, s.lastmod, s.changefreq, s.priority)),
   ...archive.articles.map((r) => url(r.path, r.isoDate, 'monthly', '0.9')),
+  ...dropEntries,
 ]
 
 writeFileSync(

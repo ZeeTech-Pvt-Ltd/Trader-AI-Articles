@@ -1,0 +1,693 @@
+/* Scoped styles for drop-folder posts (content/posts/*). Ported from the
+   MarketScope reference .bd-review rules and mapped to this site's tokens. */
+.drop-article { max-width: 820px; margin: 0 auto; padding: 32px 20px 24px; }
+.drop-article__crumb { font-size: 13px; color: var(--muted); margin-bottom: 14px; }
+.drop-article__crumb a { color: var(--primary-deep); }
+.drop-article__title { font-family: var(--heading); font-size: clamp(28px, 4vw, 40px); line-height: 1.15; color: var(--ink); margin: 0 0 12px; }
+.drop-article__meta { font-size: 14px; color: var(--muted); margin: 0 0 20px; }
+.drop-article__body { font-family: var(--body); }
+.bd-review {
+	--navy: var(--ink);
+	--coral: var(--primary);
+	--coral-dark: var(--primary-deep);
+	--paper: var(--bg);
+	--card: #ffffff;
+	--ok: #16a34a;
+	--ok-soft: #f0fdf4;
+	--star: #f59e0b;
+	--drop-radius-lg: 20px;
+}
+
+.bd-review {
+	box-sizing: border-box;
+	/* Width comes from the parent .btt-article__inner (--container) so the
+	   cards' outer edges line up with the title/breadcrumbs/TOC above them. */
+	padding: 28px 0 80px;
+	background: var(--paper);
+	color: var(--navy);
+	font-size: 17px;
+	line-height: 1.65;
+	overflow-wrap: anywhere;
+}
+
+.bd-review *,
+.bd-review *::before,
+.bd-review *::after {
+	box-sizing: border-box;
+}
+
+.bd-review p {
+	margin: 0 0 0.95em;
+}
+
+.bd-section {
+	background: var(--card);
+	border: 1px solid var(--line);
+	border-radius: var(--drop-radius-lg);
+	padding: 24px 24px 12px;
+	margin: 0 0 18px;
+	box-shadow: var(--shadow-sm);
+}
+
+.bd-heading {
+	margin: 0 0 0.7em;
+	font-size: 1.45em;
+	line-height: 1.2;
+	letter-spacing: -0.02em;
+	color: var(--navy);
+}
+
+.bd-subheading {
+	margin: 1.1em 0 0.4em;
+	font-size: 1.05em;
+	font-weight: 700;
+	color: var(--navy);
+}
+
+.bd-text {
+	color: var(--ink-soft);
+}
+
+.bd-note {
+	background: var(--primary-soft);
+	border-radius: 12px;
+	padding: 0.9em 1em;
+	color: var(--primary-deep);
+}
+
+.bd-callout {
+	background: var(--primary-soft);
+	border: 2px dashed var(--primary);
+	border-radius: 14px;
+	padding: 1em 1.1em;
+}
+
+/* Rating bar */
+.bd-rating-bar {
+	display: grid;
+	grid-template-columns: repeat(5, minmax(0, 1fr));
+	gap: 10px;
+	margin: 0 0 18px;
+}
+
+.bd-rating-item {
+	background: var(--card);
+	border-radius: 16px;
+	padding: 14px 10px 16px;
+	text-align: center;
+	box-shadow: var(--shadow-sm);
+	border: 1px solid var(--line);
+}
+
+.bd-rating-icon {
+	width: 36px;
+	height: 36px;
+	margin: 0 auto 8px;
+	border-radius: 50%;
+	background: var(--primary-soft);
+	position: relative;
+}
+
+.bd-rating-icon::before {
+	position: absolute;
+	inset: 0;
+	display: grid;
+	place-items: center;
+	color: var(--primary);
+	font-size: 16px;
+}
+
+.bd-rating-icon--star::before { content: "\2605"; }
+
+.bd-rating-icon--ease { background: #e7f8ed; }
+.bd-rating-icon--ease::before { content: "\2713"; color: #16a34a; }
+
+.bd-rating-icon--features { background: #eaecfd; }
+.bd-rating-icon--features::before {
+	content: "+";
+	font-size: 22px;
+	font-weight: 700;
+	color: #4f46e5;
+}
+
+.bd-rating-icon--value { background: #e3f8f4; }
+.bd-rating-icon--value::before { content: "$"; font-weight: 700; color: #0d9488; }
+
+.bd-rating-icon--support { background: #fce8f1; }
+.bd-rating-icon--support::before { content: "\2665"; color: #db2777; }
+
+.bd-rating-label {
+	font-size: 0.75em;
+	font-weight: 700;
+	margin-bottom: 6px;
+}
+
+.bd-stars {
+	position: relative;
+	display: inline-block;
+	font-size: 14px;
+	letter-spacing: 1px;
+	color: #d6d3d1;
+	height: 1em;
+	line-height: 1;
+}
+
+.bd-stars::before {
+	content: "\2605\2605\2605\2605\2605";
+}
+
+.bd-stars__fill {
+	position: absolute;
+	left: 0;
+	top: 0;
+	overflow: hidden;
+	white-space: nowrap;
+	color: var(--star);
+	height: 1em;
+}
+
+.bd-stars__fill::before {
+	content: "\2605\2605\2605\2605\2605";
+}
+
+.bd-rating-score {
+	margin-top: 6px;
+	font-weight: 800;
+	color: var(--navy);
+}
+
+/* Emphasise the leading "Overall Rating" tile */
+.bd-rating-bar .bd-rating-item:first-child {
+	background: linear-gradient(180deg, var(--primary-soft), #fff);
+	border-color: var(--primary);
+	box-shadow: var(--shadow);
+}
+
+.bd-rating-bar .bd-rating-item:first-child .bd-rating-icon {
+	background: var(--primary);
+}
+
+.bd-rating-bar .bd-rating-item:first-child .bd-rating-icon::before {
+	color: #fff;
+}
+
+.bd-rating-bar .bd-rating-item:first-child .bd-rating-score {
+	color: var(--primary-deep);
+}
+
+/* CTA buttons */
+.bd-product-link {
+	margin: 0 0 16px;
+}
+
+.bd-product-link a,
+.bd-cta-bar__btn,
+.bd-banner-cta__btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 6px;
+	background: linear-gradient(135deg, var(--primary) 0%, var(--primary-deep) 100%);
+	color: #fff;
+	text-decoration: none;
+	font-weight: 800;
+	font-size: 16px;
+	border-radius: 999px;
+	padding: 16px 24px;
+	box-shadow: 0 8px 0 var(--primary-deep);
+	width: 100%;
+	transition: transform 0.12s ease, box-shadow 0.15s ease;
+}
+
+.bd-product-link a:hover,
+.bd-cta-bar__btn:hover,
+.bd-banner-cta__btn:hover {
+	color: #fff;
+	transform: translateY(1px);
+	box-shadow: 0 7px 0 var(--primary-deep);
+}
+
+/* Gentle attention-drawing glow on the primary CTA only (not repeated ones further down) */
+.bd-product-link a {
+	animation: bd-cta-pulse 2.4s ease-in-out infinite;
+}
+
+@keyframes bd-cta-pulse {
+	0%, 100% { box-shadow: 0 8px 0 var(--primary-deep), 0 0 0 0 rgba(184, 76, 14, 0.35); }
+	50% { box-shadow: 0 8px 0 var(--primary-deep), 0 0 0 10px rgba(184, 76, 14, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.bd-product-link a {
+		animation: none;
+	}
+}
+
+.bd-ext::after {
+	content: "\2192";
+}
+
+/* Specs table */
+.bd-table-wrap {
+	overflow-x: auto;
+	margin: 0.3em 0 1em;
+	border-radius: 14px;
+	border: 1px solid var(--line);
+}
+
+.bd-specs {
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 0.95em;
+}
+
+.bd-specs th,
+.bd-specs td {
+	text-align: left;
+	padding: 12px 14px;
+	border-bottom: 1px solid var(--line);
+}
+
+.bd-specs th {
+	background: var(--primary-soft);
+	font-size: 0.78em;
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+}
+
+.bd-specs tr:last-child td {
+	border-bottom: 0;
+}
+
+/* Pros / cons */
+.bd-balance-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 14px;
+	margin: 0.6em 0 1em;
+}
+
+.bd-panel {
+	border-radius: 16px;
+	padding: 14px 14px 6px;
+}
+
+.bd-panel--pros {
+	background: var(--ok-soft);
+}
+
+.bd-panel--cons {
+	background: var(--red-soft);
+}
+
+.bd-panel__head {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.bd-panel__badge {
+	width: 22px;
+	height: 22px;
+	border-radius: 50%;
+}
+
+.bd-panel__badge--ok {
+	background: var(--ok);
+}
+
+.bd-panel__badge--ok::before {
+	content: "\2713";
+	display: block;
+	text-align: center;
+	color: #fff;
+	font-size: 12px;
+	line-height: 22px;
+}
+
+.bd-panel__badge--mix {
+	background: var(--red);
+}
+
+.bd-panel__badge--mix::before {
+	content: "!";
+	display: block;
+	text-align: center;
+	color: #fff;
+	font-weight: 800;
+	line-height: 22px;
+}
+
+.bd-subheading--pros,
+.bd-subheading--cons {
+	margin: 0;
+}
+
+.bd-list {
+	margin: 0 0 0.8em;
+	padding: 0;
+	list-style: none;
+}
+
+.bd-list li {
+	margin: 0 0 0.7em;
+}
+
+.bd-list--pros li,
+.bd-list--cons li {
+	display: flex;
+	gap: 8px;
+	align-items: flex-start;
+}
+
+.bd-ico-check,
+.bd-ico-x {
+	flex-shrink: 0;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	margin-top: 3px;
+}
+
+.bd-ico-check {
+	background: var(--ok);
+}
+
+.bd-ico-check::before {
+	content: "\2713";
+	display: block;
+	text-align: center;
+	color: #fff;
+	font-size: 12px;
+	line-height: 20px;
+}
+
+.bd-ico-x {
+	background: var(--red);
+}
+
+.bd-ico-x::before {
+	content: "\2715";
+	display: block;
+	text-align: center;
+	color: #fff;
+	font-size: 11px;
+	line-height: 20px;
+}
+
+.bd-list:not(.bd-list--pros):not(.bd-list--cons):not(.bd-list--assets):not(.bd-list--checklist) {
+	padding-left: 1.15em;
+	list-style: disc;
+}
+
+.bd-list--checklist li {
+	background: var(--primary-soft);
+	border-radius: 12px;
+	padding: 10px 12px 10px 40px;
+	position: relative;
+}
+
+.bd-list--checklist {
+	counter-reset: checks;
+}
+
+.bd-list--checklist li {
+	counter-increment: checks;
+}
+
+.bd-list--checklist li::before {
+	content: counter(checks);
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	width: 22px;
+	height: 22px;
+	border-radius: 50%;
+	background: var(--navy);
+	color: #fff;
+	font-size: 12px;
+	font-weight: 800;
+	text-align: center;
+	line-height: 22px;
+}
+
+/* CTA bars */
+.bd-cta-bar,
+.bd-banner-cta {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 14px;
+	background: var(--navy);
+	color: #fff;
+	border-radius: var(--drop-radius-lg);
+	padding: 18px 20px;
+	margin: 0 0 18px;
+	box-shadow: var(--shadow);
+}
+
+.bd-cta-bar__icon,
+.bd-banner-cta__icon {
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	background: var(--primary);
+	flex-shrink: 0;
+}
+
+.bd-cta-bar__icon::before,
+.bd-banner-cta__icon::before {
+	content: "\2192";
+	display: grid;
+	place-items: center;
+	height: 100%;
+	color: #fff;
+	font-size: 20px;
+	font-weight: 800;
+}
+
+.bd-cta-bar__copy,
+.bd-banner-cta__copy {
+	flex: 1 1 200px;
+	color: #d6d3d1;
+	font-size: 0.95em;
+}
+
+.bd-cta-bar__copy strong,
+.bd-banner-cta__copy strong {
+	color: #fff;
+	font-size: 1.15em;
+}
+
+.bd-cta-bar > div:last-child,
+.bd-banner-cta > div:last-child {
+	flex: 1 1 200px;
+}
+
+.bd-cta-bar__btn,
+.bd-banner-cta__btn {
+	width: 100%;
+}
+
+/* Steps */
+.bd-step {
+	display: block;
+	position: relative;
+	padding-left: 58px;
+	margin: 0 0 1.1em;
+	counter-increment: steps;
+}
+
+.bd-step .bd-subheading {
+	margin: 0 0 0.3em;
+}
+
+.bd-step .bd-text {
+	margin-bottom: 0;
+}
+
+.bd-section--getting-started {
+	counter-reset: steps;
+}
+
+.bd-step::before {
+	content: counter(steps);
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 44px;
+	height: 44px;
+	border-radius: 14px;
+	background: var(--navy);
+	color: #fff;
+	font-size: 1.3em;
+	font-weight: 800;
+	display: grid;
+	place-items: center;
+}
+
+/* Tips / mistakes */
+.bd-mistake,
+.bd-tip {
+	background: var(--primary-soft);
+	border-radius: 14px;
+	padding: 12px 14px 4px;
+	margin-bottom: 10px;
+}
+
+/* Asset chips */
+.bd-list--assets {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin: 0.4em 0 1em;
+}
+
+.bd-asset {
+	display: flex;
+	flex-direction: column;
+	min-width: 92px;
+	background: var(--primary-soft);
+	border: 1px solid var(--line);
+	border-radius: 14px;
+	padding: 10px 12px;
+}
+
+.bd-asset__ticker {
+	font-weight: 800;
+	color: var(--primary-deep);
+}
+
+.bd-asset__name {
+	font-size: 0.82em;
+	color: var(--muted);
+}
+
+/* FAQ */
+.bd-faq {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin: 0 0 1em;
+}
+
+.bd-faq__item {
+	background: var(--primary-soft);
+	border-radius: 14px;
+	padding: 14px 18px 8px;
+	border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+/* Reviews with a plain FAQ block: items sit apart with no accent border */
+.bd-faq--plain .bd-faq__item {
+	border-left: 0;
+}
+
+.bd-faq__item .bd-subheading {
+	margin: 0 0 0.35em;
+}
+
+/* Verdict card */
+.bd-verdict-card {
+	display: grid;
+	grid-template-columns: 1fr auto;
+	gap: 18px;
+	background: var(--navy);
+	color: #fff;
+	border-radius: 24px;
+	padding: 28px;
+	margin: 8px 0 18px;
+	box-shadow: var(--shadow-lg);
+}
+
+.bd-verdict-card .bd-heading,
+.bd-verdict-card .bd-text {
+	color: #fff;
+}
+
+.bd-verdict-card__icon {
+	display: none;
+}
+
+.bd-verdict-card__score {
+	text-align: center;
+	background: #292524;
+	border-radius: 20px;
+	padding: 18px 20px;
+	min-width: 140px;
+}
+
+.bd-verdict-card__number {
+	font-size: 4.2em;
+	font-weight: 800;
+	line-height: 0.85;
+	color: var(--primary);
+}
+
+.bd-verdict-card__number div {
+	display: block;
+	font-size: 0.28em;
+	color: #a8a29e;
+	margin-top: 4px;
+}
+
+.bd-stars--lg {
+	font-size: 16px;
+	margin: 10px 0;
+}
+
+.bd-verdict-card__tag {
+	display: inline-block;
+	background: var(--primary);
+	color: #fff;
+	font-weight: 800;
+	border-radius: 999px;
+	padding: 6px 12px;
+	font-size: 0.8em;
+}
+
+@media (max-width: 760px) {
+	.bd-rating-bar {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.bd-rating-bar .bd-rating-item:first-child {
+		grid-column: 1 / -1;
+	}
+
+	.bd-balance-grid,
+	.bd-verdict-card {
+		grid-template-columns: 1fr;
+	}
+
+	.bd-verdict-card__score {
+		min-width: 0;
+	}
+
+	.bd-cta-bar,
+	.bd-banner-cta {
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	/* In a column layout the 200px flex-basis becomes a 200px height, which left
+	   the banner about 500px tall on phones. Let each part size to its content. */
+	.bd-cta-bar__copy,
+	.bd-banner-cta__copy,
+	.bd-cta-bar > div:last-child,
+	.bd-banner-cta > div:last-child {
+		flex: 0 0 auto;
+	}
+}
+
+@media (max-width: 520px) {
+	.bd-review {
+		padding: 16px 0 56px;
+		font-size: 16px;
+	}
+
+	.bd-section {
+		padding: 18px 16px 8px;
+	}
+}
+
