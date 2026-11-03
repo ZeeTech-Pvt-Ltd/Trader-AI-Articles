@@ -148,6 +148,35 @@ export default function OfferForm({ offerName, platform }) {
     return digits ? `+${code}${digits}` : values.phone
   }
 
+  const postLead = async (phone) => {
+    const res = await fetch(ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        offerName,
+        firstName: values.firstName.trim(),
+        lastName: values.lastName.trim(),
+        email: values.email.trim(),
+        phone,
+        consent: true,
+      }),
+    })
+    if (!res.ok) throw new Error(`HTTP ${res.status}`)
+    // The endpoint returns 200 even for downstream rejections. Success is
+    // ONLY declared when the body is valid JSON that is not an error - an
+    // empty or non-JSON body is treated as a failure, never a fake success.
+    let data = null
+    try {
+      data = await res.json()
+    } catch {
+      throw new Error('The registration service returned an unexpected response. Please try again.')
+    }
+    if (!data || data.status === 'error') {
+      throw new Error(data?.message || 'Registration was rejected. Please try again.')
+    }
+    return data
+  }
+
   const handleSubmit = async (e) => {
     e.preventDefault()
     if (values.website) return // honeypot: silently drop bots
@@ -156,29 +185,16 @@ export default function OfferForm({ offerName, platform }) {
     setStatus('sending')
     try {
       const phone = await resolvePhone()
-      const res = await fetch(ENDPOINT, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          offerName,
-          firstName: values.firstName.trim(),
-          lastName: values.lastName.trim(),
-          email: values.email.trim(),
-          phone,
-          consent: true,
-        }),
-      })
-      if (!res.ok) throw new Error(`HTTP ${res.status}`)
-      // The endpoint returns 200 even for downstream rejections - read the
-      // body and surface the real outcome instead of a fake success.
-      let data = null
       try {
-        data = await res.json()
-      } catch {
-        /* non-JSON response - treat as success */
-      }
-      if (data && data.status === 'error') {
-        throw new Error(data.message || 'Registration was rejected. Please try again.')
+        await postLead(phone)
+      } catch (err) {
+        if (/^HTTP/.test(err.message) || /unexpected response/i.test(err.message)) {
+          // Transient failure - one retry before giving up.
+          await new Promise((r) => setTimeout(r, 1500))
+          await postLead(phone)
+        } else {
+          throw err
+        }
       }
       setStatus('ok')
       setValues({ firstName: '', lastName: '', email: '', phone: '', website: '' })
