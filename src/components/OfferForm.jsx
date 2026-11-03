@@ -33,6 +33,7 @@ export default function OfferForm({ offerName, platform }) {
   const [consent, setConsent] = useState(true)
   const [errors, setErrors] = useState({})
   const [status, setStatus] = useState(null) // 'sending' | 'ok' | 'err'
+  const [errorMsg, setErrorMsg] = useState('')
   const [dialCode, setDialCode] = useState(null)
   const phoneRef = useRef(null)
   const itiRef = useRef(null)
@@ -111,12 +112,15 @@ export default function OfferForm({ offerName, platform }) {
   }
 
   // isValidNumber() throws until utils are attached; race a deferred load
-  // (≤3s), retry, then fall back to the raw digits. Same pattern as prior projects.
+  // (≤3s), retry, then fall back to an E.164 number built from the selected
+  // country's dial code. The downstream rejects numbers without a country
+  // code, so raw digits are never sent.
   const resolvePhone = async () => {
     const iti = itiRef.current
     if (!iti) return values.phone
     try {
-      return iti.isValidNumber() ? iti.getNumber() : values.phone
+      if (iti.isValidNumber()) return iti.getNumber()
+      return e164Fallback()
     } catch {
       if (!utilsLoadedRef.current && pendingUtilsRef.current) {
         const loaded = await Promise.race([
@@ -126,14 +130,22 @@ export default function OfferForm({ offerName, platform }) {
         if (loaded) {
           utilsLoadedRef.current = true
           try {
-            return iti.isValidNumber() ? iti.getNumber() : values.phone
+            if (iti.isValidNumber()) return iti.getNumber()
           } catch {
-            return values.phone
+            /* fall through to the dial-code fallback */
           }
         }
       }
-      return values.phone
+      return e164Fallback()
     }
+  }
+
+  // Last-resort E.164: strip a leading 0, drop any existing +, and prefix the
+  // selected country's dial code (read from the ITI trigger element).
+  const e164Fallback = () => {
+    const digits = values.phone.replace(/[^\d]/g, '').replace(/^0+/, '')
+    const code = dialCode || '1'
+    return digits ? `+${code}${digits}` : values.phone
   }
 
   const handleSubmit = async (e) => {
@@ -157,10 +169,22 @@ export default function OfferForm({ offerName, platform }) {
         }),
       })
       if (!res.ok) throw new Error(`HTTP ${res.status}`)
+      // The endpoint returns 200 even for downstream rejections - read the
+      // body and surface the real outcome instead of a fake success.
+      let data = null
+      try {
+        data = await res.json()
+      } catch {
+        /* non-JSON response - treat as success */
+      }
+      if (data && data.status === 'error') {
+        throw new Error(data.message || 'Registration was rejected. Please try again.')
+      }
       setStatus('ok')
       setValues({ firstName: '', lastName: '', email: '', phone: '', website: '' })
       setConsent(true)
-    } catch {
+    } catch (err) {
+      setErrorMsg(err.message && !/^HTTP/.test(err.message) ? err.message : '')
       setStatus('err')
     }
   }
@@ -188,7 +212,7 @@ export default function OfferForm({ offerName, platform }) {
 
       {status === 'err' && (
         <p className="form-status form-status--err">
-          Something went wrong sending your details. Please try again shortly.
+          {errorMsg || 'Something went wrong sending your details. Please try again shortly.'}
         </p>
       )}
       {status === 'sending' && (
