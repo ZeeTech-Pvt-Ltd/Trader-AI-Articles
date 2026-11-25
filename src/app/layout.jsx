@@ -23,7 +23,7 @@ export const metadata = {
     images: [{ url: '/og-image.png', width: 1200, height: 630 }],
   },
   twitter: { card: 'summary_large_image' },
-  verification: { google: 'hCfXayQozP_GEBjCvlxUUoLQXRBQQ1O88jTGY7VK9uc' },
+  verification: { google: 'rX163GsGmt7DjLaEoPlX_DPHJ_fIbSOXlYLvvuzGbAA' },
   icons: { icon: '/favicon.svg' },
 }
 
